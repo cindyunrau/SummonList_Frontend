@@ -1,32 +1,14 @@
 import React from "react";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import './App.css';
+import styled, { css } from 'styled-components'
 
-import AddCreature from "./components/AddCreature";
-import Creature from "./components/CreatureList.js";
-import CreatureList from "./components/CreatureList";
+import { AddCreature, Creature, CreatureList, NavBar } from "./components"
 
 function App() {
   return (
     <div>
-      <nav className="navbar navbar-expand navbar-dark bg-dark">
-        <a href="/creatures" className="navbar-brand">
-          CindyUnrau
-        </a>
-        <div className="navbar-nav mr-auto">
-          <li className="nav-item">
-            <Link to={"/creatures"} className="nav-link">
-              Creatures
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link to={"/add"} className="nav-link">
-              Add
-            </Link>
-          </li>
-        </div>
-      </nav>
+      <NavBar />
       <div className="container mt-3">
         <Routes>
           <Route exact path={"/"} element={<CreatureList />} />
