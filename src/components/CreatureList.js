@@ -1,21 +1,40 @@
 import React, { useState, useEffect } from "react";
 import CreatureDataService from "../services/CreatureService";
-import { Link } from "react-router-dom";
 
+import { SearchBar, CreatureInfo } from "./"
+
+import styled from 'styled-components'
+
+const Container = styled.div`
+
+`
+const Title = styled.h4`
+  margin-top: 1em;
+  margin-bottom: 1em;
+`
+const ListItem = styled.li`
+  margin-top: -1px;
+  border: 1px solid;
+  padding: 10px;
+`
+const List = styled.ul`
+  list-style-type: none;
+  margin:0;
+  padding:0;
+`
+const RemoveAll = styled.button`
+margin-top: 1em;
+margin-bottom: 1em;
+`
 const CreatureList = () => {
   const [Creatures, setCreatures] = useState([]);
   const [currentCreature, setCurrentCreature] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(-1);
-  const [searchName, setSearchName] = useState("");
+
 
   useEffect(() => {
     retrieveCreatures();
   }, []);
-
-  const onChangeSearchName = e => {
-    const searchName = e.target.value;
-    setSearchName(searchName);
-  };
 
   const retrieveCreatures = () => {
     CreatureDataService.getAll()
@@ -50,99 +69,39 @@ const CreatureList = () => {
       });
   };
 
-  const findByName = () => {
-    CreatureDataService.findByName(searchName)
-      .then(response => {
-        setCreatures(response.data);
-        console.log(response.data);
-      })
-      .catch(e => {
-        console.log(e);
-      });
-  };
+
 
   return (
-    <div className="list row">
-      <div className="col-md-8">
-        <div className="input-group mb-3">
-          <input
-            type="text"
-            className="form-control"
-            placeholder="Search by Name"
-            value={searchName}
-            onChange={onChangeSearchName}
-          />
-          <div className="input-group-append">
-            <button
-              className="btn btn-outline-secondary"
-              type="button"
-              onClick={findByName}
-            >
-              Search
-            </button>
-          </div>
-        </div>
-      </div>
-      <div className="col-md-6">
-        <h4>Creatures List</h4>
-        <ul className="list-group">
+    <Container>
+      <SearchBar setCreatures={setCreatures} />
+      <div >
+        <Title>Creatures List</Title>
+        <List >
           {Creatures &&
             Creatures.map((Creature, index) => (
-              <li
-                className={
-                  "list-group-item " + (index === currentIndex ? "active" : "")
-                }
+              <ListItem
                 onClick={() => setActiveCreature(Creature, index)}
                 key={index}
               >
                 {Creature.name}
-              </li>
+              </ListItem>
             ))}
-        </ul>
-        <button
-          className="m-3 btn btn-sm btn-danger"
+        </List >
+        <RemoveAll    
           onClick={removeAllCreatures}
         >
           Remove All
-        </button>
+        </RemoveAll>
       </div>
-      <div className="col-md-6">
         {currentCreature ? (
-          <div>
-            <h4>Creature</h4>
-            <div>
-              <label>
-                <strong>Name:</strong>
-              </label>{" "}
-              {currentCreature.name}
-            </div>
-            <div>
-              <label>
-                <strong>Description:</strong>
-              </label>{" "}
-              {currentCreature.description}
-            </div>
-            <div>
-              <label>
-                <strong>Status:</strong>
-              </label>{" "}
-              {currentCreature.base ? "Original" : "Imported"}
-            </div>
-            <Link
-              to={"/Creatures/" + currentCreature.id}
-              className="badge badge-warning"
-            >
-              Edit
-            </Link>
-          </div>
+          <CreatureInfo currentCreature={currentCreature} />
         ) : (
           <div>
             <br />
             <p>Please click on a Creature...</p>
           </div>
         )}
-      </div>
-    </div>
+    </ Container>
   );
 };
 

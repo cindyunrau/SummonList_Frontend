@@ -6,7 +6,8 @@ const Creature = props => {
     id: null,
     name: "",
     description: "",
-    base: false
+    base: false,
+    cr: ""
   };
 
   const [currentCreature, setCurrentCreature] = useState(initialCreatureState);
@@ -95,6 +96,17 @@ const Creature = props => {
                 id="description"
                 name="description"
                 value={currentCreature.description}
+                onChange={handleInputChange}
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="cr">CR</label>
+              <input
+                type="int"
+                className="form-control"
+                id="cr"
+                name="cr"
+                value={currentCreature.cr}
                 onChange={handleInputChange}
               />
             </div>

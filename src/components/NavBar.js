@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
 import styled, { css } from 'styled-components'
 
 const NavContainer =  styled.nav`

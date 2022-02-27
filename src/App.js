@@ -1,23 +1,26 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
+import Routes from './routes';
 
-import { AddCreature, Creature, CreatureList, NavBar } from "./components"
+import { NavBar } from "./components"
+
+const ContentContainer = styled.div`
+  width: 1000px;
+  height: 100vh;
+  padding: 30px;
+  margin:auto;
+`
+
 
 function App() {
   return (
-    <div>
+    <>
       <NavBar />
-      <div className="container mt-3">
-        <Routes>
-          <Route exact path={"/"} element={<CreatureList />} />
-          <Route exact path={"/creatures"} element={<CreatureList />} />
-          <Route exact path="/add" element={<AddCreature />} />
-          <Route path="/creatures/:id" element={<Creature />} />
-        </Routes>
-      </div>
-    </div>
+      <ContentContainer >
+      <Routes />
+      </ContentContainer>
+    </>
   );
 }
 export default App;
