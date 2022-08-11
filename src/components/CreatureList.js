@@ -64,9 +64,10 @@ const CreatureList = () => {
     CreatureDataService.create(spider)
     .catch(e => {
         console.log(e);
-    });
-    refreshList();
-}
+    }).then(
+      refreshList()
+    );
+  }
 
   return (
     <Container>

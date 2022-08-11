@@ -9,6 +9,7 @@ const Container = styled.div`
     grid-template-areas:
         "search button";
     column-gap: 1em;  
+    margin-top: 1em;
 `
 const Search = styled.input`
     grid-area: search;
