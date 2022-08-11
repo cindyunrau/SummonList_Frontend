@@ -42,7 +42,8 @@ const CreatureInfo = ({ currentCreature }) => {
     return (
         <Container>
             <Title>Creature</Title>
-            <TextStat>
+            <p>${JSON.stringify(currentCreature)}</p>
+            {/* <TextStat>
                 <Label>Name:</Label>{" "}
                 {currentCreature.name}
             </TextStat>
@@ -90,7 +91,7 @@ const CreatureInfo = ({ currentCreature }) => {
               to={"/Creatures/" + currentCreature.id}
             >
               Edit
-            </Link>
+            </Link> */}
         </Container>
     );
 };
