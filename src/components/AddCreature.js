@@ -4,7 +4,6 @@ import styled,{css} from 'styled-components'
 
 const FormContainer = styled.div`
 
-  
 `
 const TextForm = styled.div`
 ${props =>
@@ -49,7 +48,7 @@ const AddCreature = () => {
     CreatureDataService.create(data)
       .then(response => {
         setCreature({
-          id: response.data.id,
+          id: response.data._id,
           name: response.data.name,
           description: response.data.description,
           base: response.data.base,

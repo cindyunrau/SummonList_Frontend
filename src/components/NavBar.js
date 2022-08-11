@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled, { css } from 'styled-components'
+import CreatureDataService from "../services/CreatureService";
+
 
 const NavContainer =  styled.nav`
     background-color: #282828;
@@ -10,6 +12,26 @@ const NavContainer =  styled.nav`
 `
 
 const NavItem = styled(Link)`
+    display: flex;
+    align-items: center;
+    float:left;
+    padding-left: 30px;
+    height: 50px;
+    color: white;
+    text-decoration: none;
+    &:hover {
+        color: grey;
+    }
+    
+  ${props =>
+    props.primary &&
+    css`
+      font-weight: bold;
+      font-size: 1.3em;
+    `};
+`
+
+const Test = styled.div`
     display: flex;
     align-items: center;
     float:left;
@@ -42,6 +64,7 @@ function NavBar() {
             <NavItem to={"/add"}>
                 Add
             </NavItem>
+
         </NavContainer>
     )
 }

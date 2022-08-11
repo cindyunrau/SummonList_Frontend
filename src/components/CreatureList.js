@@ -1,36 +1,14 @@
 import React, { useState, useEffect } from "react";
 import CreatureDataService from "../services/CreatureService";
-
+import creatureData from "../data/creatureData";
 import { SearchBar, CreatureInfo } from "./"
+import { Container, List, ListItem, ListItemTitle, ListItemDes } from "../styles/listStyles.js"
+import { ButtonNeg, Title } from "../styles/theme"
 
-import styled from 'styled-components'
-
-const Container = styled.div`
-
-`
-const Title = styled.h4`
-  margin-top: 1em;
-  margin-bottom: 1em;
-`
-const ListItem = styled.li`
-  margin-top: -1px;
-  border: 1px solid;
-  padding: 10px;
-`
-const List = styled.ul`
-  list-style-type: none;
-  margin:0;
-  padding:0;
-`
-const RemoveAll = styled.button`
-margin-top: 1em;
-margin-bottom: 1em;
-`
 const CreatureList = () => {
   const [Creatures, setCreatures] = useState([]);
   const [currentCreature, setCurrentCreature] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(-1);
-
 
   useEffect(() => {
     retrieveCreatures();
@@ -53,7 +31,7 @@ const CreatureList = () => {
     setCurrentIndex(-1);
   };
 
-  const setActiveCreature = (Creature, index) => {
+  const setActiveCreature = (Creature, index, e) => {
     setCurrentCreature(Creature);
     setCurrentIndex(index);
   };
@@ -69,10 +47,44 @@ const CreatureList = () => {
       });
   };
 
+  const removeCreature = (id) => {
+    CreatureDataService.remove(id)
+      .then(response => {
+        console.log(response.data);
+        refreshList();
+      })
+      .catch(e => {
+        console.log(e);
+      });
+  };
 
+  function addTestGuy(i) {
+    const spider = creatureData[i]
+    console.log("spid" + spider)
+    CreatureDataService.create(spider)
+    .catch(e => {
+        console.log(e);
+    });
+    refreshList();
+}
 
   return (
     <Container>
+      <button
+        onClick={() => addTestGuy(0)}
+      >
+        add spidey
+      </button>
+      <button
+        onClick={() => addTestGuy(1)}
+      >
+        add howrse
+      </button>
+      <button
+        onClick={() => addTestGuy(2)}
+      >
+        add devil
+      </button>
       <SearchBar setCreatures={setCreatures} />
       <div >
         <Title>Creatures List</Title>
@@ -80,18 +92,28 @@ const CreatureList = () => {
           {Creatures &&
             Creatures.map((Creature, index) => (
               <ListItem
-                onClick={() => setActiveCreature(Creature, index)}
                 key={index}
               >
-                {Creature.name}
+                <ListItemTitle
+                  onClick={() => setActiveCreature(Creature, index)}
+                >
+                  {Creature.name}
+                </ListItemTitle>
+                <ListItemDes style={{gridArea:"description"}}>
+                {Creature.description}
+                  </ListItemDes>
+                <ButtonNeg
+                  onClick={() => removeCreature(Creature._id)}>
+                  Delete Me
+                </ButtonNeg>
               </ListItem>
             ))}
         </List >
-        <RemoveAll    
+        <ButtonNeg    
           onClick={removeAllCreatures}
         >
           Remove All
-        </RemoveAll>
+        </ButtonNeg>
       </div>
         {currentCreature ? (
           <CreatureInfo currentCreature={currentCreature} />

@@ -1,27 +1,31 @@
 import http from "../http-common";
 
 const getAll = () => {
-  return http.get("/creatures");
+  return http.get("/creature");
 };
 
-const get = id => {
-  return http.get(`/creatures/${id}`);
+const getById = id => {
+  return http.get(`/creature/id/${id}`);
+};
+
+const getByName = name => {
+  return http.get(`/creature/name/${name}`);
 };
 
 const create = data => {
-  return http.post("/creatures", data);
+  return http.post("/creature/add", data);
 };
 
 const update = (id, data) => {
-  return http.put(`/creatures/${id}`, data);
+  return http.post(`/creature/update/${id}`, data);
 };
 
 const remove = id => {
-  return http.delete(`/creatures/${id}`);
+  return http.delete(`/creature/${id}`);
 };
 
 const removeAll = () => {
-  return http.delete(`/creatures`);
+  return http.delete(`/creature`);
 };
 
 const findByName = name => {
@@ -31,7 +35,8 @@ const findByName = name => {
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
   getAll,
-  get,
+  getById,
+  getByName,
   create,
   update,
   remove,
