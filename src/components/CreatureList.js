@@ -3,7 +3,8 @@ import CreatureDataService from "../services/CreatureService";
 import creatureData from "../data/creatureData";
 import { SearchBar, CreatureInfo } from "./"
 import { Container, List, ListItem, ListItemTitle, ListItemDes } from "../styles/listStyles.js"
-import { ButtonNeg, Title } from "../styles/theme"
+import { ButtonNeg, Title } from "../styles/theme";
+import * as srdData from "../data/srd.json"
 
 const CreatureList = () => {
   const [Creatures, setCreatures] = useState([]);
@@ -65,8 +66,22 @@ const CreatureList = () => {
     .catch(e => {
         console.log(e);
     }).then(
-      refreshList()
     );
+  }
+
+  function addGuy(guy) {
+  CreatureDataService.create(guy)
+        .catch(e => {
+            console.log(e);
+        }).then(
+        );
+  }
+
+  function addAllFromFile() {
+    console.log("loading")
+    srdData.default.forEach(addGuy)
+    console.log("done")
+    refreshList()
   }
 
   return (
@@ -85,6 +100,11 @@ const CreatureList = () => {
         onClick={() => addTestGuy(2)}
       >
         add devil
+      </button>
+      <button
+        onClick={() => addAllFromFile(2)}
+      >
+        add all srd
       </button>
       <SearchBar setCreatures={setCreatures} />
       <div >

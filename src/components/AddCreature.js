@@ -47,18 +47,18 @@ const AddCreature = () => {
     };
     CreatureDataService.create(data)
       .then(response => {
-        setCreature({
-          id: response.data._id,
-          name: response.data.name,
-          description: response.data.description,
-          base: response.data.base,
-          cr: response.data.cr
-        });
-        setSubmitted(true);
-        console.log(response.data);
+        console.log(response)
+        if(response.status == 200){
+          setSubmitted(true);
+          console.log(response.data);
+        } else {
+          console.log("Some Unknown Error Occurred")
+        }
+        
       })
       .catch(e => {
         console.log(e);
+        
       });
   };
 
