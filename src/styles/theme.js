@@ -33,6 +33,7 @@ export const Button = styled.button`
     &:hover {
         opacity: 0.75
       }
+      display:block;
 `
 
 export const ButtonNeg = styled(Button)`
