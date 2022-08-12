@@ -3,7 +3,7 @@ import CreatureDataService from "../services/CreatureService";
 import creatureData from "../data/creatureData";
 import { SearchBar, CreatureInfo } from "./"
 import { Container, List, ListItem, ListItemTitle, ListItemDes } from "../styles/listStyles.js"
-import { ButtonNeg, Title } from "../styles/theme";
+import { Button, ButtonNeg, Title } from "../styles/theme";
 import * as srdData from "../data/srd.json"
 
 const CreatureList = () => {
@@ -86,29 +86,19 @@ const CreatureList = () => {
 
   return (
     <Container>
-      <button
-        onClick={() => addTestGuy(0)}
+      <Button
+        onClick={() => addAllFromFile()}
       >
-        add spidey
-      </button>
-      <button
-        onClick={() => addTestGuy(1)}
-      >
-        add howrse
-      </button>
-      <button
-        onClick={() => addTestGuy(2)}
-      >
-        add devil
-      </button>
-      <button
-        onClick={() => addAllFromFile(2)}
-      >
-        add all srd
-      </button>
+        add all srd (takes a min, will not create duplicates)
+      </Button>
+      <ButtonNeg    
+          onClick={removeAllCreatures}
+        >
+          Remove All
+        </ButtonNeg>
       <SearchBar setCreatures={setCreatures} />
       <div >
-        <Title>Creatures List</Title>
+        <Title>Creatures List ({Creatures.length})</Title>
         <List >
           {Creatures &&
             Creatures.map((Creature, index) => (
@@ -120,8 +110,11 @@ const CreatureList = () => {
                 >
                   {Creature.name}
                 </ListItemTitle>
+                <div style={{gridArea:"cr"}}>
+                {Creature.challenge_rating}
+                </div>
                 <ListItemDes style={{gridArea:"description"}}>
-                {Creature.description}
+                {Creature.size} {Creature.type} {Creature.subtype} : {Creature.alignment}
                   </ListItemDes>
                 <ButtonNeg
                   onClick={() => removeCreature(Creature._id)}>
@@ -130,11 +123,7 @@ const CreatureList = () => {
               </ListItem>
             ))}
         </List >
-        <ButtonNeg    
-          onClick={removeAllCreatures}
-        >
-          Remove All
-        </ButtonNeg>
+
       </div>
         {currentCreature ? (
           <CreatureInfo currentCreature={currentCreature} />

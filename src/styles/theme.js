@@ -2,8 +2,8 @@ import styled from 'styled-components'
 
 export const theme = {
     colours: {
-        primary: "#f28482", //salmon-ish
-        secondary: "#84a59d", // blue-green
+        primary: "#84a59d", // blue-green
+        secondary: "#f28482", //salmon-ish
         tertiary: "#f6bd60", //yellow
         lightPink: "#f5cac3",
         ligherPink: "#f7ede2",

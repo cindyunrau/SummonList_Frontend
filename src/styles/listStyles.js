@@ -14,10 +14,10 @@ export const ListItem = styled.li`
   border: 1px solid;
   padding: 10px;
   display:grid;
-  grid-template-columns: 2fr 5fr 1fr;
+  grid-template-columns: 2fr 1fr 5fr 1fr;
   grid-template-rows: 1fr;
   grid-template-areas:
-    "title description button";
+    "title cr description button";
 `
 export const ListItemTitle = styled.div`
   grid-area: title;
