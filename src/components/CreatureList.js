@@ -10,6 +10,7 @@ const CreatureList = () => {
   const [Creatures, setCreatures] = useState([]);
   const [currentCreature, setCurrentCreature] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(-1);
+  const [sort, setSort] = useState("");
 
   useEffect(() => {
     retrieveCreatures();
@@ -59,16 +60,6 @@ const CreatureList = () => {
       });
   };
 
-  function addTestGuy(i) {
-    const spider = creatureData[i]
-    console.log("spid" + spider)
-    CreatureDataService.create(spider)
-    .catch(e => {
-        console.log(e);
-    }).then(
-    );
-  }
-
   function addGuy(guy) {
   CreatureDataService.create(guy)
         .catch(e => {
@@ -82,6 +73,83 @@ const CreatureList = () => {
     srdData.default.forEach(addGuy)
     console.log("done")
     refreshList()
+  }
+
+  function sortAlphaName(list){
+    var newList;
+    if (sort != "alphaNormal"){
+      newList = sortAlphaNameInc(list);
+    } else {
+      newList = sortAlphaNameDec(list);
+    }
+    setCreatures(newList)
+  }
+
+  function sortAlphaNameInc(list) {
+    var newList = list.slice(0).sort(function(a, b)
+    {
+     var x = a.name; 
+     var y = b.name;
+     return ((x < y) ? -1 : ((x > y) ? 1 : 0));
+    });
+    setSort("alphaNormal")
+    return newList;
+  }
+
+  function sortAlphaNameDec(list) {
+    var newList = list.slice(0).sort(function(a, b)
+    {
+     var x = a.name; 
+     var y = b.name;
+     return ((x > y) ? -1 : ((x < y) ? 1 : 0));
+    });
+    setSort("alphaReverse")
+    return newList;
+  }
+
+  function sortCR(list){
+    var newList;
+    if (sort != "crNormal"){
+      newList = sortCRInc(list);
+    } else {
+      newList = sortCRDec(list);
+    }
+    setCreatures(newList)
+  }
+
+  function sortCRInc(list) {
+    var newList = list.slice(0).sort(function(a, b)
+    {
+     var x = a.challenge_rating; 
+     var y = b.challenge_rating;
+     return ((x < y) ? -1 : ((x > y) ? 1 : 0));
+    });
+    setSort("crNormal")
+    return newList;
+  }
+
+  function sortCRDec(list) {
+    var newList = list.slice(0).sort(function(a, b)
+    {
+     var x = a.challenge_rating; 
+     var y = b.challenge_rating;
+     return ((x > y) ? -1 : ((x < y) ? 1 : 0));
+    });
+    setSort("crReverse")
+    return newList;
+  }
+
+  function toFraction(number){
+    switch(number){
+      case 0.125:
+        return "1/8"
+      case 0.25:
+        return "1/4"
+      case 0.5:
+        return "1/2"
+      default:
+        return number
+    }
   }
 
   return (
@@ -100,6 +168,23 @@ const CreatureList = () => {
       <div >
         <Title>Creatures List ({Creatures.length})</Title>
         <List >
+          {Creatures.length != 0 ? (
+            <ListItem>
+              <ListItemTitle onClick={() => sortAlphaName(Creatures)}>
+              <strong>Name</strong>
+                {sort != "alphaNormal" ? " ˄" : " ˅"}
+              </ListItemTitle>
+              <div style={{gridArea:"cr"}} onClick={() => sortCR(Creatures)}>
+              <strong>CR</strong>
+                {sort != "crNormal" ? " ˄" : " ˅"} 
+              </div>
+              <ListItemDes style={{gridArea:"description"}}>
+                <strong>Description</strong>
+              </ListItemDes>
+            </ListItem>)
+          : <p> No Creatures </p>
+          }
+          
           {Creatures &&
             Creatures.map((Creature, index) => (
               <ListItem
@@ -111,7 +196,7 @@ const CreatureList = () => {
                   {Creature.name}
                 </ListItemTitle>
                 <div style={{gridArea:"cr"}}>
-                {Creature.challenge_rating}
+                {toFraction(Creature.challenge_rating)}
                 </div>
                 <ListItemDes style={{gridArea:"description"}}>
                 {Creature.size} {Creature.type} {Creature.subtype} : {Creature.alignment}
@@ -125,14 +210,6 @@ const CreatureList = () => {
         </List >
 
       </div>
-        {currentCreature ? (
-          <CreatureInfo currentCreature={currentCreature} />
-        ) : (
-          <div>
-            <br />
-            <p>Please click on a Creature...</p>
-          </div>
-        )}
     </ Container>
   );
 };
