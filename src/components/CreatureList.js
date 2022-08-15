@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from "react";
 import CreatureDataService from "../services/CreatureService";
-import creatureData from "../data/creatureData";
-import { SearchBar, CreatureInfo } from "./"
-import { Container, List, ListItem, ListItemTitle, ListItemDes } from "../styles/listStyles.js"
-import { Button, ButtonNeg, Title } from "../styles/theme";
-import * as srdData from "../data/srd.json"
+import { SearchBar, CreatureInfo } from "./";
+import { Container, List, ListItem, ListItemTitle, ListItemDes } from "../styles/listStyles.js";
+import { Button, ButtonNeg, Title, Loading } from "../styles/theme";
+import * as srdData from "../data/srd.json";
+
 
 const CreatureList = () => {
   const [Creatures, setCreatures] = useState([]);
   const [currentCreature, setCurrentCreature] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(-1);
+  const [loading, setLoading] = useState(false);
   const [sort, setSort] = useState("");
 
   useEffect(() => {
@@ -34,6 +35,10 @@ const CreatureList = () => {
   };
 
   const setActiveCreature = (Creature, index, e) => {
+    if(Creature === currentCreature){
+      refreshList();
+      return;
+    }
     setCurrentCreature(Creature);
     setCurrentIndex(index);
   };
@@ -68,16 +73,22 @@ const CreatureList = () => {
         );
   }
 
-  function addAllFromFile() {
-    console.log("loading")
-    srdData.default.forEach(addGuy)
-    console.log("done")
-    refreshList()
+  async function addAllFromFile() {
+    var promises = srdData.default.map(async (element)=> {
+      addGuy(element);
+      return new Promise((res, rej) => {res()})
+    });
+    Promise.all(promises)
+    .then((results) => {
+      console.log("done");
+      refreshList();
+    })
+
   }
 
   function sortAlphaName(list){
     var newList;
-    if (sort != "alphaNormal"){
+    if (sort !== "alphaNormal"){
       newList = sortAlphaNameInc(list);
     } else {
       newList = sortAlphaNameDec(list);
@@ -109,7 +120,7 @@ const CreatureList = () => {
 
   function sortCR(list){
     var newList;
-    if (sort != "crNormal"){
+    if (sort !== "crNormal"){
       newList = sortCRInc(list);
     } else {
       newList = sortCRDec(list);
@@ -154,29 +165,39 @@ const CreatureList = () => {
 
   return (
     <Container>
-      <Button
-        onClick={() => addAllFromFile()}
-      >
-        add all srd (takes a min, will not create duplicates)
-      </Button>
-      <ButtonNeg    
-          onClick={removeAllCreatures}
+      <div>
+        <Button
+          onClick={() => addAllFromFile()}
+          style={{float:"left"}}
         >
-          Remove All
-        </ButtonNeg>
+          add all srd (takes a min, will not create duplicates)
+        </Button>
+        {loading ? <Loading style={{float:"left"}}></Loading>
+        : null
+        }
+        <br clear="all" />
+        <div onClick={removeAllCreatures}>
+          <ButtonNeg    
+              
+              style={{display:"block", float:"left"}}
+            >
+          </ButtonNeg>
+          <strong style={{margin:"0.5rem"}}>Remove All</strong>
+        </div>
+      </div>
       <SearchBar setCreatures={setCreatures} />
       <div >
         <Title>Creatures List ({Creatures.length})</Title>
         <List >
-          {Creatures.length != 0 ? (
+          {Creatures.length !== 0 ? (
             <ListItem>
               <ListItemTitle onClick={() => sortAlphaName(Creatures)}>
               <strong>Name</strong>
-                {sort != "alphaNormal" ? " ˄" : " ˅"}
+                {sort !== "alphaNormal" ? " ˄" : " ˅"}
               </ListItemTitle>
               <div style={{gridArea:"cr"}} onClick={() => sortCR(Creatures)}>
               <strong>CR</strong>
-                {sort != "crNormal" ? " ˄" : " ˅"} 
+                {sort !== "crNormal" ? " ˄" : " ˅"} 
               </div>
               <ListItemDes style={{gridArea:"description"}}>
                 <strong>Description</strong>
@@ -187,25 +208,33 @@ const CreatureList = () => {
           
           {Creatures &&
             Creatures.map((Creature, index) => (
-              <ListItem
-                key={index}
-              >
-                <ListItemTitle
-                  onClick={() => setActiveCreature(Creature, index)}
+              <>
+                <ListItem
+                  
                 >
-                  {Creature.name}
-                </ListItemTitle>
-                <div style={{gridArea:"cr"}}>
-                {toFraction(Creature.challenge_rating)}
-                </div>
-                <ListItemDes style={{gridArea:"description"}}>
-                {Creature.size} {Creature.type} {Creature.subtype} : {Creature.alignment}
-                  </ListItemDes>
-                <ButtonNeg
-                  onClick={() => removeCreature(Creature._id)}>
-                  Delete Me
-                </ButtonNeg>
-              </ListItem>
+                  <ListItemTitle
+                    onClick={() => setActiveCreature(Creature, index)}
+                  >
+                    {Creature.name}
+                  </ListItemTitle>
+                  <div style={{gridArea:"cr"}}>
+                  {toFraction(Creature.challenge_rating)}
+                  </div>
+                  <ListItemDes style={{gridArea:"description"}}>
+                  {Creature.size} {Creature.type} {Creature.subtype} : {Creature.alignment}
+                    </ListItemDes>
+                  <ButtonNeg
+                    onClick={() => removeCreature(Creature._id)}>
+                  </ButtonNeg>
+                </ListItem>
+                {
+                  Creature == currentCreature ? 
+                    <CreatureInfo currentCreature={currentCreature}>
+                    </CreatureInfo> 
+                    : null
+                }
+                
+              </>
             ))}
         </List >
 

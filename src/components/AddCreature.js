@@ -64,7 +64,7 @@ const AddCreature = () => {
     CreatureDataService.create(data)
       .then(response => {
         console.log(response)
-        if(response.status == 200){
+        if(response.status === 200){
           setSubmitted(true);
           console.log(response.data);
         } else {

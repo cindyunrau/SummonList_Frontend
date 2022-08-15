@@ -1,4 +1,7 @@
 import styled from 'styled-components'
+import { keyframes } from 'styled-components'
+import { ReactComponent as Delete } from "../images/icons/delete.svg";
+import { ReactComponent as Spinner } from "../images/icons/spinner.svg";
 
 export const theme = {
     colours: {
@@ -36,6 +39,19 @@ export const Button = styled.button`
       display:block;
 `
 
-export const ButtonNeg = styled(Button)`
-    background-color: ${theme.colours.negative};
+export const ButtonNeg = styled(Delete)`
+    fill: ${theme.colours.negative};
+    width: 1.8rem;
+    cursor: pointer;
 `
+const spin = keyframes`
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+`
+export const Loading = styled(Spinner)`
+    animation: ${spin} 4s linear infinite;
+    width: 2rem;
+    fill: ${theme.colours.tertiary};
+`
+
+
