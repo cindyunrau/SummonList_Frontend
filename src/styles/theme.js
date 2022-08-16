@@ -2,17 +2,16 @@ import styled from 'styled-components'
 import { keyframes } from 'styled-components'
 import { ReactComponent as Delete } from "../images/icons/delete.svg";
 import { ReactComponent as Spinner } from "../images/icons/spinner.svg";
+import { ReactComponent as Plus } from "../images/icons/add.svg";
 
 export const theme = {
     colours: {
-        primary: "#84a59d", // blue-green
-        secondary: "#f28482", //salmon-ish
-        tertiary: "#f6bd60", //yellow
-        lightPink: "#f5cac3",
-        ligherPink: "#f7ede2",
+        primary: "#404040", 
+        secondary: "#808080",
+        tertiary: "#b2b2b2", 
         white: "#ffffff",
         black: "#12100E",
-        negative: "#F24333" 
+        negative: "#404040" 
     }
     
 }
@@ -23,7 +22,7 @@ export const Title = styled.h4`
 `
 
 export const Button = styled.button`
-    background-color: ${theme.colours.primary};
+    background-color: ${theme.colours.secondary};
     color: ${theme.colours.white};
     font-weight: 400;
     text-align: center;
@@ -42,6 +41,16 @@ export const Button = styled.button`
 export const ButtonNeg = styled(Delete)`
     fill: ${theme.colours.negative};
     width: 1.8rem;
+    cursor: pointer;
+`
+export const Remove = styled(Delete)`
+    fill: ${theme.colours.secondary};
+    width: 1rem;
+    cursor: pointer;
+`
+export const Add = styled(Plus)`
+    fill: ${theme.colours.secondary};
+    width: 1rem;
     cursor: pointer;
 `
 const spin = keyframes`

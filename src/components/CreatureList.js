@@ -66,7 +66,9 @@ const CreatureList = () => {
   };
 
   function addGuy(guy) {
-  CreatureDataService.create(guy)
+    guy.source = "srd"
+    guy.tags.push("srd")
+    CreatureDataService.create(guy)
         .catch(e => {
             console.log(e);
         }).then(

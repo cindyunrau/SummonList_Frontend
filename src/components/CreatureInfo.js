@@ -2,9 +2,6 @@ import styled from 'styled-components';
 import { ItemInfo } from "../styles/listStyles"
 import { Link } from "react-router-dom"
 
-const Container = styled.div`
-    width:500px;
-`
 const Row = styled.div`
     display:grid;
     grid-auto-flow: column;
@@ -16,11 +13,6 @@ const AbilityStat = styled.div`
 `
 const TextStat = styled.div`
 `
-
-const Title = styled.h4`
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-`
 const Label = styled.label`
     font-weight: bold;
     padding:0;
@@ -30,9 +22,6 @@ const AbilityLabel = styled(Label)`
     width:100%;
     padding:0;
     margin:0;
-`
-const Tag = styled.div`
-    background.color: red;
 `
 
 const CreatureInfo = ({ currentCreature }) => {
@@ -48,12 +37,16 @@ const CreatureInfo = ({ currentCreature }) => {
         var string = "";
         var obj = currentCreature.speed
         for(const speed in obj) {
-            if(obj[speed]){
-                if(string != ""){
+            if(obj[speed] || obj[speed] === 0){
+                if(string !== ""){
                     string += ", "
                 }
-                string += (speed + " " + obj[speed] + "ft.")
-            } 
+                if(speed === "Walk"){
+                string += (obj[speed] + "ft.") 
+                } else {
+                  string += (speed + " " + obj[speed] + "ft.")  
+                }
+            }
         };
         return string;
     }
@@ -63,7 +56,7 @@ const CreatureInfo = ({ currentCreature }) => {
         var obj = currentCreature.properties
         for(const skill in obj) {
             if(obj[skill]){
-                if(string != ""){
+                if(string !== ""){
                     string += ", "
                 }
                 if(obj[skill]<0){
@@ -81,7 +74,7 @@ const CreatureInfo = ({ currentCreature }) => {
         var obj = currentCreature.senses
         for(const sense in obj) {
             if(obj[sense]){
-                if(string != ""){
+                if(string !== ""){
                     string += ", "
                 }
                 string += (sense + " " + obj[sense])
@@ -94,7 +87,7 @@ const CreatureInfo = ({ currentCreature }) => {
         var string = "";
         var obj = currentCreature.languages
         for(const i in obj) {
-            if(string != ""){
+            if(string !== ""){
                 string += ", "
             }
             string += (obj[i])
@@ -106,7 +99,7 @@ const CreatureInfo = ({ currentCreature }) => {
         var string = "";
         var obj = currentCreature.traits
         for(const i in obj) {
-            if(string != ""){
+            if(string !== ""){
                 string += "<br />"
             }
             string += "<strong>" + obj[i].name + ". </strong>" + obj[i].description 
@@ -119,7 +112,7 @@ const CreatureInfo = ({ currentCreature }) => {
         var obj = currentCreature.actions
         for(const i in obj) {
             if(!obj[i].legendary){
-                if(string != ""){
+                if(string !== ""){
                 string += "<br />"
                 }
                 string += "<strong>" + obj[i].name + ". </strong>" + obj[i].description 
@@ -133,98 +126,145 @@ const CreatureInfo = ({ currentCreature }) => {
         var obj = currentCreature.actions
         for(const i in obj) {
             if(obj[i].legendary){
-                if(string != ""){
+                if(string !== ""){
                 string += "<br />"
                 }
                 string += "<strong>" + obj[i].name + ". </strong>" + obj[i].description 
             }
         };
+        if(string !== "" && !currentCreature.tags.includes("legendary")){
+            currentCreature.tags.push("legendary") // this doesn't push to database
+        }
         return string;
     }
 
     const tags = () => {
-        var string = "";
+        var string = "Tags: ";
         var obj = currentCreature.tags
         for(const i in obj) {
-            string += "<i>"+obj[i] + "</i> "
+            if(string !== "Tags: "){
+                string += ", "
+            }
+            string += "<i>" + obj[i] + "</i>"
         };
         return string;
     }
 
     return (
         <ItemInfo>
+            {currentCreature.source ? 
             <TextStat>
                 <Label>Source:</Label>{" "}
-                {currentCreature.base ? "Original" : "Imported"}
+                {currentCreature.source}
             </TextStat>
-            <TextStat>
-                <Label>Armor Class:</Label>{" "}
-                {currentCreature.armor_class.value} ({currentCreature.armor_class.description})
-            </TextStat>
-            <TextStat>
-                <Label>Hit Points:</Label>{" "}
-                {currentCreature.hit_points.max} ({currentCreature.hit_points.dice[0].count}d{currentCreature.hit_points.dice[0].sides}+{currentCreature.hit_points.dice[0].mod})
-            </TextStat>
-            <TextStat>
-                <Label>Speed:</Label>{" "}
-                {speed()}
-            </TextStat>
-            <Row>
-                <AbilityStat>
-                    <AbilityLabel>STR:</AbilityLabel>
-                    {currentCreature.ability_scores.str + " (" + abilityMod(currentCreature.ability_scores.str) + ")"}
-                </AbilityStat>
-                <AbilityStat>
-                    <AbilityLabel>DEX:</AbilityLabel>
-                    {currentCreature.ability_scores.dex + " (" + abilityMod(currentCreature.ability_scores.dex) + ")"}
-                </AbilityStat>
-                <AbilityStat>
-                    <AbilityLabel>CON:</AbilityLabel>
-                    {currentCreature.ability_scores.con + " (" + abilityMod(currentCreature.ability_scores.con) + ")"}
-                </AbilityStat>
-                <AbilityStat>
-                    <AbilityLabel>INT:</AbilityLabel>
-                    {currentCreature.ability_scores.int + " (" + abilityMod(currentCreature.ability_scores.int) + ")"}
-                </AbilityStat>
-                <AbilityStat>
-                    <AbilityLabel>WIS:</AbilityLabel>
-                    {currentCreature.ability_scores.wis + " (" + abilityMod(currentCreature.ability_scores.wis) + ")"}
-                </AbilityStat>
-                <AbilityStat>
-                    <AbilityLabel>CHA:</AbilityLabel>
-                    {currentCreature.ability_scores.cha + " (" + abilityMod(currentCreature.ability_scores.cha) + ")"}
-                </AbilityStat>
-            </Row>
+            : null}
+            
+            {currentCreature.armor_class ? 
+                <TextStat>
+                    <Label>Armor Class:</Label>{" "}
+                    {currentCreature.armor_class.value + (currentCreature.armor_class.description ? " (" + currentCreature.armor_class.description + ")" : null) }
+                </TextStat>    
+            : null}
+            
+            {currentCreature.hit_points ? 
+                <TextStat>
+                    <Label>Hit Points:</Label>{" "}
+                    {currentCreature.hit_points.max + (currentCreature.hit_points.dice ? " (" + currentCreature.hit_points.dice.count + "d" + currentCreature.hit_points.dice.sides + "+" + currentCreature.hit_points.dice.mod + ")" : null) }
+                </TextStat>    
+            : null}
+
+            {currentCreature.speed ? 
+                <TextStat>
+                    <Label>Speed:</Label>{" "}
+                    {speed()}
+                </TextStat>
+            : null }
+
+            {currentCreature.ability_scores ? 
+                <Row>
+                    <AbilityStat>
+                        <AbilityLabel>STR:</AbilityLabel>
+                        {currentCreature.ability_scores.str ? currentCreature.ability_scores.str + " (" + abilityMod(currentCreature.ability_scores.str) + ")" 
+                        : "- -"}
+                    </AbilityStat>
+                    <AbilityStat>
+                        <AbilityLabel>DEX:</AbilityLabel>
+                        {currentCreature.ability_scores.dex ? currentCreature.ability_scores.dex + " (" + abilityMod(currentCreature.ability_scores.dex) + ")" 
+                        : "- -"}
+                    </AbilityStat>
+                    <AbilityStat>
+                        <AbilityLabel>CON:</AbilityLabel>
+                        {currentCreature.ability_scores.con ? currentCreature.ability_scores.con + " (" + abilityMod(currentCreature.ability_scores.con) + ")" 
+                        : "- -"}
+                    </AbilityStat>
+                    <AbilityStat>
+                        <AbilityLabel>INT:</AbilityLabel>
+                        {currentCreature.ability_scores.int ? currentCreature.ability_scores.int + " (" + abilityMod(currentCreature.ability_scores.int) + ")" 
+                        : "- -"}
+                    </AbilityStat>
+                    <AbilityStat>
+                        <AbilityLabel>WIS:</AbilityLabel>
+                        {currentCreature.ability_scores.wis ? currentCreature.ability_scores.wis + " (" + abilityMod(currentCreature.ability_scores.wis) + ")" 
+                        : "- -"}
+                    </AbilityStat>
+                    <AbilityStat>
+                        <AbilityLabel>CHA:</AbilityLabel>
+                        {currentCreature.ability_scores.cha ? currentCreature.ability_scores.cha + " (" + abilityMod(currentCreature.ability_scores.cha) + ")" 
+                        : "- -"}
+                    </AbilityStat>
+                </Row>
+            : null }
+
+            {currentCreature.properties ? 
             <TextStat>
                 <Label>Skills:</Label>{" "}
                 {skills()}
             </TextStat>
+            : null }
+
+            {currentCreature.senses ? 
             <TextStat>
                 <Label>Senses:</Label>{" "}
                 {senses()}
             </TextStat>
+            : null }
+
+            {currentCreature.languages ? 
             <TextStat>
                 <Label>Languages:</Label>{" "}
                 {languages()}
             </TextStat>
+            : null }
+
+            {currentCreature.traits ? 
             <TextStat>
                 <hr></hr>
                 <div dangerouslySetInnerHTML={{__html: traits()}}></div>
             </TextStat>
+            : null }
+
+            {currentCreature.actions ? 
             <TextStat>
                 <hr></hr>
                 <h5>Actions:</h5>{" "}
                 <div dangerouslySetInnerHTML={{__html: actions()}}></div>
             </TextStat>
+            : null }
+
+            {currentCreature.actions ? 
             <TextStat>
                 <hr></hr>
                 <h5>Legendary Actions:</h5>{" "}
                 <div dangerouslySetInnerHTML={{__html: legActions()}}></div>
             </TextStat>
+            : null }
+
+            {currentCreature.tags ? 
             <TextStat>
                 <hr></hr>
                 <div dangerouslySetInnerHTML={{__html: tags()}}></div>
             </TextStat>
+            : null }
 
             {/* <Link
               to={"/Creatures/" + currentCreature.id}

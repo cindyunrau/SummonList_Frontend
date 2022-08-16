@@ -13,13 +13,12 @@
     },
     "hit_points": {
       "max": 135,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 18,
           "mod": 36
         }
-      ]
     },
     "speed": {
       "Walk": 10,
@@ -153,13 +152,12 @@
     },
     "hit_points": {
       "max": 9,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 2,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -242,13 +240,12 @@
     },
     "hit_points": {
       "max": 195,
-      "dice": [
+      "dice": 
         {
           "sides": 12,
           "count": 17,
           "mod": 85
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -403,13 +400,12 @@
     },
     "hit_points": {
       "max": 225,
-      "dice": [
+      "dice": 
         {
           "sides": 12,
           "count": 18,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -573,13 +569,12 @@
     },
     "hit_points": {
       "max": 225,
-      "dice": [
+      "dice": 
         {
           "sides": 12,
           "count": 18,
           "mod": 108
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -729,13 +724,12 @@
     },
     "hit_points": {
       "max": 172,
-      "dice": [
+      "dice": 
         {
           "sides": 12,
           "count": 15,
           "mod": 75
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -867,13 +861,12 @@
     },
     "hit_points": {
       "max": 212,
-      "dice": [
+      "dice": 
         {
           "sides": 12,
           "count": 17,
           "mod": 102
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -1028,13 +1021,12 @@
     },
     "hit_points": {
       "max": 184,
-      "dice": [
+      "dice": 
         {
           "sides": 12,
           "count": 16,
           "mod": 80
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -1184,13 +1176,12 @@
     },
     "hit_points": {
       "max": 256,
-      "dice": [
+      "dice": 
         {
           "sides": 12,
           "count": 19,
           "mod": 133
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -1345,13 +1336,12 @@
     },
     "hit_points": {
       "max": 207,
-      "dice": [
+      "dice": 
         {
           "sides": 12,
           "count": 18,
           "mod": 90
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -1509,13 +1499,12 @@
     },
     "hit_points": {
       "max": 256,
-      "dice": [
+      "dice": 
         {
           "sides": 12,
           "count": 19,
           "mod": 133
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -1675,13 +1664,12 @@
     },
     "hit_points": {
       "max": 243,
-      "dice": [
+      "dice": 
         {
           "sides": 12,
           "count": 18,
           "mod": 126
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -1831,13 +1819,12 @@
     },
     "hit_points": {
       "max": 200,
-      "dice": [
+      "dice": 
         {
           "sides": 12,
           "count": 16,
           "mod": 96
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -1992,13 +1979,12 @@
     },
     "hit_points": {
       "max": 90,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 12,
           "mod": 24
         }
-      ]
     },
     "speed": {
       "Walk": 0,
@@ -2115,13 +2101,12 @@
     },
     "hit_points": {
       "max": 367,
-      "dice": [
+      "dice": 
         {
           "sides": 20,
           "count": 21,
           "mod": 147
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -2276,13 +2261,12 @@
     },
     "hit_points": {
       "max": 481,
-      "dice": [
+      "dice": 
         {
           "sides": 20,
           "count": 26,
           "mod": 208
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -2426,13 +2410,12 @@
     },
     "hit_points": {
       "max": 297,
-      "dice": [
+      "dice": 
         {
           "sides": 20,
           "count": 17,
           "mod": 119
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -2587,13 +2570,12 @@
     },
     "hit_points": {
       "max": 444,
-      "dice": [
+      "dice": 
         {
           "sides": 20,
           "count": 24,
           "mod": 192
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -2753,13 +2735,12 @@
     },
     "hit_points": {
       "max": 350,
-      "dice": [
+      "dice": 
         {
           "sides": 20,
           "count": 20,
           "mod": 140
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -2914,13 +2895,12 @@
     },
     "hit_points": {
       "max": 546,
-      "dice": [
+      "dice": 
         {
           "sides": 20,
           "count": 28,
           "mod": 252
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -3080,13 +3060,12 @@
     },
     "hit_points": {
       "max": 385,
-      "dice": [
+      "dice": 
         {
           "sides": 20,
           "count": 22,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -3242,13 +3221,12 @@
     },
     "hit_points": {
       "max": 546,
-      "dice": [
+      "dice": 
         {
           "sides": 20,
           "count": 28,
           "mod": 252
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -3398,13 +3376,12 @@
     },
     "hit_points": {
       "max": 487,
-      "dice": [
+      "dice": 
         {
           "sides": 20,
           "count": 25,
           "mod": 225
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -3559,13 +3536,12 @@
     },
     "hit_points": {
       "max": 333,
-      "dice": [
+      "dice": 
         {
           "sides": 20,
           "count": 18,
           "mod": 144
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -3702,13 +3678,12 @@
     },
     "hit_points": {
       "max": 199,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 19,
           "mod": 95
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -3844,13 +3819,12 @@
     },
     "hit_points": {
       "max": 33,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 6,
           "mod": 6
         }
-      ]
     },
     "speed": {
       "Walk": 25,
@@ -3961,13 +3935,12 @@
     },
     "hit_points": {
       "max": 39,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 6,
           "mod": 6
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -4057,13 +4030,12 @@
     },
     "hit_points": {
       "max": 19,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 3,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -4155,13 +4127,12 @@
     },
     "hit_points": {
       "max": 99,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 18,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -4255,13 +4226,12 @@
     },
     "hit_points": {
       "max": 78,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 12,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -4372,13 +4342,12 @@
     },
     "hit_points": {
       "max": 10,
-      "dice": [
+      "dice": 
         {
           "sides": 6,
           "count": 3,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 20,
@@ -4467,13 +4436,12 @@
     },
     "hit_points": {
       "max": 59,
-      "dice": [
+      "dice": 
         {
           "sides": 12,
           "count": 7,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 20,
@@ -4563,13 +4531,12 @@
     },
     "hit_points": {
       "max": 19,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 3,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 50,
@@ -4646,13 +4613,12 @@
     },
     "hit_points": {
       "max": 39,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 6,
           "mod": 12
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -4752,13 +4718,12 @@
     },
     "hit_points": {
       "max": 3,
-      "dice": [
+      "dice": 
         {
           "sides": 6,
           "count": 1,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -4841,13 +4806,12 @@
     },
     "hit_points": {
       "max": 3,
-      "dice": [
+      "dice": 
         {
           "sides": 4,
           "count": 1,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 20,
@@ -4932,13 +4896,12 @@
     },
     "hit_points": {
       "max": 262,
-      "dice": [
+      "dice": 
         {
           "sides": 12,
           "count": 21,
           "mod": 126
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -5080,13 +5043,12 @@
     },
     "hit_points": {
       "max": 11,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 2,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -5173,13 +5135,12 @@
     },
     "hit_points": {
       "max": 65,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 10,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -5277,13 +5238,12 @@
     },
     "hit_points": {
       "max": 110,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 13,
           "mod": 52
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -5419,13 +5379,12 @@
     },
     "hit_points": {
       "max": 52,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 8,
           "mod": 16
         }
-      ]
     },
     "speed": {
       "Walk": 20,
@@ -5510,13 +5469,12 @@
     },
     "hit_points": {
       "max": 1,
-      "dice": [
+      "dice": 
         {
           "sides": 4,
           "count": 1,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 5,
@@ -5606,13 +5564,12 @@
     },
     "hit_points": {
       "max": 52,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 8,
           "mod": 16
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -5738,13 +5695,12 @@
     },
     "hit_points": {
       "max": 168,
-      "dice": [
+      "dice": 
         {
           "sides": 12,
           "count": 16,
           "mod": 64
         }
-      ]
     },
     "speed": {
       "Walk": 50,
@@ -5861,13 +5817,12 @@
     },
     "hit_points": {
       "max": 67,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 9,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -5950,13 +5905,12 @@
     },
     "hit_points": {
       "max": 19,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 3,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -6054,13 +6008,12 @@
     },
     "hit_points": {
       "max": 33,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 6,
           "mod": 6
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -6161,13 +6114,12 @@
     },
     "hit_points": {
       "max": 85,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 10,
           "mod": 30
         }
-      ]
     },
     "speed": {
       "Walk": 20,
@@ -6284,13 +6236,12 @@
     },
     "hit_points": {
       "max": 22,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 4,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -6379,13 +6330,12 @@
     },
     "hit_points": {
       "max": 7,
-      "dice": [
+      "dice": 
         {
           "sides": 6,
           "count": 2,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 10,
@@ -6473,13 +6423,12 @@
     },
     "hit_points": {
       "max": 52,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 8,
           "mod": 16
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -6574,13 +6523,12 @@
     },
     "hit_points": {
       "max": 11,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 2,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -6668,13 +6616,12 @@
     },
     "hit_points": {
       "max": 142,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 15,
           "mod": 60
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -6820,13 +6767,12 @@
     },
     "hit_points": {
       "max": 16,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 3,
           "mod": 3
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -6921,13 +6867,12 @@
     },
     "hit_points": {
       "max": 32,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 5,
           "mod": 10
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -7028,13 +6973,12 @@
     },
     "hit_points": {
       "max": 34,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 4,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -7132,13 +7076,12 @@
     },
     "hit_points": {
       "max": 27,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 5,
           "mod": 5
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -7239,13 +7182,12 @@
     },
     "hit_points": {
       "max": 94,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 9,
           "mod": 45
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -7336,13 +7278,12 @@
     },
     "hit_points": {
       "max": 15,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 2,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 50,
@@ -7419,13 +7360,12 @@
     },
     "hit_points": {
       "max": 51,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 6,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -7530,13 +7470,12 @@
     },
     "hit_points": {
       "max": 2,
-      "dice": [
+      "dice": 
         {
           "sides": 4,
           "count": 1,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -7619,13 +7558,12 @@
     },
     "hit_points": {
       "max": 42,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 5,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -7725,13 +7663,12 @@
     },
     "hit_points": {
       "max": 45,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 6,
           "mod": 12
         }
-      ]
     },
     "speed": {
       "Walk": 50,
@@ -7840,13 +7777,12 @@
     },
     "hit_points": {
       "max": 85,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 10,
           "mod": 40
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -7968,13 +7904,12 @@
     },
     "hit_points": {
       "max": 114,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 12,
           "mod": 48
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -8088,13 +8023,12 @@
     },
     "hit_points": {
       "max": 93,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 11,
           "mod": 33
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -8200,13 +8134,12 @@
     },
     "hit_points": {
       "max": 133,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 14,
           "mod": 56
         }
-      ]
     },
     "speed": {
       "Walk": 20,
@@ -8339,13 +8272,12 @@
     },
     "hit_points": {
       "max": 78,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 12,
           "mod": 12
         }
-      ]
     },
     "speed": {
       "Walk": 10,
@@ -8466,13 +8398,12 @@
     },
     "hit_points": {
       "max": 200,
-      "dice": [
+      "dice": 
         {
           "sides": 12,
           "count": 16,
           "mod": 96
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -8578,13 +8509,12 @@
     },
     "hit_points": {
       "max": 27,
-      "dice": [
+      "dice": 
         {
           "sides": 6,
           "count": 6,
           "mod": 6
         }
-      ]
     },
     "speed": {
       "Walk": 20,
@@ -8663,13 +8593,12 @@
     },
     "hit_points": {
       "max": 4,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 1,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -8746,13 +8675,12 @@
     },
     "hit_points": {
       "max": 13,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 2,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -8841,13 +8769,12 @@
     },
     "hit_points": {
       "max": 22,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 4,
           "mod": 4
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -8942,13 +8869,12 @@
     },
     "hit_points": {
       "max": 97,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 13,
           "mod": 39
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -9068,13 +8994,12 @@
     },
     "hit_points": {
       "max": 2,
-      "dice": [
+      "dice": 
         {
           "sides": 4,
           "count": 1,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 20,
@@ -9159,13 +9084,12 @@
     },
     "hit_points": {
       "max": 19,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 3,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 20,
@@ -9248,13 +9172,12 @@
     },
     "hit_points": {
       "max": 22,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 6,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -9347,13 +9270,12 @@
     },
     "hit_points": {
       "max": 9,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 2,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -9436,13 +9358,12 @@
     },
     "hit_points": {
       "max": 22,
-      "dice": [
+      "dice": 
         {
           "sides": 6,
           "count": 5,
           "mod": 5
         }
-      ]
     },
     "speed": {
       "Walk": 10,
@@ -9537,13 +9458,12 @@
     },
     "hit_points": {
       "max": 39,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 6,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -9633,13 +9553,12 @@
     },
     "hit_points": {
       "max": 16,
-      "dice": [
+      "dice": 
         {
           "sides": 6,
           "count": 3,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 20,
@@ -9746,13 +9665,12 @@
     },
     "hit_points": {
       "max": 4,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 1,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 50,
@@ -9829,13 +9747,12 @@
     },
     "hit_points": {
       "max": 136,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 16,
           "mod": 64
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -9959,13 +9876,12 @@
     },
     "hit_points": {
       "max": 37,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 5,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 50,
@@ -10053,13 +9969,12 @@
     },
     "hit_points": {
       "max": 161,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 14,
           "mod": 84
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -10170,13 +10085,12 @@
     },
     "hit_points": {
       "max": 52,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 8,
           "mod": 16
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -10284,13 +10198,12 @@
     },
     "hit_points": {
       "max": 19,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 3,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -10367,13 +10280,12 @@
     },
     "hit_points": {
       "max": 341,
-      "dice": [
+      "dice": 
         {
           "sides": 20,
           "count": 22,
           "mod": 110
         }
-      ]
     },
     "speed": {
       "Walk": 20,
@@ -10497,13 +10409,12 @@
     },
     "hit_points": {
       "max": 18,
-      "dice": [
+      "dice": 
         {
           "sides": 6,
           "count": 4,
           "mod": 4
         }
-      ]
     },
     "speed": {
       "Walk": 20,
@@ -10616,13 +10527,12 @@
     },
     "hit_points": {
       "max": 123,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 13,
           "mod": 52
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -10753,13 +10663,12 @@
     },
     "hit_points": {
       "max": 13,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 3,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -10865,13 +10774,12 @@
     },
     "hit_points": {
       "max": 27,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 5,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -10954,13 +10862,12 @@
     },
     "hit_points": {
       "max": 22,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 5,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -11066,13 +10973,12 @@
     },
     "hit_points": {
       "max": 26,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 4,
           "mod": 8
         }
-      ]
     },
     "speed": {
       "Walk": 25,
@@ -11186,13 +11092,12 @@
     },
     "hit_points": {
       "max": 17,
-      "dice": [
+      "dice": 
         {
           "sides": 6,
           "count": 5,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -11304,13 +11209,12 @@
     },
     "hit_points": {
       "max": 3,
-      "dice": [
+      "dice": 
         {
           "sides": 6,
           "count": 1,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 10,
@@ -11393,13 +11297,12 @@
     },
     "hit_points": {
       "max": 126,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 12,
           "mod": 60
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -11515,13 +11418,12 @@
     },
     "hit_points": {
       "max": 200,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 16,
           "mod": 112
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -11636,13 +11538,12 @@
     },
     "hit_points": {
       "max": 76,
-      "dice": [
+      "dice": 
         {
           "sides": 12,
           "count": 8,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -11735,13 +11636,12 @@
     },
     "hit_points": {
       "max": 13,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 2,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 50,
@@ -11824,13 +11724,12 @@
     },
     "hit_points": {
       "max": 153,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 18,
           "mod": 72
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -11962,13 +11861,12 @@
     },
     "hit_points": {
       "max": 44,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 8,
           "mod": 8
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -12093,13 +11991,12 @@
     },
     "hit_points": {
       "max": 85,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 10,
           "mod": 30
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -12205,13 +12102,12 @@
     },
     "hit_points": {
       "max": 102,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 12,
           "mod": 36
         }
-      ]
     },
     "speed": {
       "Walk": 50,
@@ -12332,13 +12228,12 @@
     },
     "hit_points": {
       "max": 162,
-      "dice": [
+      "dice": 
         {
           "sides": 12,
           "count": 13,
           "mod": 78
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -12435,13 +12330,12 @@
     },
     "hit_points": {
       "max": 93,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 11,
           "mod": 44
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -12573,13 +12467,12 @@
     },
     "hit_points": {
       "max": 5,
-      "dice": [
+      "dice": 
         {
           "sides": 4,
           "count": 2,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -12664,13 +12557,12 @@
     },
     "hit_points": {
       "max": 17,
-      "dice": [
+      "dice": 
         {
           "sides": 6,
           "count": 5,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 0,
@@ -12775,13 +12667,12 @@
     },
     "hit_points": {
       "max": 1,
-      "dice": [
+      "dice": 
         {
           "sides": 4,
           "count": 1,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 20,
@@ -12860,13 +12751,12 @@
     },
     "hit_points": {
       "max": 138,
-      "dice": [
+      "dice": 
         {
           "sides": 12,
           "count": 12,
           "mod": 60
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -12963,13 +12853,12 @@
     },
     "hit_points": {
       "max": 52,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 7,
           "mod": 21
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -13082,13 +12971,12 @@
     },
     "hit_points": {
       "max": 84,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 8,
           "mod": 40
         }
-      ]
     },
     "speed": {
       "Walk": 15,
@@ -13193,13 +13081,12 @@
     },
     "hit_points": {
       "max": 36,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 8,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -13307,13 +13194,12 @@
     },
     "hit_points": {
       "max": 45,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 10,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 0,
@@ -13443,13 +13329,12 @@
     },
     "hit_points": {
       "max": 22,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 5,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -13538,13 +13423,12 @@
     },
     "hit_points": {
       "max": 157,
-      "dice": [
+      "dice": 
         {
           "sides": 12,
           "count": 15,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -13636,13 +13520,12 @@
     },
     "hit_points": {
       "max": 13,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 2,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -13742,13 +13625,12 @@
     },
     "hit_points": {
       "max": 22,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 4,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 10,
@@ -13838,13 +13720,12 @@
     },
     "hit_points": {
       "max": 42,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 5,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -13932,13 +13813,12 @@
     },
     "hit_points": {
       "max": 4,
-      "dice": [
+      "dice": 
         {
           "sides": 6,
           "count": 1,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -14017,13 +13897,12 @@
     },
     "hit_points": {
       "max": 60,
-      "dice": [
+      "dice": 
         {
           "sides": 12,
           "count": 8,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -14112,13 +13991,12 @@
     },
     "hit_points": {
       "max": 13,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 3,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -14203,13 +14081,12 @@
     },
     "hit_points": {
       "max": 85,
-      "dice": [
+      "dice": 
         {
           "sides": 12,
           "count": 9,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -14307,13 +14184,12 @@
     },
     "hit_points": {
       "max": 26,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 4,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 10,
@@ -14412,13 +14288,12 @@
     },
     "hit_points": {
       "max": 42,
-      "dice": [
+      "dice": 
         {
           "sides": 12,
           "count": 5,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 60,
@@ -14514,13 +14389,12 @@
     },
     "hit_points": {
       "max": 4,
-      "dice": [
+      "dice": 
         {
           "sides": 6,
           "count": 1,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -14605,13 +14479,12 @@
     },
     "hit_points": {
       "max": 18,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 4,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -14706,13 +14579,12 @@
     },
     "hit_points": {
       "max": 19,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 3,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -14800,13 +14672,12 @@
     },
     "hit_points": {
       "max": 45,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 6,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 50,
@@ -14889,13 +14760,12 @@
     },
     "hit_points": {
       "max": 19,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 3,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -14985,13 +14855,12 @@
     },
     "hit_points": {
       "max": 52,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 8,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 10,
@@ -15091,13 +14960,12 @@
     },
     "hit_points": {
       "max": 19,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 3,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 5,
@@ -15190,13 +15058,12 @@
     },
     "hit_points": {
       "max": 11,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 2,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -15275,13 +15142,12 @@
     },
     "hit_points": {
       "max": 7,
-      "dice": [
+      "dice": 
         {
           "sides": 6,
           "count": 2,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -15371,13 +15237,12 @@
     },
     "hit_points": {
       "max": 7,
-      "dice": [
+      "dice": 
         {
           "sides": 6,
           "count": 2,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -15456,13 +15321,12 @@
     },
     "hit_points": {
       "max": 52,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 7,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -15556,13 +15420,12 @@
     },
     "hit_points": {
       "max": 16,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 3,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 0,
@@ -15650,13 +15513,12 @@
     },
     "hit_points": {
       "max": 126,
-      "dice": [
+      "dice": 
         {
           "sides": 12,
           "count": 11,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 0,
@@ -15746,13 +15608,12 @@
     },
     "hit_points": {
       "max": 26,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 4,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -15853,13 +15714,12 @@
     },
     "hit_points": {
       "max": 39,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 6,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 20,
@@ -15954,13 +15814,12 @@
     },
     "hit_points": {
       "max": 22,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 3,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 10,
@@ -16063,13 +15922,12 @@
     },
     "hit_points": {
       "max": 13,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 3,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 10,
@@ -16146,13 +16004,12 @@
     },
     "hit_points": {
       "max": 9,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 2,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -16237,13 +16094,12 @@
     },
     "hit_points": {
       "max": 11,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 2,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -16339,13 +16195,12 @@
     },
     "hit_points": {
       "max": 67,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 9,
           "mod": 27
         }
-      ]
     },
     "speed": {
       "Walk": 10,
@@ -16448,13 +16303,12 @@
     },
     "hit_points": {
       "max": 157,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 15,
           "mod": 75
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -16581,13 +16435,12 @@
     },
     "hit_points": {
       "max": 112,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 15,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -16696,13 +16549,12 @@
     },
     "hit_points": {
       "max": 22,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 5,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -16807,13 +16659,12 @@
     },
     "hit_points": {
       "max": 4,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 1,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -16901,13 +16752,12 @@
     },
     "hit_points": {
       "max": 7,
-      "dice": [
+      "dice": 
         {
           "sides": 6,
           "count": 2,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -17003,13 +16853,12 @@
     },
     "hit_points": {
       "max": 60,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 8,
           "mod": 24
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -17110,13 +16959,12 @@
     },
     "hit_points": {
       "max": 114,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 12,
           "mod": 48
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -17219,13 +17067,12 @@
     },
     "hit_points": {
       "max": 22,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 3,
           "mod": 9
         }
-      ]
     },
     "speed": {
       "Walk": 10,
@@ -17335,13 +17182,12 @@
     },
     "hit_points": {
       "max": 38,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 7,
           "mod": 7
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -17445,13 +17291,12 @@
     },
     "hit_points": {
       "max": 82,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 11,
           "mod": 33
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -17575,13 +17420,12 @@
     },
     "hit_points": {
       "max": 27,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 6,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -17686,13 +17530,12 @@
     },
     "hit_points": {
       "max": 59,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 7,
           "mod": 21
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -17792,13 +17635,12 @@
     },
     "hit_points": {
       "max": 11,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 2,
           "mod": 2
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -17896,13 +17738,12 @@
     },
     "hit_points": {
       "max": 11,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 2,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -17979,13 +17820,12 @@
     },
     "hit_points": {
       "max": 127,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 15,
           "mod": 45
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -18095,13 +17935,12 @@
     },
     "hit_points": {
       "max": 136,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 16,
           "mod": 48
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -18234,13 +18073,12 @@
     },
     "hit_points": {
       "max": 65,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 10,
           "mod": 20
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -18361,13 +18199,12 @@
     },
     "hit_points": {
       "max": 38,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 7,
           "mod": 7
         }
-      ]
     },
     "speed": {
       "Walk": 20,
@@ -18464,13 +18301,12 @@
     },
     "hit_points": {
       "max": 1,
-      "dice": [
+      "dice": 
         {
           "sides": 4,
           "count": 1,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 10,
@@ -18553,13 +18389,12 @@
     },
     "hit_points": {
       "max": 45,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 7,
           "mod": 14
         }
-      ]
     },
     "speed": {
       "Walk": 50,
@@ -18662,13 +18497,12 @@
     },
     "hit_points": {
       "max": 136,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 13,
           "mod": 65
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -18795,13 +18629,12 @@
     },
     "hit_points": {
       "max": 105,
-      "dice": [
+      "dice": 
         {
           "sides": 12,
           "count": 10,
           "mod": 40
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -18895,13 +18728,12 @@
     },
     "hit_points": {
       "max": 19,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 3,
           "mod": 3
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -18999,13 +18831,12 @@
     },
     "hit_points": {
       "max": 11,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 2,
           "mod": 2
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -19101,13 +18932,12 @@
     },
     "hit_points": {
       "max": 5,
-      "dice": [
+      "dice": 
         {
           "sides": 4,
           "count": 2,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 20,
@@ -19199,13 +19029,12 @@
     },
     "hit_points": {
       "max": 148,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 17,
           "mod": 55
         }
-      ]
     },
     "speed": {
       "Walk": 20,
@@ -19336,13 +19165,12 @@
     },
     "hit_points": {
       "max": 45,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 6,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 0,
@@ -19432,13 +19260,12 @@
     },
     "hit_points": {
       "max": 172,
-      "dice": [
+      "dice": 
         {
           "sides": 12,
           "count": 15,
           "mod": 75
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -19543,13 +19370,12 @@
     },
     "hit_points": {
       "max": 5,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 1,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 50,
@@ -19632,13 +19458,12 @@
     },
     "hit_points": {
       "max": 180,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 19,
           "mod": 76
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -19774,13 +19599,12 @@
     },
     "hit_points": {
       "max": 21,
-      "dice": [
+      "dice": 
         {
           "sides": 6,
           "count": 6,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -19899,13 +19723,12 @@
     },
     "hit_points": {
       "max": 10,
-      "dice": [
+      "dice": 
         {
           "sides": 4,
           "count": 3,
           "mod": 3
         }
-      ]
     },
     "speed": {
       "Walk": 20,
@@ -20026,13 +19849,12 @@
     },
     "hit_points": {
       "max": 104,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 16,
           "mod": 32
         }
-      ]
     },
     "speed": {
       "Walk": 50,
@@ -20146,13 +19968,12 @@
     },
     "hit_points": {
       "max": 210,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 20,
           "mod": 100
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -20295,13 +20116,12 @@
     },
     "hit_points": {
       "max": 3,
-      "dice": [
+      "dice": 
         {
           "sides": 6,
           "count": 1,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -20389,13 +20209,12 @@
     },
     "hit_points": {
       "max": 90,
-      "dice": [
+      "dice": 
         {
           "sides": 12,
           "count": 12,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 0,
@@ -20485,13 +20304,12 @@
     },
     "hit_points": {
       "max": 52,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 8,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -20600,13 +20418,12 @@
     },
     "hit_points": {
       "max": 5,
-      "dice": [
+      "dice": 
         {
           "sides": 6,
           "count": 2,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -20707,13 +20524,12 @@
     },
     "hit_points": {
       "max": 472,
-      "dice": [
+      "dice": 
         {
           "sides": 20,
           "count": 27,
           "mod": 189
         }
-      ]
     },
     "speed": {
       "Walk": 20,
@@ -20870,13 +20686,12 @@
     },
     "hit_points": {
       "max": 97,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 13,
           "mod": 26
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -20982,13 +20797,12 @@
     },
     "hit_points": {
       "max": 13,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 3,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 15,
@@ -21092,13 +20906,12 @@
     },
     "hit_points": {
       "max": 135,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 18,
           "mod": 54
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -21245,13 +21058,12 @@
     },
     "hit_points": {
       "max": 26,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 4,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 50,
@@ -21359,13 +21171,12 @@
     },
     "hit_points": {
       "max": 2,
-      "dice": [
+      "dice": 
         {
           "sides": 4,
           "count": 1,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 20,
@@ -21444,13 +21255,12 @@
     },
     "hit_points": {
       "max": 22,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 4,
           "mod": 4
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -21568,13 +21378,12 @@
     },
     "hit_points": {
       "max": 40,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 9,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -21657,13 +21466,12 @@
     },
     "hit_points": {
       "max": 22,
-      "dice": [
+      "dice": 
         {
           "sides": 6,
           "count": 5,
           "mod": 5
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -21781,13 +21589,12 @@
     },
     "hit_points": {
       "max": 9,
-      "dice": [
+      "dice": 
         {
           "sides": 6,
           "count": 2,
           "mod": 2
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -21885,13 +21692,12 @@
     },
     "hit_points": {
       "max": 126,
-      "dice": [
+      "dice": 
         {
           "sides": 12,
           "count": 11,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -21984,13 +21790,12 @@
     },
     "hit_points": {
       "max": 68,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 8,
           "mod": 24
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -22100,13 +21905,12 @@
     },
     "hit_points": {
       "max": 189,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 18,
           "mod": 90
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -22249,13 +22053,12 @@
     },
     "hit_points": {
       "max": 5,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 1,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -22338,13 +22141,12 @@
     },
     "hit_points": {
       "max": 127,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 17,
           "mod": 51
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -22454,13 +22256,12 @@
     },
     "hit_points": {
       "max": 11,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 2,
           "mod": 2
         }
-      ]
     },
     "speed": {
       "Walk": 10,
@@ -22544,13 +22345,12 @@
     },
     "hit_points": {
       "max": 45,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 6,
           "mod": 12
         }
-      ]
     },
     "speed": {
       "Walk": 10,
@@ -22661,13 +22461,12 @@
     },
     "hit_points": {
       "max": 58,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 9,
           "mod": 18
         }
-      ]
     },
     "speed": {
       "Walk": 15,
@@ -22783,13 +22582,12 @@
     },
     "hit_points": {
       "max": 76,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 9,
           "mod": 27
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -22894,13 +22692,12 @@
     },
     "hit_points": {
       "max": 67,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 9,
           "mod": 18
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -23007,13 +22804,12 @@
     },
     "hit_points": {
       "max": 11,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 2,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -23101,13 +22897,12 @@
     },
     "hit_points": {
       "max": 58,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 9,
           "mod": 18
         }
-      ]
     },
     "speed": {
       "Walk": 20,
@@ -23210,13 +23005,12 @@
     },
     "hit_points": {
       "max": 97,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 13,
           "mod": 39
         }
-      ]
     },
     "speed": {
       "Walk": 20,
@@ -23370,13 +23164,12 @@
     },
     "hit_points": {
       "max": 184,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 16,
           "mod": 96
         }
-      ]
     },
     "speed": {
       "Walk": 20,
@@ -23508,13 +23301,12 @@
     },
     "hit_points": {
       "max": 112,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 15,
           "mod": 45
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -23654,13 +23446,12 @@
     },
     "hit_points": {
       "max": 68,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 8,
           "mod": 24
         }
-      ]
     },
     "speed": {
       "Walk": 60,
@@ -23758,13 +23549,12 @@
     },
     "hit_points": {
       "max": 9,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 2,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -23847,13 +23637,12 @@
     },
     "hit_points": {
       "max": 45,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 6,
           "mod": 12
         }
-      ]
     },
     "speed": {
       "Walk": 10,
@@ -23966,13 +23755,12 @@
     },
     "hit_points": {
       "max": 3,
-      "dice": [
+      "dice": 
         {
           "sides": 6,
           "count": 1,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 5,
@@ -24072,13 +23860,12 @@
     },
     "hit_points": {
       "max": 59,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 7,
           "mod": 21
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -24168,13 +23955,12 @@
     },
     "hit_points": {
       "max": 85,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 9,
           "mod": 36
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -24267,13 +24053,12 @@
     },
     "hit_points": {
       "max": 110,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 13,
           "mod": 39
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -24389,13 +24174,12 @@
     },
     "hit_points": {
       "max": 15,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 2,
           "mod": 6
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -24491,13 +24275,12 @@
     },
     "hit_points": {
       "max": 114,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 12,
           "mod": 48
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -24602,13 +24385,12 @@
     },
     "hit_points": {
       "max": 1,
-      "dice": [
+      "dice": 
         {
           "sides": 4,
           "count": 1,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 5,
@@ -24698,13 +24480,12 @@
     },
     "hit_points": {
       "max": 59,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 7,
           "mod": 21
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -24804,13 +24585,12 @@
     },
     "hit_points": {
       "max": 13,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 3,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 50,
@@ -24908,13 +24688,12 @@
     },
     "hit_points": {
       "max": 59,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 7,
           "mod": 21
         }
-      ]
     },
     "speed": {
       "Walk": 60,
@@ -24994,13 +24773,12 @@
     },
     "hit_points": {
       "max": 32,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 5,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -25095,13 +24873,12 @@
     },
     "hit_points": {
       "max": 300,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 24,
           "mod": 168
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -25252,13 +25029,12 @@
     },
     "hit_points": {
       "max": 200,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 16,
           "mod": 112
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -25382,13 +25158,12 @@
     },
     "hit_points": {
       "max": 68,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 8,
           "mod": 24
         }
-      ]
     },
     "speed": {
       "Walk": 20,
@@ -25473,13 +25248,12 @@
     },
     "hit_points": {
       "max": 2,
-      "dice": [
+      "dice": 
         {
           "sides": 4,
           "count": 1,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -25558,13 +25332,12 @@
     },
     "hit_points": {
       "max": 42,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 5,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -25662,13 +25435,12 @@
     },
     "hit_points": {
       "max": 11,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 2,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -25745,13 +25517,12 @@
     },
     "hit_points": {
       "max": 27,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 5,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 25,
@@ -25839,13 +25610,12 @@
     },
     "hit_points": {
       "max": 7,
-      "dice": [
+      "dice": 
         {
           "sides": 4,
           "count": 2,
           "mod": 2
         }
-      ]
     },
     "speed": {
       "Walk": 15,
@@ -25956,13 +25726,12 @@
     },
     "hit_points": {
       "max": 247,
-      "dice": [
+      "dice": 
         {
           "sides": 20,
           "count": 15,
           "mod": 90
         }
-      ]
     },
     "speed": {
       "Walk": 50,
@@ -26063,13 +25832,12 @@
     },
     "hit_points": {
       "max": 7,
-      "dice": [
+      "dice": 
         {
           "sides": 4,
           "count": 3,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -26191,13 +25959,12 @@
     },
     "hit_points": {
       "max": 1,
-      "dice": [
+      "dice": 
         {
           "sides": 4,
           "count": 1,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 0,
@@ -26287,13 +26054,12 @@
     },
     "hit_points": {
       "max": 110,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 13,
           "mod": 52
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -26397,13 +26163,12 @@
     },
     "hit_points": {
       "max": 1,
-      "dice": [
+      "dice": 
         {
           "sides": 4,
           "count": 1,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 20,
@@ -26488,13 +26253,12 @@
     },
     "hit_points": {
       "max": 1,
-      "dice": [
+      "dice": 
         {
           "sides": 4,
           "count": 1,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 10,
@@ -26572,13 +26336,12 @@
     },
     "hit_points": {
       "max": 75,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 10,
           "mod": 30
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -26673,13 +26436,12 @@
     },
     "hit_points": {
       "max": 22,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 4,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 0,
@@ -26769,13 +26531,12 @@
     },
     "hit_points": {
       "max": 195,
-      "dice": [
+      "dice": 
         {
           "sides": 12,
           "count": 17,
           "mod": 85
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -26870,13 +26631,12 @@
     },
     "hit_points": {
       "max": 45,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 6,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -26959,13 +26719,12 @@
     },
     "hit_points": {
       "max": 13,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 2,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 60,
@@ -27042,13 +26801,12 @@
     },
     "hit_points": {
       "max": 248,
-      "dice": [
+      "dice": 
         {
           "sides": 20,
           "count": 16,
           "mod": 80
         }
-      ]
     },
     "speed": {
       "Walk": 20,
@@ -27146,13 +26904,12 @@
     },
     "hit_points": {
       "max": 93,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 11,
           "mod": 33
         }
-      ]
     },
     "speed": {
       "Walk": 10,
@@ -27262,13 +27019,12 @@
     },
     "hit_points": {
       "max": 33,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 6,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 10,
@@ -27378,13 +27134,12 @@
     },
     "hit_points": {
       "max": 27,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 5,
           "mod": 5
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -27479,13 +27234,12 @@
     },
     "hit_points": {
       "max": 52,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 7,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -27583,13 +27337,12 @@
     },
     "hit_points": {
       "max": 22,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 4,
           "mod": 4
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -27709,13 +27462,12 @@
     },
     "hit_points": {
       "max": 90,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 12,
           "mod": 24
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -27831,13 +27583,12 @@
     },
     "hit_points": {
       "max": 31,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 7,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -27947,13 +27698,12 @@
     },
     "hit_points": {
       "max": 1,
-      "dice": [
+      "dice": 
         {
           "sides": 4,
           "count": 1,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 10,
@@ -28032,13 +27782,12 @@
     },
     "hit_points": {
       "max": 16,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 3,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -28136,13 +27885,12 @@
     },
     "hit_points": {
       "max": 52,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 7,
           "mod": 21
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -28261,13 +28009,12 @@
     },
     "hit_points": {
       "max": 1,
-      "dice": [
+      "dice": 
         {
           "sides": 4,
           "count": 1,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 0,
@@ -28339,13 +28086,12 @@
     },
     "hit_points": {
       "max": 16,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 3,
           "mod": 3
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -28467,13 +28213,12 @@
     },
     "hit_points": {
       "max": 136,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 16,
           "mod": 48
         }
-      ]
     },
     "speed": {
       "Walk": 20,
@@ -28580,13 +28325,12 @@
     },
     "hit_points": {
       "max": 142,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 15,
           "mod": 60
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -28703,13 +28447,12 @@
     },
     "hit_points": {
       "max": 13,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 3,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 0,
@@ -28796,13 +28539,12 @@
     },
     "hit_points": {
       "max": 45,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 6,
           "mod": 18
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -28897,13 +28639,12 @@
     },
     "hit_points": {
       "max": 13,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 2,
           "mod": 4
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -29000,13 +28741,12 @@
     },
     "hit_points": {
       "max": 243,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 18,
           "mod": 144
         }
-      ]
     },
     "speed": {
       "Walk": 50,
@@ -29168,13 +28908,12 @@
     },
     "hit_points": {
       "max": 22,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 5,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 0,
@@ -29289,13 +29028,12 @@
     },
     "hit_points": {
       "max": 1,
-      "dice": [
+      "dice": 
         {
           "sides": 4,
           "count": 1,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 20,
@@ -29390,13 +29128,12 @@
     },
     "hit_points": {
       "max": 75,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 10,
           "mod": 20
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -29496,13 +29233,12 @@
     },
     "hit_points": {
       "max": 2,
-      "dice": [
+      "dice": 
         {
           "sides": 4,
           "count": 1,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 10,
@@ -29601,13 +29337,12 @@
     },
     "hit_points": {
       "max": 27,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 6,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -29710,13 +29445,12 @@
     },
     "hit_points": {
       "max": 21,
-      "dice": [
+      "dice": 
         {
           "sides": 6,
           "count": 6,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -29826,13 +29560,12 @@
     },
     "hit_points": {
       "max": 2,
-      "dice": [
+      "dice": 
         {
           "sides": 4,
           "count": 1,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 10,
@@ -29911,13 +29644,12 @@
     },
     "hit_points": {
       "max": 126,
-      "dice": [
+      "dice": 
         {
           "sides": 12,
           "count": 11,
           "mod": 55
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -30025,13 +29757,12 @@
     },
     "hit_points": {
       "max": 178,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 17,
           "mod": 85
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -30153,13 +29884,12 @@
     },
     "hit_points": {
       "max": 230,
-      "dice": [
+      "dice": 
         {
           "sides": 12,
           "count": 20,
           "mod": 100
         }
-      ]
     },
     "speed": {
       "Walk": 50,
@@ -30282,13 +30012,12 @@
     },
     "hit_points": {
       "max": 66,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 12,
           "mod": 12
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -30410,13 +30139,12 @@
     },
     "hit_points": {
       "max": 22,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 5,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 0,
@@ -30526,13 +30254,12 @@
     },
     "hit_points": {
       "max": 22,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 5,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 20,
@@ -30632,13 +30359,12 @@
     },
     "hit_points": {
       "max": 22,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 5,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 20,
@@ -30738,13 +30464,12 @@
     },
     "hit_points": {
       "max": 22,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 5,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 20,
@@ -30844,13 +30569,12 @@
     },
     "hit_points": {
       "max": 36,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 8,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -30950,13 +30674,12 @@
     },
     "hit_points": {
       "max": 28,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 8,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 0,
@@ -31066,13 +30789,12 @@
     },
     "hit_points": {
       "max": 24,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 7,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -31177,13 +30899,12 @@
     },
     "hit_points": {
       "max": 24,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 7,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 10,
@@ -31281,13 +31002,12 @@
     },
     "hit_points": {
       "max": 22,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 5,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 20,
@@ -31401,13 +31121,12 @@
     },
     "hit_points": {
       "max": 22,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 5,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 5,
@@ -31507,13 +31226,12 @@
     },
     "hit_points": {
       "max": 676,
-      "dice": [
+      "dice": 
         {
           "sides": 20,
           "count": 33,
           "mod": 330
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -31689,13 +31407,12 @@
     },
     "hit_points": {
       "max": 32,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 5,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -31793,13 +31510,12 @@
     },
     "hit_points": {
       "max": 37,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 5,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -31894,13 +31610,12 @@
     },
     "hit_points": {
       "max": 138,
-      "dice": [
+      "dice": 
         {
           "sides": 12,
           "count": 12,
           "mod": 60
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -32018,13 +31733,12 @@
     },
     "hit_points": {
       "max": 11,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 2,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -32107,13 +31821,12 @@
     },
     "hit_points": {
       "max": 95,
-      "dice": [
+      "dice": 
         {
           "sides": 12,
           "count": 10,
           "mod": 30
         }
-      ]
     },
     "speed": {
       "Walk": 50,
@@ -32208,13 +31921,12 @@
     },
     "hit_points": {
       "max": 84,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 8,
           "mod": 40
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -32324,13 +32036,12 @@
     },
     "hit_points": {
       "max": 136,
-      "dice": [
+      "dice": 
         {
           "sides": 12,
           "count": 13,
           "mod": 52
         }
-      ]
     },
     "speed": {
       "Walk": 50,
@@ -32424,13 +32135,12 @@
     },
     "hit_points": {
       "max": 67,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 9,
           "mod": 18
         }
-      ]
     },
     "speed": {
       "Walk": 50,
@@ -32584,13 +32294,12 @@
     },
     "hit_points": {
       "max": 144,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 17,
           "mod": 68
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -32751,13 +32460,12 @@
     },
     "hit_points": {
       "max": 82,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 11,
           "mod": 33
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -32870,13 +32578,12 @@
     },
     "hit_points": {
       "max": 58,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 9,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -32978,13 +32685,12 @@
     },
     "hit_points": {
       "max": 18,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 4,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 5,
@@ -33081,13 +32787,12 @@
     },
     "hit_points": {
       "max": 104,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 11,
           "mod": 44
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -33219,13 +32924,12 @@
     },
     "hit_points": {
       "max": 5,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 1,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 10,
@@ -33313,13 +33017,12 @@
     },
     "hit_points": {
       "max": 19,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 3,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 60,
@@ -33402,13 +33105,12 @@
     },
     "hit_points": {
       "max": 22,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 3,
           "mod": 6
         }
-      ]
     },
     "speed": {
       "Walk": 60,
@@ -33499,13 +33201,12 @@
     },
     "hit_points": {
       "max": 114,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 12,
           "mod": 48
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -33626,13 +33327,12 @@
     },
     "hit_points": {
       "max": 1,
-      "dice": [
+      "dice": 
         {
           "sides": 4,
           "count": 1,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -33715,13 +33415,12 @@
     },
     "hit_points": {
       "max": 135,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 18,
           "mod": 54
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -33841,13 +33540,12 @@
     },
     "hit_points": {
       "max": 78,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 12,
           "mod": 24
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -33962,13 +33660,12 @@
     },
     "hit_points": {
       "max": 33,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 6,
           "mod": 6
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -34090,13 +33787,12 @@
     },
     "hit_points": {
       "max": 120,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 16,
           "mod": 48
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -34233,13 +33929,12 @@
     },
     "hit_points": {
       "max": 58,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 9,
           "mod": 18
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -34359,13 +34054,12 @@
     },
     "hit_points": {
       "max": 32,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 5,
           "mod": 10
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -34460,13 +34154,12 @@
     },
     "hit_points": {
       "max": 45,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 6,
           "mod": 18
         }
-      ]
     },
     "speed": {
       "Walk": 30,
@@ -34585,13 +34278,12 @@
     },
     "hit_points": {
       "max": 22,
-      "dice": [
+      "dice": 
         {
           "sides": 4,
           "count": 9,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 0,
@@ -34719,13 +34411,12 @@
     },
     "hit_points": {
       "max": 75,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 10,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 50,
@@ -34833,13 +34524,12 @@
     },
     "hit_points": {
       "max": 11,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 2,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -34927,13 +34617,12 @@
     },
     "hit_points": {
       "max": 26,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 4,
           "mod": 0
         }
-      ]
     },
     "speed": {
       "Walk": 50,
@@ -35019,13 +34708,12 @@
     },
     "hit_points": {
       "max": 67,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 9,
           "mod": 27
         }
-      ]
     },
     "speed": {
       "Walk": 0,
@@ -35144,13 +34832,12 @@
     },
     "hit_points": {
       "max": 110,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 13,
           "mod": 39
         }
-      ]
     },
     "speed": {
       "Walk": 20,
@@ -35254,13 +34941,12 @@
     },
     "hit_points": {
       "max": 73,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 7,
           "mod": 42
         }
-      ]
     },
     "speed": {
       "Walk": 20,
@@ -35374,13 +35060,12 @@
     },
     "hit_points": {
       "max": 127,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 15,
           "mod": 45
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -35497,13 +35182,12 @@
     },
     "hit_points": {
       "max": 152,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 16,
           "mod": 64
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -35614,13 +35298,12 @@
     },
     "hit_points": {
       "max": 110,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 13,
           "mod": 39
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -35731,13 +35414,12 @@
     },
     "hit_points": {
       "max": 142,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 15,
           "mod": 60
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -35854,13 +35536,12 @@
     },
     "hit_points": {
       "max": 119,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 14,
           "mod": 42
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -35971,13 +35652,12 @@
     },
     "hit_points": {
       "max": 178,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 17,
           "mod": 85
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -36094,13 +35774,12 @@
     },
     "hit_points": {
       "max": 136,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 16,
           "mod": 48
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -36220,13 +35899,12 @@
     },
     "hit_points": {
       "max": 178,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 17,
           "mod": 85
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -36337,13 +36015,12 @@
     },
     "hit_points": {
       "max": 168,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 16,
           "mod": 80
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -36454,13 +36131,12 @@
     },
     "hit_points": {
       "max": 133,
-      "dice": [
+      "dice": 
         {
           "sides": 10,
           "count": 14,
           "mod": 56
         }
-      ]
     },
     "speed": {
       "Walk": 40,
@@ -36577,13 +36253,12 @@
     },
     "hit_points": {
       "max": 22,
-      "dice": [
+      "dice": 
         {
           "sides": 8,
           "count": 3,
           "mod": 9
         }
-      ]
     },
     "speed": {
       "Walk": 20,

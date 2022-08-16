@@ -29,6 +29,11 @@
             "default": "Any Race",
             "examples": ["Goblinoid"]
         },
+        "speed": {
+            "type": "string",
+            "input": "dropdown",
+            "enum": ["Walk", "Burrow", "Climb", "Fly", "Hover", "Swim"]
+        },
         "traits": {
             "type": "array",
             "items": {
