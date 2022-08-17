@@ -162,14 +162,14 @@ const CreatureInfo = ({ currentCreature }) => {
             {currentCreature.armor_class ? 
                 <TextStat>
                     <Label>Armor Class:</Label>{" "}
-                    {currentCreature.armor_class.value + (currentCreature.armor_class.description ? " (" + currentCreature.armor_class.description + ")" : null) }
+                    {currentCreature.armor_class.value + (currentCreature.armor_class.description ? " (" + currentCreature.armor_class.description + ")" : "") }
                 </TextStat>    
             : null}
             
             {currentCreature.hit_points ? 
                 <TextStat>
                     <Label>Hit Points:</Label>{" "}
-                    {currentCreature.hit_points.max + (currentCreature.hit_points.dice ? " (" + currentCreature.hit_points.dice.count + "d" + currentCreature.hit_points.dice.sides + "+" + currentCreature.hit_points.dice.mod + ")" : null) }
+                    {currentCreature.hit_points.max + (currentCreature.hit_points.dice ? " (" + currentCreature.hit_points.dice.count + "d" + currentCreature.hit_points.dice.sides + "+" + currentCreature.hit_points.dice.mod + ")" : "") }
                 </TextStat>    
             : null}
 

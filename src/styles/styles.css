@@ -14,3 +14,23 @@
 .speed-row {
     grid-auto-columns: 3fr 10fr 1fr 1fr;
 }
+.long-row {
+    display:grid;
+    grid-auto-columns: 1fr 5fr;
+    grid-auto-flow:column;
+    grid-gap:0.5rem;
+}
+.three-one-row {
+    display:grid;
+    grid-auto-columns: 5fr 1fr;
+    grid-auto-flow:column;
+    grid-gap:0.5rem;
+
+}
+.red-hover {
+}
+.red-hover:hover{
+    background-color: red;
+    color: white;
+    cursor:pointer;
+}

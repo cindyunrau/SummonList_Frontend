@@ -1,7 +1,7 @@
 import React, { useState, useReducer } from "react";
 import CreatureDataService from "../services/CreatureService";
 import styled from 'styled-components'
-import { Remove } from '../styles/theme'
+import { Add, Remove } from '../styles/theme'
 import * as monsterSchema from "../data/monsterSchema.json"
 import Dropdown from 'react-bootstrap/Dropdown';
 import Button from 'react-bootstrap/Button';
@@ -12,7 +12,11 @@ import $ from 'jquery';
 const sizeOptions = monsterSchema.default.properties.size.enum;
 const typeOptions = monsterSchema.default.properties.type.enum;
 const abilityOptions = ["str","dex","con","int","wis","cha"];
+const savingThrowOptions = ["Str","Dex","Con","Int","Wis","Cha"];
 const speedOptions = monsterSchema.default.properties.speed.enum;
+const skillOptions = monsterSchema.default.properties.skills.enum
+const alignmentOptions = ["Lawful Good","Lawful Neutral","Lawful Evil","Neutral Good","True Neutral","Neutral Evil","Chaotic Good","Chaotic Neutral","Chaotic Evil","Any Alignment"];
+const languageOptions = ["Abyssal","Aquan","Auran","Celestial","Common","Deep Speech","Draconic","Dwarvish","Elvish","Giant","Gnomish","Goblin","Halfling","Ignan","Infernal","Orc","Primordial","Sylvan","Terran","Undercommon"]
 
 const Toggle = styled(Dropdown.Toggle)`
   border-radius: 10rem;
@@ -21,64 +25,117 @@ const Toggle = styled(Dropdown.Toggle)`
     }
 `;
 
+
 const AddCreature = () => {
-  const formReducer = (state, event) => {
-    console.log(JSON.stringify(event))
-    if(abilityOptions.includes(event.name)) {
-      return {
-        ...state,
-        ["ability_scores"]: {
-          ...state.ability_scores,
-          [event.name]: event.value
-        }
+  const formReducer = (state, action) => {
+    console.log("State " + JSON.stringify(state))
+    console.log("Action " + JSON.stringify(action))
+    if(action.payload === "Other"){
+      return {...state};
+    }
+    if(action.type === "array"){
+      if(!state[action.subtype])
+          state = {
+            [action.subtype] : []
+          }
       }
-    } else if(speedOptions.includes(event.name)) {
-      return {
-        ...state,
-        ["speed"]: {
-          ...state.speed,
-          [event.name]: event.value
-        }
-      }
-    } else if (event.name === "hit_points"){
-      return {
-        ...state,
-        ["hit_points"]: {
-          ...state.hit_points,
-          ["max"]: event.value
-        }
-      }
-    } else if (event.name.includes("dice")){
-      return {
-        ...state,
-        ["hit_points"]: {
-          ...state.hit_points,
-          ["dice"]: {
-            ...state.hit_points.dice,
-            [event.name.replace("dice_","")]: event.value
+
+    if(action.subtype){
+      switch(action.type) {
+        case "hit_points":
+          switch(action.subtype) {
+            case "max":
+              return {
+                ...state,
+                [action.type]: {
+                  ...state.hit_points,
+                  [action.subtype]: action.payload
+                }
+              }
+            default:
+              return {
+                ...state,
+                [action.type]: {
+                  ...state.hit_points,
+                  ["dice"]: {
+                    ...state.hit_points.dice,
+                    [action.subtype]: action.payload
+                  }
+                }
+              }
+          } 
+        case "array":
+          return {
+            ...state,
+            [action.subtype]: [...state[action.subtype], action.payload]
+            }
+        default:
+          return {
+            ...state,
+            [action.type]: {
+              ...state[action.type],
+              [action.subtype]: action.payload
+            }
           }
         }
+    } else {
+      switch(action.type){
+
+        default:
+          return {
+            ...state,
+            [action.type]: action.payload
+          }
       }
-    }
-    return {
-      ...state,
-      [event.name]: event.value
-    }
+    } 
   }
 
   const [submitted, setSubmitted] = useState(false);
-  const [formData, setFormData] = useReducer(formReducer, {});
+  const [formData, dispatch] = useReducer(formReducer, {});
   const [visibleSpeedOptions, setVisibleSpeedOptions] = useState(["Walk"]);
+  const [visibleSavingThrowOptions, setVisibleSavingThrowOptions] = useState([]);
+  const [visibleSkillOptions, setVisibleSkillOptions] = useState([]);
 
 
   const handleChange = event => {
-      setFormData({
-        name: event.target.name,
-        value: event.target.value,
-      });
-    console.log(formData);
+    const subtype = $(`#${event.target.id}`).attr("subtype")
+    dispatch({
+      type: event.target.name,
+      subtype: subtype,
+      payload: event.target.value,
+    });
   }
 
+  const addTrait = (name, description) => {
+    const nameValue = name.val();
+    const descriptionValue = description.val()
+    const payload = {
+      "name" : nameValue,
+      "description" : descriptionValue
+      
+    }
+    if(nameValue && descriptionValue){
+      dispatch({
+        type: "array",
+        subtype: "traits",
+        payload: payload,
+      });
+      name.val('');
+      description.val('')
+    }
+  }
+  
+  const addOtherLanguage = (other) => {
+    const lanValue = other.val();
+    if(lanValue){
+      dispatch({
+        type: "array",
+        subtype: "languages",
+        payload: lanValue,
+      });
+      other.val('');
+    }
+  }
   const addSpeedRow = (option) => {
     if(!visibleSpeedOptions.includes(option)){
       setVisibleSpeedOptions(oldOptions => [...oldOptions, option])
@@ -88,6 +145,30 @@ const AddCreature = () => {
   const removeSpeedRow = (option) => {
     if(visibleSpeedOptions.includes(option)){
       setVisibleSpeedOptions(visibleSpeedOptions.filter(item => item !== option))
+    }
+  }
+
+  const addSavingRow = (option) => {
+    if(!visibleSavingThrowOptions.includes(option)){
+      setVisibleSavingThrowOptions(oldOptions => [...oldOptions, option])
+    }
+  }
+
+  const removeSavingRow = (option) => {
+    if(visibleSavingThrowOptions.includes(option)){
+      setVisibleSavingThrowOptions(visibleSavingThrowOptions.filter(item => item !== option))
+    }
+  }
+
+  const addSkillRow = (option) => {
+    if(!visibleSkillOptions.includes(option)){
+      setVisibleSkillOptions(oldOptions => [...oldOptions, option])
+    }
+  }
+
+  const removeSkillRow = (option) => {
+    if(visibleSkillOptions.includes(option)){
+      setVisibleSkillOptions(visibleSkillOptions.filter(item => item !== option))
     }
   }
 
@@ -109,6 +190,7 @@ const AddCreature = () => {
       });
   };
 
+
   return (
     <div className="submit-form">
       {submitted ? (
@@ -122,7 +204,7 @@ const AddCreature = () => {
         <Form>
           <div className="auto-row">
             <Form.Group>
-              <Form.Label>Name:</Form.Label>
+              <Form.Label className="font-weight-bold">Name:</Form.Label>
               <Form.Control 
                 type="text" 
                 placeholder="" 
@@ -134,10 +216,11 @@ const AddCreature = () => {
 
           <div className="auto-row">
             <div>
-              <label htmlFor="size">Size</label>
+              <label className="font-weight-bold">Size</label>
               <select className="form-control" 
                 name="size"
                 onChange={handleChange}
+                id="size"
                 defaultValue={'default'}>
                 <option value='default' disabled>Please select</option>
                 {sizeOptions.map((option, _) => (
@@ -148,16 +231,18 @@ const AddCreature = () => {
               {document.getElementById('other_size_option') && document.getElementById('other_size_option').selected ?
               <input className="form-control" 
                 name="size"
+                id="size"
                 onChange={handleChange}
                 placeholder="Please Enter Size">
               </input>
               : null }
             </div>
             <div>
-              <label htmlFor="type">Type</label>
+              <label className="font-weight-bold">Type</label>
               <select className="form-control" 
                 name="type"
                 onChange={handleChange}
+                id="type"
                 defaultValue={'default'}>
                 <option value='default' disabled>Please select</option>
                 {typeOptions.map((option, _) => (
@@ -173,11 +258,24 @@ const AddCreature = () => {
               </input>
               : null }
             </div>
+            <div>
+              <label className="font-weight-bold">Alignment</label>
+              <select className="form-control" 
+                name="alignment"
+                id="alignment"
+                onChange={handleChange}
+                defaultValue={'default'}>
+                <option value='default' disabled>Please select</option>
+                {alignmentOptions.map((option, _) => (
+                  <option key={option}>{option}</option>
+                  ))}
+              </select>
+            </div>
             </div>
 
           <div className="auto-row">
             <Form.Group>
-              <Form.Label>CR:</Form.Label>
+              <Form.Label className="font-weight-bold" >Challenge Rating:</Form.Label>
               <Form.Control 
                 type="number" 
                 placeholder="" 
@@ -186,13 +284,14 @@ const AddCreature = () => {
                 name="challenge_rating"/>
             </Form.Group>
             <Form.Group>
-              <Form.Label>Hit Points:</Form.Label>
+              <Form.Label className="font-weight-bold" >Hit Points:</Form.Label>
               <Form.Control 
                 type="number" 
                 placeholder="" 
                 id="hp"
                 onChange={handleChange}
-                name="hit_points"/>
+                name="hit_points"
+                subtype="max"/>
                 {$("#hp").val() ? 
                   <div className="auto-row">
                     <div>
@@ -201,7 +300,8 @@ const AddCreature = () => {
                       placeholder="" 
                       id="dice_sides"
                       onChange={handleChange}
-                      name="dice_sides"/>
+                      name="hit_points"
+                      subtype="count"/>
                     </div>
                     <div>
                       <Form.Control 
@@ -209,7 +309,8 @@ const AddCreature = () => {
                       placeholder="" 
                       id="dice_count"
                       onChange={handleChange}
-                      name="dice_count"/>
+                      name="hit_points"
+                      subtype="sides"/>
                     </div>
                     <div>
                       <Form.Control 
@@ -217,11 +318,22 @@ const AddCreature = () => {
                       placeholder="" 
                       id="dice_mod"
                       onChange={handleChange}
-                      name="dice_mod"/>
+                      name="hit_points"
+                      subtype="mod"/>
                     </div>
                   </div>
                   
                 : null}
+            </Form.Group>
+            <Form.Group>
+              <Form.Label className="font-weight-bold" >Armor Class:</Form.Label>
+              <Form.Control 
+                type="number" 
+                placeholder="" 
+                id="armor_class"
+                onChange={handleChange}
+                name="armor_class"
+                subtype="value"/>
             </Form.Group>
             </div>
 
@@ -233,7 +345,8 @@ const AddCreature = () => {
                 placeholder="" 
                 id="str"
                 onChange={handleChange}
-                name="str"/>
+                name="ability_scores"
+                subtype="str"/>
             </Form.Group>
             <Form.Group>
               <Form.Label>DEX:</Form.Label>
@@ -242,7 +355,8 @@ const AddCreature = () => {
                 placeholder="" 
                 id="dex"
                 onChange={handleChange}
-                name="dex"/>
+                name="ability_scores"
+                subtype="dex"/>
             </Form.Group>
             <Form.Group>
               <Form.Label>CON:</Form.Label>
@@ -251,7 +365,8 @@ const AddCreature = () => {
                 placeholder="" 
                 id="con"
                 onChange={handleChange}
-                name="con"/>
+                name="ability_scores"
+                subtype="con"/>
             </Form.Group>
             <Form.Group>
               <Form.Label>INT:</Form.Label>
@@ -260,7 +375,8 @@ const AddCreature = () => {
                 placeholder="" 
                 id="int"
                 onChange={handleChange}
-                name="int"/>
+                name="ability_scores"
+                subtype="int"/>
             </Form.Group>
             <Form.Group>
               <Form.Label>WIS:</Form.Label>
@@ -269,7 +385,8 @@ const AddCreature = () => {
                 placeholder="" 
                 id="wis"
                 onChange={handleChange}
-                name="wis"/>
+                name="ability_scores"
+                subtype="wis"/>
             </Form.Group>
             <Form.Group>
               <Form.Label>CHA:</Form.Label>
@@ -278,21 +395,24 @@ const AddCreature = () => {
                 placeholder="" 
                 id="cha"
                 onChange={handleChange}
-                name="cha"/>
+                name="ability_scores"
+                subtype="cha"/>
             </Form.Group>
           </div>
 
           <div className="auto-row">
             <div className="auto-column">
-              <label htmlFor="speed">Speed: </label>
+              <label className="font-weight-bold">Speed: </label>
               {visibleSpeedOptions.map((option, _) => (
-                  <Form.Group className="auto-row speed-row" controlId="formBasicEmail" key={option}>
+                  <Form.Group className="auto-row speed-row" key={option} >
                     <Form.Label>{option}:</Form.Label>
                     <Form.Control 
                       type="text" 
                       placeholder="" 
                       onChange={handleChange}
-                      name={option} />
+                      id={option} 
+                      name="speed"
+                      subtype={option} />
                     <Form.Label>ft.</Form.Label>
                     {option !== "Walk" ? <Remove onClick={() => removeSpeedRow(option)}></Remove> : <div></div>}
                   </Form.Group>
@@ -315,22 +435,156 @@ const AddCreature = () => {
               : null }
                 
             </div>
+            <div className="auto-column">
+              <label className="font-weight-bold">Saving Throws: </label>
+              {visibleSavingThrowOptions.map((option, _) => (
+                  <Form.Group className="auto-row speed-row" key={option}>
+                    <Form.Label>{option}:</Form.Label>
+                    <Form.Control 
+                      type="text" 
+                      placeholder="" 
+                      onChange={handleChange}
+                      id={option}
+                      name="saving_throws"
+                      subtype={option}  />
+                    <Remove onClick={() => removeSavingRow(option)}></Remove>
+                  </Form.Group>
+                  
+                ))}
 
+              {savingThrowOptions.length !== visibleSavingThrowOptions.length ?
+              <Dropdown id="savingThrowDropdown">
+                <Toggle variant="success" id="dropdown-basic">
+                  +
+                </Toggle>
+                <Dropdown.Menu>
+                {savingThrowOptions.map((option, _) => (
+                  (!visibleSavingThrowOptions.includes(option)) ? 
+                  <Dropdown.Item key={option} onClick={() => addSavingRow(option)}>{option}</Dropdown.Item>
+                  : <Dropdown.Item key={option} onClick={() => addSavingRow(option)} disabled>{option}</Dropdown.Item>
+                ))}
+                </Dropdown.Menu>
+              </Dropdown>
+              : null }
+                
+            </div>
 
+            <div className="auto-column">
+              <label className="font-weight-bold">Languages: </label>
+              <div >
+              {formData.languages ? formData.languages.map((option, index) => (
+                <span className="red-hover">{(formData.languages.length !== 0 && index !== formData.languages.length-1) ? option + ", " : option}</span>
+                )) : ""}
+              </div>
+              <select className="form-control" 
+                subtype="languages"
+                name="array"
+                onChange={handleChange}
+                id="languages"
+                defaultValue={'default'}>
+                <option value='default' disabled>Please select</option>
+                {languageOptions.map((option, _) => (
+                  (formData.languages && formData.languages.includes(option)) ?
+                    <option disabled key={option}>{option}</option>
+                  :
+                    <option key={option}>{option}</option>
+                  ))}
+                <option id="other_language_option" key="Other">Other</option>
+              </select>
+              {document.getElementById('other_language_option') && document.getElementById('other_language_option').selected ?
+                <div className="three-one-row">
+                  <input className="form-control" 
+                    subtype="languages"
+                    id="other_language_field"
+                    placeholder="Please Enter a Language">
+                  </input>
+                  <Button onClick={()=>addOtherLanguage($("#other_language_field"))}> Add </Button>
+                </div>
+              : null }
+              
+              
+            </div>
+          </div>
+
+          <div className="auto-row">
+            <div className="auto-column">
+              <label className="font-weight-bold">Skills: </label>
+              {visibleSkillOptions.map((option, _) => (
+                  <Form.Group className="auto-row speed-row" key={option}>
+                    <Form.Label>{option}:</Form.Label>
+                    <Form.Control 
+                      type="text" 
+                      placeholder="" 
+                      onChange={handleChange}
+                      name={option} />
+                    <Remove onClick={() => removeSkillRow(option)}></Remove>
+                  </Form.Group>
+                  
+                ))}
+
+              {skillOptions.length !== visibleSkillOptions.length ?
+              <Dropdown id="skillDropdown">
+                <Toggle variant="success" id="dropdown-basic">
+                  +
+                </Toggle>
+                <Dropdown.Menu>
+                {skillOptions.map((option, _) => (
+                  (!visibleSkillOptions.includes(option)) ? 
+                  <Dropdown.Item key={option} onClick={() => addSkillRow(option)}>{option}</Dropdown.Item>
+                  : <Dropdown.Item key={option} onClick={() => addSkillRow(option)} disabled>{option}</Dropdown.Item>
+                ))}
+                </Dropdown.Menu>
+              </Dropdown>
+              : null }
+                
+            </div>
 
             <div className="auto-column">
               <label htmlFor="speed">test: </label>
             </div>
-            <div className="auto-column">
-              <label htmlFor="speed">test: </label>
-            </div>
-            </div>
+           
+          </div>
 
+          <div className="auto-row">
+            <div className="auto-column">
+              <Form.Group>
+                <Form.Label className="font-weight-bold" >Traits:</Form.Label> <br></br>
+                {formData.traits ? formData.traits.map((option, _) => (
+                  <div key = {option}>
+                    <span className="font-weight-bold">{option.name}: {' '}</span>
+                    <span >{option.description}</span>
+                  </div>
+                )): ""}
+                <div className="long-row">
+                  <Form.Label>Name:</Form.Label>
+                  <Form.Label>Description:</Form.Label>
+                  <div></div>
+                </div>
+                <div className="long-row">
+                  <Form.Control 
+                    type="text" 
+                    placeholder="" 
+                    id="traits_name"
+                    name="traits"
+                    subtype="name" /> 
+                  <Form.Control 
+                    type="text" 
+                    placeholder="" 
+                    id="traits_description"
+                    name="traits"
+                    subtype="description" />
+                  <Button onClick={()=>addTrait($("#traits_name"),$("#traits_description"))}>Add</Button>
+                </div>
+                
+              </Form.Group>
+            </div>
+          </div>
+                  <br></br>
           <div className="auto-row">
             <Button onClick={saveCreature} >
               Submit
             </Button>
-            </div>
+          </div>
         </Form>
       )}
     </div>

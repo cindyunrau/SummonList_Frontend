@@ -48,6 +48,10 @@
                 "$ref": "action.schema.json"
             }
         },
+        "skills": {
+            "type": "string",
+            "enum": ["Athletics","Acrobatics","Stealth","Arcana","History","Investigation","Nature","Religion","Insight","Medicine","Perception","Survival","Deception","Intimidation","Performance","Persuasion"]
+        },
         "tags": {
             "$ref": "tag.schema.json"
         }
