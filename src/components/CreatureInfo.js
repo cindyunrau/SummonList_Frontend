@@ -53,7 +53,8 @@ const CreatureInfo = ({ currentCreature }) => {
 
     const skills = () => {
         var string = "";
-        var obj = currentCreature.properties
+        var obj = currentCreature.skills
+        console.log(obj)
         for(const skill in obj) {
             if(obj[skill]){
                 if(string !== ""){
@@ -132,9 +133,6 @@ const CreatureInfo = ({ currentCreature }) => {
                 string += "<strong>" + obj[i].name + ". </strong>" + obj[i].description 
             }
         };
-        if(string !== "" && !currentCreature.tags.includes("legendary")){
-            currentCreature.tags.push("legendary") // this doesn't push to database
-        }
         return string;
     }
 
@@ -215,7 +213,7 @@ const CreatureInfo = ({ currentCreature }) => {
                 </Row>
             : null }
 
-            {currentCreature.properties ? 
+            {currentCreature.skills ? 
             <TextStat>
                 <Label>Skills:</Label>{" "}
                 {skills()}

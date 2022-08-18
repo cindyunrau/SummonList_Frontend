@@ -17,6 +17,11 @@ const speedOptions = monsterSchema.default.properties.speed.enum;
 const skillOptions = monsterSchema.default.properties.skills.enum
 const alignmentOptions = ["Lawful Good","Lawful Neutral","Lawful Evil","Neutral Good","True Neutral","Neutral Evil","Chaotic Good","Chaotic Neutral","Chaotic Evil","Any Alignment"];
 const languageOptions = ["Abyssal","Aquan","Auran","Celestial","Common","Deep Speech","Draconic","Dwarvish","Elvish","Giant","Gnomish","Goblin","Halfling","Ignan","Infernal","Orc","Primordial","Sylvan","Terran","Undercommon"]
+const senseOptions = ["Passive Perception", "Blindsight","Darkvision","Tremorsense","Truesight"]
+const armorOptions = ["Natural Armor","Padded Armor","Leather Armor","Studded Leather Armor","Hide Armor","Chain Shirt","Scale Mail","Breastplate","Half Plate","Ring Mail","Chain Mail","Splint","Plate"]
+const damageTypes = ["Acid","Bludgeoning","Cold","Fire","Force","Lightning","Necrotic","Piercing","Poison","Psychic","Radiant","Slashing","Thunder"]
+const conditionTypes = ["Blinded","Charmed","Deafened","Exhaustion","Frightened","Grappled","Incapacitated","Invisible","Paralyzed","Petrified","Poisoned","Prone","Restrained","Stunned","Unconscious"]
+const commonTags = ["Legendary","Dragon","Elementals","Sphinxes","Animated Objects","Demons","Oozes","Devils","Golems","Giants","Genies","Angels","Mephits","Ghouls","Hags","Nagas","Skeletons","Mummies","Zombies","Dinosaurs","Undead","Fungi","Plants","Vampires","Lycanthropes","Shapeshifters"]
 
 const Toggle = styled(Dropdown.Toggle)`
   border-radius: 10rem;
@@ -36,9 +41,20 @@ const AddCreature = () => {
     if(action.type === "array"){
       if(!state[action.subtype])
           state = {
+            ...state,
             [action.subtype] : []
           }
       }
+    
+    if(action.type === "remove"){
+      switch(action.subtype) {
+        default:
+          return {
+            ...state,
+            [action.subtype]: state[action.subtype].filter(item => item !== action.payload)
+          }
+      }
+    }
 
     if(action.subtype){
       switch(action.type) {
@@ -95,15 +111,24 @@ const AddCreature = () => {
   const [visibleSpeedOptions, setVisibleSpeedOptions] = useState(["Walk"]);
   const [visibleSavingThrowOptions, setVisibleSavingThrowOptions] = useState([]);
   const [visibleSkillOptions, setVisibleSkillOptions] = useState([]);
+  const [visibleSenseOptions, setVisibleSenseOptions] = useState(["Passive Perception"]);
 
 
   const handleChange = event => {
     const subtype = $(`#${event.target.id}`).attr("subtype")
-    dispatch({
-      type: event.target.name,
-      subtype: subtype,
-      payload: event.target.value,
-    });
+    if(event.target.type === "checkbox"){
+      dispatch({
+        type: event.target.name,
+        subtype: subtype,
+        payload: $(`#${event.target.id}`).is(":checked"),
+      });
+    } else {
+      dispatch({
+        type: event.target.name,
+        subtype: subtype,
+        payload: event.target.value,
+      });
+    }
   }
 
   const addTrait = (name, description) => {
@@ -124,18 +149,85 @@ const AddCreature = () => {
       description.val('')
     }
   }
+
+  const removeTrait = (name) => {
+    dispatch({
+      type: "remove",
+      subtype: "traits",
+      payload: name,
+    });
+  }
+
   
-  const addOtherLanguage = (other) => {
-    const lanValue = other.val();
-    if(lanValue){
+  const addOther = (type, other) => {
+    const value = other.val()
+    if(value){
       dispatch({
         type: "array",
-        subtype: "languages",
-        payload: lanValue,
+        subtype: type,
+        payload: value,
       });
       other.val('');
     }
   }
+
+  const handleRemove = (type, language) => {
+    dispatch({
+      type: "remove",
+      subtype: type,
+      payload: language,
+    });
+  }
+
+  const addAction = () => {
+    const nameValue = $("#action_name").val();
+    const descriptionValue = $("#action_description").val();
+    const legendaryValue = $("#action_legendary").is(":checked");
+    const reactionValue = $("#action_reaction").is(":checked");
+    const payload = {
+      "name" : nameValue,
+      "description" : descriptionValue,
+      "legendary" : legendaryValue,
+      "reaction" : reactionValue
+    }
+    if(nameValue && descriptionValue){
+      dispatch({
+        type: "array",
+        subtype: "actions",
+        payload: payload,
+      });
+      $("#action_name").val('');
+      $("#action_description").val('')
+      $("#action_legendary").prop( "checked", false );
+      $("#action_reaction").prop( "checked", false );
+    }
+    if(legendaryValue){
+      addTag("Legendary")
+    }
+  }
+
+  const addTagForm = () => {
+    const tagValue = $("#tags").val();
+    if(tagValue){
+      dispatch({
+        type: "array",
+        subtype: "tags",
+        payload: tagValue,
+      });
+    }
+    $("#tags").val('');
+  }
+
+  const addTag = (tag) => {
+    if(tag){
+      dispatch({
+        type: "array",
+        subtype: "tags",
+        payload: tag,
+      });
+    }
+  }
+
   const addSpeedRow = (option) => {
     if(!visibleSpeedOptions.includes(option)){
       setVisibleSpeedOptions(oldOptions => [...oldOptions, option])
@@ -169,6 +261,18 @@ const AddCreature = () => {
   const removeSkillRow = (option) => {
     if(visibleSkillOptions.includes(option)){
       setVisibleSkillOptions(visibleSkillOptions.filter(item => item !== option))
+    }
+  }
+
+  const addSenseRow = (option) => {
+    if(!visibleSenseOptions.includes(option)){
+      setVisibleSenseOptions(oldOptions => [...oldOptions, option])
+    }
+  }
+
+  const removeSenseRow = (option) => {
+    if(visibleSenseOptions.includes(option)){
+      setVisibleSenseOptions(visibleSenseOptions.filter(item => item !== option))
     }
   }
 
@@ -258,6 +362,15 @@ const AddCreature = () => {
               </input>
               : null }
             </div>
+            <Form.Group>
+              <Form.Label className="font-weight-bold">Subtype:</Form.Label>
+              <Form.Control 
+                type="text" 
+                placeholder="" 
+                id="subtype"
+                onChange={handleChange}
+                name="subtype"/>
+            </Form.Group>
             <div>
               <label className="font-weight-bold">Alignment</label>
               <select className="form-control" 
@@ -325,17 +438,41 @@ const AddCreature = () => {
                   
                 : null}
             </Form.Group>
-            <Form.Group>
+            <div>
               <Form.Label className="font-weight-bold" >Armor Class:</Form.Label>
-              <Form.Control 
-                type="number" 
-                placeholder="" 
-                id="armor_class"
-                onChange={handleChange}
-                name="armor_class"
-                subtype="value"/>
-            </Form.Group>
+              <div className="auto-row">
+                <Form.Group>
+                  <Form.Control 
+                    type="number" 
+                    placeholder="" 
+                    id="armor_class_value"
+                    onChange={handleChange}
+                    name="armor_class"
+                    subtype="value"/>
+                </Form.Group>
+
+                <select className="form-control" 
+                  name="armor_class"
+                  id="armor_class_description"
+                  onChange={handleChange}
+                  defaultValue={'default'}
+                  subtype="description">
+                  <option value='default' disabled>Please select</option>
+                  {armorOptions.map((option, _) => (
+                    <option key={option}>{option}</option>
+                    ))}
+                </select>
+              </div>
+              <Form.Check 
+                    type="checkbox"
+                    id="armor_class_shield"
+                    onChange={handleChange}
+                    label={`Shield`}
+                    name="armor_class"
+                    subtype="shield"
+                  />
             </div>
+          </div>
 
           <div className="auto-row" onChange={handleChange} name="ability_scores">
             <Form.Group>
@@ -410,7 +547,7 @@ const AddCreature = () => {
                       type="text" 
                       placeholder="" 
                       onChange={handleChange}
-                      id={option} 
+                      id={option.replace(/ /g,'')} 
                       name="speed"
                       subtype={option} />
                     <Form.Label>ft.</Form.Label>
@@ -444,7 +581,7 @@ const AddCreature = () => {
                       type="text" 
                       placeholder="" 
                       onChange={handleChange}
-                      id={option}
+                      id={option.replace(/ /g,'')}
                       name="saving_throws"
                       subtype={option}  />
                     <Remove onClick={() => removeSavingRow(option)}></Remove>
@@ -471,11 +608,20 @@ const AddCreature = () => {
 
             <div className="auto-column">
               <label className="font-weight-bold">Languages: </label>
-              <div >
-              {formData.languages ? formData.languages.map((option, index) => (
-                <span className="red-hover">{(formData.languages.length !== 0 && index !== formData.languages.length-1) ? option + ", " : option}</span>
-                )) : ""}
-              </div>
+              {formData.languages ? 
+                <div >
+                  {formData.languages.map((option, index) => (
+                    <span 
+                    className="red-hover" 
+                    key={option} 
+                    onClick={() => handleRemove("languages" ,option)}
+                    name="deleteLanguage"
+                    id="language-display">
+                      {(formData.languages.length !== 0 && index !== formData.languages.length-1) ? option + ", " : option}
+                    </span>
+                  ))}
+                </div>
+              : null }
               <select className="form-control" 
                 subtype="languages"
                 name="array"
@@ -498,9 +644,16 @@ const AddCreature = () => {
                     id="other_language_field"
                     placeholder="Please Enter a Language">
                   </input>
-                  <Button onClick={()=>addOtherLanguage($("#other_language_field"))}> Add </Button>
+                  <Button onClick={()=>addOther("languagues",$("#other_language_field"))}> Add </Button>
                 </div>
               : null }
+              <Form.Check 
+                type="checkbox"
+                id="telepathy"
+                label={`Telepathy`}
+                name="languages"
+                subtype="telepathy"
+              />
               
               
             </div>
@@ -516,7 +669,9 @@ const AddCreature = () => {
                       type="text" 
                       placeholder="" 
                       onChange={handleChange}
-                      name={option} />
+                      id={option.replace(/ /g,'')}
+                      name="skills"
+                      subtype={option}/>
                     <Remove onClick={() => removeSkillRow(option)}></Remove>
                   </Form.Group>
                   
@@ -540,9 +695,215 @@ const AddCreature = () => {
             </div>
 
             <div className="auto-column">
-              <label htmlFor="speed">test: </label>
+              <label className="font-weight-bold">Senses: </label>
+
+              {visibleSenseOptions.map((option, _) => (
+                  <Form.Group className="auto-row sense-row" key={option}>
+                    <Form.Label>{option}:</Form.Label>
+                    <Form.Control 
+                      type="text" 
+                      placeholder="" 
+                      onChange={handleChange}
+                      id={option.replace(/ /g,'')}
+                      name="senses"
+                      subtype={`${option}`}/>
+                    {option !== "Passive Perception" ? 
+                      <Form.Label>ft.</Form.Label>
+                    : <div></div>}
+                    {option !== "Passive Perception" ? 
+                      <Remove onClick={() => removeSenseRow(option)}></Remove>
+                    : <div></div>}
+                  </Form.Group>
+                  
+              ))}
+
+              {senseOptions.length !== (formData.senses ? formData.senses.length : -1) ?
+              <Dropdown id="senseDropdown">
+                <Toggle variant="success" id="dropdown-basic">
+                  +
+                </Toggle>
+                <Dropdown.Menu>
+                {senseOptions.map((option, _) => (
+                  (!visibleSenseOptions.includes(option)) ? 
+                  <Dropdown.Item key={option} onClick={() => addSenseRow(option)}>{option}</Dropdown.Item>
+                  : <Dropdown.Item key={option} onClick={() => addSenseRow(option)} disabled>{option}</Dropdown.Item>
+                ))}
+                </Dropdown.Menu>
+              </Dropdown>
+              : null }
             </div>
-           
+          </div>
+
+          <div className="auto-row">
+            <div className="auto-column">
+                <label className="font-weight-bold">Damage Vulnerabilities: </label>
+                {formData.vulnerabilities ? 
+                  <div >
+                    {formData.vulnerabilities.map((option, index) => (
+                      <span 
+                      className="red-hover" 
+                      key={option} 
+                      onClick={() => handleRemove("vulnerabilities", option)}
+                      id="vulnerabilities-display">
+                        {(formData.vulnerabilities.length !== 0 && index !== formData.vulnerabilities.length-1) ? option + ", " : option}
+                      </span>
+                    ))}
+                  </div>
+                : null }
+                <select className="form-control" 
+                  subtype="vulnerabilities"
+                  name="array"
+                  onChange={handleChange}
+                  id="vulnerabilities"
+                  defaultValue={'default'}>
+                  <option value='default' disabled>Please select</option>
+                  {damageTypes.map((option, _) => (
+                    (formData.vulnerabilities && formData.vulnerabilities.includes(option)) ?
+                      <option disabled key={option}>{option}</option>
+                    :
+                      <option key={option}>{option}</option>
+                    ))}
+                  <option id="other_vulnerabilities_option" key="Other">Other</option>
+                </select>
+                {document.getElementById('other_vulnerabilities_option') && document.getElementById('other_vulnerabilities_option').selected ?
+                  <div className="three-one-row">
+                    <input className="form-control" 
+                      subtype="vulnerabilities"
+                      id="other_vulnerabilities_field"
+                      placeholder="Please Enter a Vulnerability">
+                    </input>
+                    <Button onClick={()=>addOther("vulnerabilities",$("#other_vulnerabilities_field"))}> Add </Button>
+                  </div>
+                : null }
+              </div>
+
+              <div className="auto-column">
+                <label className="font-weight-bold">Damage Immunities: </label>
+                {formData.immunities ? 
+                  <div >
+                    {formData.immunities.map((option, index) => (
+                      <span 
+                      className="red-hover" 
+                      key={option} 
+                      onClick={() => handleRemove("immunities",option)}
+                      id="immunities-display">
+                        {(formData.immunities.length !== 0 && index !== formData.immunities.length-1) ? option + ", " : option}
+                      </span>
+                    ))}
+                  </div>
+                : null }
+                <select className="form-control" 
+                  subtype="immunities"
+                  name="array"
+                  onChange={handleChange}
+                  id="immunities"
+                  defaultValue={'default'}>
+                  <option value='default' disabled>Please select</option>
+                  {damageTypes.map((option, _) => (
+                    (formData.immunities && formData.immunities.includes(option)) ?
+                      <option disabled key={option}>{option}</option>
+                    :
+                      <option key={option}>{option}</option>
+                    ))}
+                  <option id="other_immunities_option" key="Other">Other</option>
+                </select>
+                {document.getElementById('other_immunities_option') && document.getElementById('other_immunities_option').selected ?
+                  <div className="three-one-row">
+                    <input className="form-control" 
+                      subtype="immunities"
+                      id="other_immunities_field"
+                      placeholder="Please Enter an Immunity">
+                    </input>
+                    <Button onClick={()=>addOther("immunities",$("#other_immunities_field"))}> Add </Button>
+                  </div>
+                : null }
+              </div>
+
+              <div className="auto-column">
+                <label className="font-weight-bold">Damage Resistances: </label>
+                {formData.resistances ? 
+                  <div >
+                    {formData.resistances.map((option, index) => (
+                      <span 
+                      className="red-hover" 
+                      key={option} 
+                      onClick={() => handleRemove("resistances",option)}
+                      id="resistances-display">
+                        {(formData.resistances.length !== 0 && index !== formData.resistances.length-1) ? option + ", " : option}
+                      </span>
+                    ))}
+                  </div>
+                : null }
+                <select className="form-control" 
+                  subtype="resistances"
+                  name="array"
+                  onChange={handleChange}
+                  id="resistances"
+                  defaultValue={'default'}>
+                  <option value='default' disabled>Please select</option>
+                  {damageTypes.map((option, _) => (
+                    (formData.resistances && formData.resistances.includes(option)) ?
+                      <option disabled key={option}>{option}</option>
+                    :
+                      <option key={option}>{option}</option>
+                    ))}
+                  <option id="other_resistances_option" key="Other">Other</option>
+                </select>
+                {document.getElementById('other_resistances_option') && document.getElementById('other_resistances_option').selected ?
+                  <div className="three-one-row">
+                    <input className="form-control" 
+                      subtype="resistances"
+                      id="other_resistances_field"
+                      placeholder="Please Enter a Vulnerability">
+                    </input>
+                    <Button onClick={()=>addOther("resistances",$("#other_resistances_field"))}> Add </Button>
+                  </div>
+                : null }
+              </div>
+
+              <div className="auto-column">
+                <label className="font-weight-bold">Condition Immunities: </label>
+                {formData.condition_immunities ? 
+                  <div >
+                    {formData.condition_immunities.map((option, index) => (
+                      <span 
+                      className="red-hover" 
+                      key={option} 
+                      onClick={() => handleRemove("condition_immunities",option)}
+                      id="condition_immunities-display">
+                        {(formData.condition_immunities.length !== 0 && index !== formData.condition_immunities.length-1) ? option + ", " : option}
+                      </span>
+                    ))}
+                  </div>
+                : null }
+                <select className="form-control" 
+                  subtype="condition_immunities"
+                  name="array"
+                  onChange={handleChange}
+                  id="condition_immunities"
+                  defaultValue={'default'}>
+                  <option value='default' disabled>Please select</option>
+                  {conditionTypes.map((option, _) => (
+                    (formData.condition_immunities && formData.condition_immunities.includes(option)) ?
+                      <option disabled key={option}>{option}</option>
+                    :
+                      <option key={option}>{option}</option>
+                    ))}
+                  <option id="other_condition_immunities_option" key="Other">Other</option>
+                </select>
+                {document.getElementById('other_condition_immunities_option') && document.getElementById('other_condition_immunities_option').selected ?
+                  <div className="three-one-row">
+                    <input className="form-control" 
+                      subtype="condition_immunities"
+                      id="other_condition_immunities_field"
+                      placeholder="Please Enter a Condition Immunities">
+                    </input>
+                    <Button onClick={()=>addOther("condition_immunities",$("#other_condition_immunities_field"))}> Add </Button>
+                  </div>
+                : null }
+              </div>
+
+
           </div>
 
           <div className="auto-row">
@@ -550,7 +911,7 @@ const AddCreature = () => {
               <Form.Group>
                 <Form.Label className="font-weight-bold" >Traits:</Form.Label> <br></br>
                 {formData.traits ? formData.traits.map((option, _) => (
-                  <div key = {option}>
+                  <div key = {option.name} className="red-hover" onClick={()=>removeTrait(option)}>
                     <span className="font-weight-bold">{option.name}: {' '}</span>
                     <span >{option.description}</span>
                   </div>
@@ -575,11 +936,94 @@ const AddCreature = () => {
                     subtype="description" />
                   <Button onClick={()=>addTrait($("#traits_name"),$("#traits_description"))}>Add</Button>
                 </div>
-                
               </Form.Group>
             </div>
           </div>
-                  <br></br>
+
+          <div className="auto-row">
+            <div className="auto-column">
+              <Form.Group>
+                <Form.Label className="font-weight-bold" >Actions:</Form.Label> <br></br>
+                {formData.actions ? formData.actions.map((option, _) => (
+                  <div key = {option.name} className="red-hover" onClick={()=>handleRemove("actions",option)}>
+                    <span className="font-weight-bold">{option.name}: </span>
+                    <span className="font-italic">{option.legendary ? " (Legendary) " : ' '}</span>
+                    <span className="font-italic">{option.reaction ? " (Reaction) " : ' '}</span>
+                    <span >{option.description}</span>
+                  </div>
+                )): ""}
+                <div className="long-row">
+                  <Form.Label>Name:</Form.Label>
+                  <Form.Label>Description:</Form.Label>
+                  <div></div>
+                </div>
+                <div className="long-row">
+                  <Form.Control 
+                    type="text" 
+                    placeholder="" 
+                    id="action_name"
+                    name="actions"
+                    subtype="name" /> 
+                  <Form.Control 
+                    type="text" 
+                    placeholder="" 
+                    id="action_description"
+                    name="actions"
+                    subtype="description" />
+                  <Button onClick={()=>addAction()}>Add</Button>
+                </div>
+                <div className="auto-row-left">
+                  <Form.Check 
+                    type="checkbox"
+                    id="action_legendary"
+                    label={`Legendary`}
+                  />
+                <Form.Check 
+                    type="checkbox"
+                    id="action_reaction"
+                    label={`Reaction`}
+                  />
+                </div>
+              </Form.Group>
+            </div>
+          </div>
+
+          <div className="auto-row">
+            <Form.Group>
+              <Form.Label className="font-weight-bold">Tags:</Form.Label>
+              <div>
+                {formData.tags ? formData.tags.sort().map((option, index) => (
+                      <span 
+                      className="red-hover" 
+                      key={option} 
+                      onClick={() => handleRemove("tags",option)}
+                      id="tags-display">
+                        {(formData.tags.length !== 0 && index !== formData.tags.length-1) ? option + ", " : option}
+                      </span>
+                    )) : ""}
+              </div>
+              <div className="three-one-row">
+                <Form.Control 
+                  type="text" 
+                  placeholder="" 
+                  id="tags"
+                  name="array"
+                  subtype="tags"/>
+                <Button onClick={()=>addTagForm()}>Add</Button>
+              </div>
+              <div>Common Tags: {' '}
+              {commonTags.sort().map((option,index) =>(
+                <span key={option} className="blue-hover font-italic" onClick={()=>addTag(option)}>{option}
+                {(index !== commonTags.length-1) ? 
+                 ", " : ""}
+                </span>
+              ))}
+              </div>
+            </Form.Group>
+            
+          </div>
+
+          <br></br>
           <div className="auto-row">
             <Button onClick={saveCreature} >
               Submit
