@@ -8,9 +8,6 @@ import * as srdData from "../data/srd.json";
 
 const CreatureList = () => {
   const [Creatures, setCreatures] = useState([]);
-  const [currentCreature, setCurrentCreature] = useState(null);
-  const [currentIndex, setCurrentIndex] = useState(-1);
-  const [loading, setLoading] = useState(false);
   const [sort, setSort] = useState("");
 
   useEffect(() => {
@@ -30,17 +27,6 @@ const CreatureList = () => {
 
   const refreshList = () => {
     retrieveCreatures();
-    setCurrentCreature(null);
-    setCurrentIndex(-1);
-  };
-
-  const setActiveCreature = (Creature, index, e) => {
-    if(Creature === currentCreature){
-      refreshList();
-      return;
-    }
-    setCurrentCreature(Creature);
-    setCurrentIndex(index);
   };
 
   const removeAllCreatures = () => {
@@ -89,7 +75,7 @@ const CreatureList = () => {
   }
 
   function defaultSort(list){
-    return sortAlphaNameInc(list);
+    return sortCRInc(list);
   }
 
   function sortAlphaName(list){
@@ -185,6 +171,7 @@ const CreatureList = () => {
       <div >
         <Title>Creatures List ({Creatures.length})</Title>
         
+        
           {Creatures.length !== 0 ? 
             <div className="auto-row list-row temp">
               <div className="pointer" onClick={() => sortAlphaName(Creatures)}><strong >Name{sort !== "alphaNormal" ? " ˄" : " ˅"}</strong></div>
@@ -203,7 +190,7 @@ const CreatureList = () => {
                     <div className="auto-row list-row">
                       <div>{Creature.name}</div>
                       <div>{toFraction(Creature.challenge_rating)}</div>
-                      <div>{Creature.size} {Creature.type} {Creature.subtype} : {Creature.alignment}</div>
+                      <div>{Creature.size} {Creature.type}{Creature.subtype ? ", " + Creature.subtype : " "} : {Creature.alignment}</div>
 
                     </div>
                   </Accordian.Header>

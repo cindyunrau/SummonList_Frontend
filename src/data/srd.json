@@ -5,7 +5,6 @@
     "challenge_rating": 10,
     "size": "Large",
     "type": "Aberration",
-    "subtype": "",
     "alignment": "Lawful Evil",
     "armor_class": {
       "value": 17,
@@ -149,7 +148,7 @@
     "alignment": "Any Alignment",
     "armor_class": {
       "value": 10,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -234,7 +233,6 @@
     "challenge_rating": 14,
     "size": "Huge",
     "type": "Dragon",
-    "subtype": "",
     "alignment": "Chaotic Evil",
     "armor_class": {
       "value": 19,
@@ -395,11 +393,10 @@
     "challenge_rating": 17,
     "size": "Huge",
     "type": "Undead",
-    "subtype": "",
     "alignment": "Lawful Evil",
     "armor_class": {
       "value": 19,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -565,7 +562,6 @@
     "challenge_rating": 16,
     "size": "Huge",
     "type": "Dragon",
-    "subtype": "",
     "alignment": "Lawful Evil",
     "armor_class": {
       "value": 19,
@@ -721,7 +717,6 @@
     "challenge_rating": 13,
     "size": "Huge",
     "type": "Dragon",
-    "subtype": "",
     "alignment": "Chaotic Good",
     "armor_class": {
       "value": 18,
@@ -859,7 +854,6 @@
     "challenge_rating": 15,
     "size": "Huge",
     "type": "Dragon",
-    "subtype": "",
     "alignment": "Lawful Good",
     "armor_class": {
       "value": 19,
@@ -1020,7 +1014,6 @@
     "challenge_rating": 14,
     "size": "Huge",
     "type": "Dragon",
-    "subtype": "",
     "alignment": "Chaotic Good",
     "armor_class": {
       "value": 18,
@@ -1176,7 +1169,6 @@
     "challenge_rating": 17,
     "size": "Huge",
     "type": "Dragon",
-    "subtype": "",
     "alignment": "Lawful Good",
     "armor_class": {
       "value": 19,
@@ -1337,7 +1329,6 @@
     "challenge_rating": 15,
     "size": "Huge",
     "type": "Dragon",
-    "subtype": "",
     "alignment": "Lawful Evil",
     "armor_class": {
       "value": 19,
@@ -1501,7 +1492,6 @@
     "challenge_rating": 17,
     "size": "Huge",
     "type": "Dragon",
-    "subtype": "",
     "alignment": "Chaotic Evil",
     "armor_class": {
       "value": 19,
@@ -1667,7 +1657,6 @@
     "challenge_rating": 16,
     "size": "Huge",
     "type": "Dragon",
-    "subtype": "",
     "alignment": "Lawful Good",
     "armor_class": {
       "value": 19,
@@ -1823,7 +1812,6 @@
     "challenge_rating": 13,
     "size": "Huge",
     "type": "Dragon",
-    "subtype": "",
     "alignment": "Chaotic Evil",
     "armor_class": {
       "value": 18,
@@ -1984,11 +1972,10 @@
     "challenge_rating": 5,
     "size": "Large",
     "type": "Elemental",
-    "subtype": "",
     "alignment": "Neutral",
     "armor_class": {
       "value": 15,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -2107,7 +2094,6 @@
     "challenge_rating": 21,
     "size": "Gargantuan",
     "type": "Dragon",
-    "subtype": "",
     "alignment": "Chaotic Evil",
     "armor_class": {
       "value": 22,
@@ -2268,7 +2254,6 @@
     "challenge_rating": 23,
     "size": "Gargantuan",
     "type": "Dragon",
-    "subtype": "",
     "alignment": "Lawful Evil",
     "armor_class": {
       "value": 22,
@@ -2418,7 +2403,6 @@
     "challenge_rating": 20,
     "size": "Gargantuan",
     "type": "Dragon",
-    "subtype": "",
     "alignment": "Chaotic Good",
     "armor_class": {
       "value": 20,
@@ -2579,7 +2563,6 @@
     "challenge_rating": 22,
     "size": "Gargantuan",
     "type": "Dragon",
-    "subtype": "",
     "alignment": "Lawful Good",
     "armor_class": {
       "value": 22,
@@ -2745,7 +2728,6 @@
     "challenge_rating": 21,
     "size": "Gargantuan",
     "type": "Dragon",
-    "subtype": "",
     "alignment": "Chaotic Good",
     "armor_class": {
       "value": 21,
@@ -2906,7 +2888,6 @@
     "challenge_rating": 24,
     "size": "Gargantuan",
     "type": "Dragon",
-    "subtype": "",
     "alignment": "Lawful Good",
     "armor_class": {
       "value": 22,
@@ -3072,11 +3053,10 @@
     "challenge_rating": 22,
     "size": "Gargantuan",
     "type": "Dragon",
-    "subtype": "",
     "alignment": "Lawful Evil",
     "armor_class": {
       "value": 21,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -3234,7 +3214,6 @@
     "challenge_rating": 24,
     "size": "Gargantuan",
     "type": "Dragon",
-    "subtype": "",
     "alignment": "Chaotic Evil",
     "armor_class": {
       "value": 22,
@@ -3390,7 +3369,6 @@
     "challenge_rating": 23,
     "size": "Gargantuan",
     "type": "Dragon",
-    "subtype": "",
     "alignment": "Lawful Good",
     "armor_class": {
       "value": 22,
@@ -3551,7 +3529,6 @@
     "challenge_rating": 20,
     "size": "Gargantuan",
     "type": "Dragon",
-    "subtype": "",
     "alignment": "Chaotic Evil",
     "armor_class": {
       "value": 20,
@@ -3694,7 +3671,6 @@
     "challenge_rating": 17,
     "size": "Large",
     "type": "Monstrosity",
-    "subtype": "",
     "alignment": "Lawful Neutral",
     "armor_class": {
       "value": 17,
@@ -3836,7 +3812,6 @@
     "challenge_rating": 1,
     "size": "Medium",
     "type": "Construct",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 18,
@@ -3895,7 +3870,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Blindsight": "60 ft. (blind beyond this radius)"
@@ -3953,7 +3928,6 @@
     "challenge_rating": 2,
     "size": "Large",
     "type": "Monstrosity",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 14,
@@ -4012,7 +3986,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Darkvision": "60 ft.",
@@ -4049,11 +4023,10 @@
     "challenge_rating": 0.5,
     "size": "Medium",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 12,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -4108,7 +4081,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {},
     "traits": [],
@@ -4151,7 +4124,7 @@
     "alignment": "Any Alignment",
     "armor_class": {
       "value": 12,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -4251,7 +4224,7 @@
     "alignment": "Any Non-good Alignment",
     "armor_class": {
       "value": 15,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -4364,11 +4337,10 @@
     "challenge_rating": 0,
     "size": "Small",
     "type": "Plant",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 9,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -4459,11 +4431,10 @@
     "challenge_rating": 2,
     "size": "Huge",
     "type": "Plant",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 13,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -4555,11 +4526,10 @@
     "challenge_rating": 0.25,
     "size": "Large",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 11,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -4614,7 +4584,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {},
     "traits": [],
@@ -4638,7 +4608,6 @@
     "challenge_rating": 2,
     "size": "Medium",
     "type": "Elemental",
-    "subtype": "",
     "alignment": "Lawful Neutral",
     "armor_class": {
       "value": 17,
@@ -4744,11 +4713,10 @@
     "challenge_rating": 0,
     "size": "Small",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 12,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -4803,7 +4771,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {},
     "traits": [
@@ -4833,11 +4801,10 @@
     "challenge_rating": 0,
     "size": "Tiny",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 10,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -4892,7 +4859,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Darkvision": "30 ft."
@@ -5076,7 +5043,7 @@
     "alignment": "Any Non-lawful Alignment",
     "armor_class": {
       "value": 12,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -5169,7 +5136,7 @@
     "alignment": "Any Non-lawful Alignment",
     "armor_class": {
       "value": 15,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -5411,7 +5378,6 @@
     "challenge_rating": 3,
     "size": "Medium",
     "type": "Monstrosity",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 12,
@@ -5470,7 +5436,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Darkvision": "60 ft."
@@ -5502,11 +5468,10 @@
     "challenge_rating": 0,
     "size": "Tiny",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 12,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -5561,7 +5526,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Blindsight": "60 ft."
@@ -5730,7 +5695,6 @@
     "challenge_rating": 11,
     "size": "Huge",
     "type": "Monstrosity",
-    "subtype": "",
     "alignment": "Neutral Evil",
     "armor_class": {
       "value": 17,
@@ -5857,7 +5821,7 @@
     "alignment": "Any Chaotic Alignment",
     "armor_class": {
       "value": 13,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -5942,11 +5906,10 @@
     "challenge_rating": 0.5,
     "size": "Medium",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 11,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -6001,7 +5964,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {},
     "traits": [
@@ -6046,7 +6009,6 @@
     "challenge_rating": 2,
     "size": "Medium",
     "type": "Dragon",
-    "subtype": "",
     "alignment": "Chaotic Evil",
     "armor_class": {
       "value": 17,
@@ -6153,11 +6115,10 @@
     "challenge_rating": 4,
     "size": "Large",
     "type": "Ooze",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 7,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -6212,7 +6173,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Blindsight": "60 ft. (blind beyond this radius)"
@@ -6276,11 +6237,10 @@
     "challenge_rating": 0.25,
     "size": "Medium",
     "type": "Fey",
-    "subtype": "",
     "alignment": "Lawful Good",
     "armor_class": {
       "value": 13,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -6371,11 +6331,10 @@
     "challenge_rating": 0.125,
     "size": "Small",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 12,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -6430,7 +6389,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {},
     "traits": [
@@ -6465,7 +6424,6 @@
     "challenge_rating": 3,
     "size": "Medium",
     "type": "Dragon",
-    "subtype": "",
     "alignment": "Lawful Evil",
     "armor_class": {
       "value": 17,
@@ -6566,11 +6524,10 @@
     "challenge_rating": 0.25,
     "size": "Medium",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 11,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -6625,7 +6582,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {},
     "traits": [
@@ -6812,7 +6769,6 @@
     "challenge_rating": 1,
     "size": "Medium",
     "type": "Dragon",
-    "subtype": "",
     "alignment": "Chaotic Good",
     "armor_class": {
       "value": 16,
@@ -6913,7 +6869,6 @@
     "challenge_rating": 2,
     "size": "Medium",
     "type": "Dragon",
-    "subtype": "",
     "alignment": "Lawful Good",
     "armor_class": {
       "value": 17,
@@ -7020,11 +6975,10 @@
     "challenge_rating": 1,
     "size": "Large",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 11,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -7079,7 +7033,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {},
     "traits": [
@@ -7231,7 +7185,6 @@
     "challenge_rating": 5,
     "size": "Large",
     "type": "Monstrosity",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 17,
@@ -7290,7 +7243,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Darkvision": "60 ft.",
@@ -7328,11 +7281,10 @@
     "challenge_rating": 0.125,
     "size": "Large",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 9,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -7387,7 +7339,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {},
     "traits": [],
@@ -7411,11 +7363,10 @@
     "challenge_rating": 2,
     "size": "Large",
     "type": "Monstrosity",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 13,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -7470,7 +7421,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Darkvision": "60 ft."
@@ -7522,11 +7473,10 @@
     "challenge_rating": 0,
     "size": "Tiny",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 12,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -7581,7 +7531,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {},
     "traits": [
@@ -7611,11 +7561,10 @@
     "challenge_rating": 2,
     "size": "Large",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 12,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -7670,7 +7619,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Darkvision": "60 ft."
@@ -7717,11 +7666,10 @@
     "challenge_rating": 2,
     "size": "Large",
     "type": "Monstrosity",
-    "subtype": "",
     "alignment": "Neutral Good",
     "armor_class": {
       "value": 12,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -7960,7 +7908,6 @@
     "challenge_rating": 6,
     "size": "Large",
     "type": "Monstrosity",
-    "subtype": "",
     "alignment": "Chaotic Evil",
     "armor_class": {
       "value": 14,
@@ -8080,7 +8027,6 @@
     "challenge_rating": 4,
     "size": "Large",
     "type": "Aberration",
-    "subtype": "",
     "alignment": "Chaotic Evil",
     "armor_class": {
       "value": 16,
@@ -8192,7 +8138,6 @@
     "challenge_rating": 9,
     "size": "Large",
     "type": "Construct",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 14,
@@ -8331,7 +8276,6 @@
     "challenge_rating": 8,
     "size": "Large",
     "type": "Aberration",
-    "subtype": "",
     "alignment": "Chaotic Neutral",
     "armor_class": {
       "value": 14,
@@ -8458,7 +8402,6 @@
     "challenge_rating": 9,
     "size": "Huge",
     "type": "Giant",
-    "subtype": "",
     "alignment": "Neutral Good (50%) Or Neutral Evil (50%)",
     "armor_class": {
       "value": 14,
@@ -8570,11 +8513,10 @@
     "challenge_rating": 0.5,
     "size": "Small",
     "type": "Monstrosity",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 11,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -8629,7 +8571,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Darkvision": "60 ft."
@@ -8659,7 +8601,7 @@
     "alignment": "Any Alignment",
     "armor_class": {
       "value": 10,
-      "description": "",
+    
       "shield": false
     },
     "hit_points": {
@@ -8738,11 +8680,10 @@
     "challenge_rating": 0.25,
     "size": "Large",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 12,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -8797,7 +8738,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Blindsight": "10 ft."
@@ -8833,7 +8774,6 @@
     "challenge_rating": 1,
     "size": "Medium",
     "type": "Dragon",
-    "subtype": "",
     "alignment": "Chaotic Good",
     "armor_class": {
       "value": 16,
@@ -8934,7 +8874,6 @@
     "challenge_rating": 4,
     "size": "Medium",
     "type": "Celestial",
-    "subtype": "",
     "alignment": "Lawful Good",
     "armor_class": {
       "value": 19,
@@ -9060,11 +8999,10 @@
     "challenge_rating": 0,
     "size": "Tiny",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 11,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -9119,7 +9057,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Blindsight": "30 ft."
@@ -9151,11 +9089,10 @@
     "challenge_rating": 0.5,
     "size": "Large",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 12,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -9210,7 +9147,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {},
     "traits": [
@@ -9244,7 +9181,7 @@
     "alignment": "Any Non-good Alignment",
     "armor_class": {
       "value": 13,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -9343,7 +9280,7 @@
     "alignment": "Any Non-good Alignment",
     "armor_class": {
       "value": 12,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -9428,11 +9365,10 @@
     "challenge_rating": 0.5,
     "size": "Small",
     "type": "Monstrosity",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 11,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -9487,7 +9423,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Blindsight": "60 ft."
@@ -9529,11 +9465,10 @@
     "challenge_rating": 1,
     "size": "Medium",
     "type": "Monstrosity",
-    "subtype": "",
     "alignment": "Neutral Evil",
     "armor_class": {
       "value": 12,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -9588,7 +9523,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Darkvision": "120 ft."
@@ -9629,7 +9564,7 @@
     "alignment": "Neutral Good",
     "armor_class": {
       "value": 15,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -9738,11 +9673,10 @@
     "challenge_rating": 0,
     "size": "Medium",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 13,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -9797,7 +9731,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {},
     "traits": [],
@@ -9821,7 +9755,6 @@
     "challenge_rating": 10,
     "size": "Medium",
     "type": "Celestial",
-    "subtype": "",
     "alignment": "Lawful Good",
     "armor_class": {
       "value": 17,
@@ -9951,11 +9884,10 @@
     "challenge_rating": 1,
     "size": "Large",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 14,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -10010,7 +9942,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {},
     "traits": [
@@ -10045,7 +9977,6 @@
     "challenge_rating": 11,
     "size": "Large",
     "type": "Elemental",
-    "subtype": "",
     "alignment": "Chaotic Good",
     "armor_class": {
       "value": 17,
@@ -10166,7 +10097,7 @@
     "alignment": "Unaligned",
     "armor_class": {
       "value": 14,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -10276,11 +10207,10 @@
     "challenge_rating": 0.25,
     "size": "Large",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 10,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -10335,7 +10265,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {},
     "traits": [],
@@ -10359,7 +10289,6 @@
     "challenge_rating": 17,
     "size": "Gargantuan",
     "type": "Dragon",
-    "subtype": "",
     "alignment": "Neutral",
     "armor_class": {
       "value": 20,
@@ -10608,7 +10537,6 @@
     "challenge_rating": 6,
     "size": "Large",
     "type": "Monstrosity",
-    "subtype": "",
     "alignment": "Chaotic Evil",
     "armor_class": {
       "value": 19,
@@ -10749,7 +10677,7 @@
     "alignment": "Neutral Evil",
     "armor_class": {
       "value": 15,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -10861,7 +10789,7 @@
     "alignment": "Any Alignment",
     "armor_class": {
       "value": 11,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -10946,7 +10874,6 @@
     "challenge_rating": 1,
     "size": "Medium",
     "type": "Fey",
-    "subtype": "",
     "alignment": "Neutral",
     "armor_class": {
       "value": 11,
@@ -11178,11 +11105,10 @@
     "challenge_rating": 0.5,
     "size": "Small",
     "type": "Elemental",
-    "subtype": "",
     "alignment": "Neutral Evil",
     "armor_class": {
       "value": 12,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -11296,11 +11222,10 @@
     "challenge_rating": 0,
     "size": "Small",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 12,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -11355,7 +11280,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {},
     "traits": [
@@ -11385,7 +11310,6 @@
     "challenge_rating": 5,
     "size": "Large",
     "type": "Elemental",
-    "subtype": "",
     "alignment": "Neutral",
     "armor_class": {
       "value": 17,
@@ -11507,7 +11431,6 @@
     "challenge_rating": 11,
     "size": "Large",
     "type": "Elemental",
-    "subtype": "",
     "alignment": "Lawful Evil",
     "armor_class": {
       "value": 17,
@@ -11628,11 +11551,10 @@
     "challenge_rating": 4,
     "size": "Huge",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 12,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -11687,7 +11609,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {},
     "traits": [
@@ -11727,11 +11649,10 @@
     "challenge_rating": 0.25,
     "size": "Large",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 10,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -11786,7 +11707,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {},
     "traits": [
@@ -11954,7 +11875,6 @@
     "challenge_rating": 2,
     "size": "Medium",
     "type": "Monstrosity",
-    "subtype": "",
     "alignment": "Neutral Evil",
     "armor_class": {
       "value": 13,
@@ -12013,7 +11933,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Darkvision": "60 ft."
@@ -12085,7 +12005,6 @@
     "challenge_rating": 4,
     "size": "Large",
     "type": "Giant",
-    "subtype": "",
     "alignment": "Chaotic Evil",
     "armor_class": {
       "value": 12,
@@ -12197,11 +12116,10 @@
     "challenge_rating": 5,
     "size": "Large",
     "type": "Elemental",
-    "subtype": "",
     "alignment": "Neutral",
     "armor_class": {
       "value": 13,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -12324,7 +12242,6 @@
     "challenge_rating": 9,
     "size": "Huge",
     "type": "Giant",
-    "subtype": "",
     "alignment": "Lawful Evil",
     "armor_class": {
       "value": 18,
@@ -12427,11 +12344,10 @@
     "challenge_rating": 5,
     "size": "Medium",
     "type": "Construct",
-    "subtype": "",
     "alignment": "Neutral",
     "armor_class": {
       "value": 9,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -12565,11 +12481,10 @@
     "challenge_rating": 0.125,
     "size": "Tiny",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 14,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -12624,7 +12539,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Blindsight": "10 ft."
@@ -12656,7 +12571,6 @@
     "challenge_rating": 0.25,
     "size": "Small",
     "type": "Construct",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 17,
@@ -12715,7 +12629,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Blindsight": "60 ft. (blind beyond this radius)"
@@ -12767,11 +12681,10 @@
     "challenge_rating": 0,
     "size": "Tiny",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 11,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -12826,7 +12739,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Darkvision": "30 ft."
@@ -12852,7 +12765,6 @@
     "challenge_rating": 8,
     "size": "Huge",
     "type": "Giant",
-    "subtype": "",
     "alignment": "Neutral Evil",
     "armor_class": {
       "value": 15,
@@ -12955,7 +12867,6 @@
     "challenge_rating": 2,
     "size": "Medium",
     "type": "Elemental",
-    "subtype": "",
     "alignment": "Chaotic Evil",
     "armor_class": {
       "value": 15,
@@ -13074,11 +12985,10 @@
     "challenge_rating": 2,
     "size": "Large",
     "type": "Ooze",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 6,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -13133,7 +13043,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Blindsight": "60 ft. (blind beyond this radius)"
@@ -13185,11 +13095,10 @@
     "challenge_rating": 2,
     "size": "Medium",
     "type": "Undead",
-    "subtype": "",
     "alignment": "Chaotic Evil",
     "armor_class": {
       "value": 13,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -13299,11 +13208,10 @@
     "challenge_rating": 4,
     "size": "Medium",
     "type": "Undead",
-    "subtype": "",
     "alignment": "Any Alignment",
     "armor_class": {
       "value": 11,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -13435,11 +13343,10 @@
     "challenge_rating": 1,
     "size": "Medium",
     "type": "Undead",
-    "subtype": "",
     "alignment": "Chaotic Evil",
     "armor_class": {
       "value": 12,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -13530,11 +13437,10 @@
     "challenge_rating": 7,
     "size": "Huge",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 12,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -13589,7 +13495,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {},
     "traits": [],
@@ -13628,11 +13534,10 @@
     "challenge_rating": 0.25,
     "size": "Medium",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 10,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -13687,7 +13592,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Darkvision": "30 ft."
@@ -13734,11 +13639,10 @@
     "challenge_rating": 0.25,
     "size": "Large",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 13,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -13793,7 +13697,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Blindsight": "60 ft."
@@ -13830,11 +13734,10 @@
     "challenge_rating": 2,
     "size": "Large",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 12,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -13889,7 +13792,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {},
     "traits": [
@@ -13924,11 +13827,10 @@
     "challenge_rating": 0.25,
     "size": "Small",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 13,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -13983,7 +13885,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Blindsight": "30 ft."
@@ -14009,11 +13911,10 @@
     "challenge_rating": 2,
     "size": "Huge",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 12,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -14068,7 +13969,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Blindsight": "10 ft."
@@ -14104,11 +14005,10 @@
     "challenge_rating": 0.125,
     "size": "Medium",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 15,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -14163,7 +14063,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Blindsight": "30 ft."
@@ -14195,11 +14095,10 @@
     "challenge_rating": 5,
     "size": "Huge",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 14,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -14254,7 +14153,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {},
     "traits": [
@@ -14299,11 +14198,10 @@
     "challenge_rating": 1,
     "size": "Large",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Neutral Good",
     "armor_class": {
       "value": 13,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -14404,11 +14302,10 @@
     "challenge_rating": 2,
     "size": "Huge",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 15,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -14506,11 +14403,10 @@
     "challenge_rating": 0,
     "size": "Small",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 13,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -14565,7 +14461,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Blindsight": "30 ft."
@@ -14597,11 +14493,10 @@
     "challenge_rating": 0.25,
     "size": "Medium",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 11,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -14656,7 +14551,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Darkvision": "30 ft."
@@ -14698,11 +14593,10 @@
     "challenge_rating": 0.5,
     "size": "Large",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 11,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -14757,7 +14651,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {},
     "traits": [
@@ -14792,11 +14686,10 @@
     "challenge_rating": 1,
     "size": "Large",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 12,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -14851,7 +14744,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {},
     "traits": [
@@ -14881,11 +14774,10 @@
     "challenge_rating": 0.25,
     "size": "Large",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 12,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -14940,7 +14832,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Darkvision": "30 ft."
@@ -14977,11 +14869,10 @@
     "challenge_rating": 1,
     "size": "Large",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 11,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -15036,7 +14927,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Darkvision": "60 ft."
@@ -15083,11 +14974,10 @@
     "challenge_rating": 0.25,
     "size": "Large",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Neutral",
     "armor_class": {
       "value": 12,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -15182,11 +15072,10 @@
     "challenge_rating": 0.25,
     "size": "Medium",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 14,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -15241,7 +15130,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Blindsight": "10 ft."
@@ -15267,11 +15156,10 @@
     "challenge_rating": 0.125,
     "size": "Small",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 12,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -15326,7 +15214,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Darkvision": "60 ft."
@@ -15363,11 +15251,10 @@
     "challenge_rating": 0.125,
     "size": "Small",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 12,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -15422,7 +15309,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Darkvision": "60 ft."
@@ -15448,11 +15335,10 @@
     "challenge_rating": 3,
     "size": "Large",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 15,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -15507,7 +15393,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Blindsight": "60 ft."
@@ -15548,11 +15434,10 @@
     "challenge_rating": 0.5,
     "size": "Large",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 13,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -15607,7 +15492,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {},
     "traits": [
@@ -15642,11 +15527,10 @@
     "challenge_rating": 5,
     "size": "Huge",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 13,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -15701,7 +15585,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Blindsight": "60 ft."
@@ -15738,11 +15622,10 @@
     "challenge_rating": 1,
     "size": "Large",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 14,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -15797,7 +15680,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Blindsight": "10 ft.",
@@ -15845,11 +15728,10 @@
     "challenge_rating": 1,
     "size": "Large",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 11,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -15904,7 +15786,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Darkvision": "30 ft."
@@ -15946,11 +15828,10 @@
     "challenge_rating": 1,
     "size": "Large",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Neutral Evil",
     "armor_class": {
       "value": 10,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -16055,11 +15936,10 @@
     "challenge_rating": 0.5,
     "size": "Medium",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 12,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -16114,7 +15994,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {},
     "traits": [],
@@ -16138,11 +16018,10 @@
     "challenge_rating": 0.125,
     "size": "Medium",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 13,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -16197,7 +16076,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Darkvision": "60 ft."
@@ -16229,11 +16108,10 @@
     "challenge_rating": 0.25,
     "size": "Medium",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 13,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -16288,7 +16166,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Blindsight": "10 ft.",
@@ -16331,11 +16209,10 @@
     "challenge_rating": 2,
     "size": "Medium",
     "type": "Aberration",
-    "subtype": "",
     "alignment": "Neutral",
     "armor_class": {
       "value": 9,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -16390,7 +16267,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Darkvision": "60 ft."
@@ -16577,7 +16454,7 @@
     "alignment": "Any Alignment",
     "armor_class": {
       "value": 16,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -16799,11 +16676,10 @@
     "challenge_rating": 0,
     "size": "Medium",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 10,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -16858,7 +16734,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {},
     "traits": [
@@ -16995,7 +16871,6 @@
     "challenge_rating": 3,
     "size": "Medium",
     "type": "Dragon",
-    "subtype": "",
     "alignment": "Lawful Good",
     "armor_class": {
       "value": 17,
@@ -17102,7 +16977,6 @@
     "challenge_rating": 5,
     "size": "Large",
     "type": "Monstrosity",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 19,
@@ -17161,7 +17035,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Darkvision": "60 ft."
@@ -17211,11 +17085,10 @@
     "challenge_rating": 0.5,
     "size": "Medium",
     "type": "Ooze",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 8,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -17270,7 +17143,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Blindsight": "60 ft. (blind beyond this radius)"
@@ -17327,7 +17200,6 @@
     "challenge_rating": 2,
     "size": "Medium",
     "type": "Dragon",
-    "subtype": "",
     "alignment": "Lawful Evil",
     "armor_class": {
       "value": 17,
@@ -17437,7 +17309,6 @@
     "challenge_rating": 3,
     "size": "Medium",
     "type": "Fey",
-    "subtype": "",
     "alignment": "Neutral Evil",
     "armor_class": {
       "value": 17,
@@ -17567,7 +17438,6 @@
     "challenge_rating": 2,
     "size": "Medium",
     "type": "Monstrosity",
-    "subtype": "",
     "alignment": "Neutral",
     "armor_class": {
       "value": 14,
@@ -17626,7 +17496,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Darkvision": "60 ft."
@@ -17678,11 +17548,10 @@
     "challenge_rating": 2,
     "size": "Large",
     "type": "Monstrosity",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 12,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -17737,7 +17606,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Darkvision": "60 ft."
@@ -17788,7 +17657,7 @@
     "alignment": "Neutral Evil",
     "armor_class": {
       "value": 11,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -17892,7 +17761,7 @@
     "alignment": "Any Alignment",
     "armor_class": {
       "value": 16,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -17971,7 +17840,6 @@
     "challenge_rating": 10,
     "size": "Large",
     "type": "Monstrosity",
-    "subtype": "",
     "alignment": "Lawful Good",
     "armor_class": {
       "value": 18,
@@ -18087,7 +17955,6 @@
     "challenge_rating": 11,
     "size": "Large",
     "type": "Monstrosity",
-    "subtype": "",
     "alignment": "Lawful Neutral",
     "armor_class": {
       "value": 17,
@@ -18353,11 +18220,10 @@
     "challenge_rating": 1,
     "size": "Medium",
     "type": "Monstrosity",
-    "subtype": "",
     "alignment": "Chaotic Evil",
     "armor_class": {
       "value": 11,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -18456,11 +18322,10 @@
     "challenge_rating": 0,
     "size": "Tiny",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 13,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -18515,7 +18380,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {},
     "traits": [
@@ -18545,7 +18410,6 @@
     "challenge_rating": 3,
     "size": "Medium",
     "type": "Fiend",
-    "subtype": "",
     "alignment": "Lawful Evil",
     "armor_class": {
       "value": 15,
@@ -18787,7 +18651,6 @@
     "challenge_rating": 5,
     "size": "Huge",
     "type": "Giant",
-    "subtype": "",
     "alignment": "Chaotic Evil",
     "armor_class": {
       "value": 13,
@@ -18887,11 +18750,10 @@
     "challenge_rating": 1,
     "size": "Large",
     "type": "Monstrosity",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 11,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -18946,7 +18808,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {},
     "traits": [
@@ -19093,7 +18955,6 @@
     "challenge_rating": 0,
     "size": "Tiny",
     "type": "Construct",
-    "subtype": "",
     "alignment": "Neutral",
     "armor_class": {
       "value": 13,
@@ -19328,11 +19189,10 @@
     "challenge_rating": 2,
     "size": "Large",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 12,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -19387,7 +19247,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Darkvision": "30 ft."
@@ -19424,7 +19284,6 @@
     "challenge_rating": 8,
     "size": "Huge",
     "type": "Monstrosity",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 15,
@@ -19483,7 +19342,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Darkvision": "60 ft."
@@ -19535,11 +19394,10 @@
     "challenge_rating": 0,
     "size": "Medium",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 11,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -19594,7 +19452,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {},
     "traits": [
@@ -19766,11 +19624,10 @@
     "challenge_rating": 0.5,
     "size": "Small",
     "type": "Elemental",
-    "subtype": "",
     "alignment": "Neutral Evil",
     "armor_class": {
       "value": 11,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -19895,7 +19752,7 @@
     "alignment": "Lawful Evil",
     "armor_class": {
       "value": 13,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -20018,11 +19875,10 @@
     "challenge_rating": 6,
     "size": "Medium",
     "type": "Elemental",
-    "subtype": "",
     "alignment": "Neutral",
     "armor_class": {
       "value": 14,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -20138,7 +19994,6 @@
     "challenge_rating": 16,
     "size": "Large",
     "type": "Construct",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 20,
@@ -20287,11 +20142,10 @@
     "challenge_rating": 0,
     "size": "Small",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 12,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -20346,7 +20200,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {},
     "traits": [
@@ -20381,11 +20235,10 @@
     "challenge_rating": 3,
     "size": "Huge",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 12,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -20440,7 +20293,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Blindsight": "120 ft."
@@ -20481,7 +20334,7 @@
     "alignment": "Any Alignment",
     "armor_class": {
       "value": 18,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -20596,7 +20449,7 @@
     "alignment": "Lawful Evil",
     "armor_class": {
       "value": 12,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -20862,7 +20715,6 @@
     "challenge_rating": 4,
     "size": "Large",
     "type": "Monstrosity",
-    "subtype": "",
     "alignment": "Chaotic Evil",
     "armor_class": {
       "value": 13,
@@ -20978,7 +20830,7 @@
     "alignment": "Lawful Evil",
     "armor_class": {
       "value": 7,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -21084,7 +20936,6 @@
     "challenge_rating": 21,
     "size": "Medium",
     "type": "Undead",
-    "subtype": "",
     "alignment": "Any Evil Alignment",
     "armor_class": {
       "value": 17,
@@ -21237,11 +21088,10 @@
     "challenge_rating": 1,
     "size": "Large",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 12,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -21296,7 +21146,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {},
     "traits": [
@@ -21351,11 +21201,10 @@
     "challenge_rating": 0,
     "size": "Tiny",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 10,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -21410,7 +21259,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Darkvision": "30 ft."
@@ -21564,7 +21413,7 @@
     "alignment": "Any Alignment",
     "armor_class": {
       "value": 12,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -21649,11 +21498,10 @@
     "challenge_rating": 0.5,
     "size": "Small",
     "type": "Elemental",
-    "subtype": "",
     "alignment": "Neutral Evil",
     "armor_class": {
       "value": 11,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -21773,7 +21621,6 @@
     "challenge_rating": 0.5,
     "size": "Small",
     "type": "Elemental",
-    "subtype": "",
     "alignment": "Chaotic Neutral",
     "armor_class": {
       "value": 14,
@@ -21877,11 +21724,10 @@
     "challenge_rating": 6,
     "size": "Huge",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 13,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -21936,7 +21782,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {},
     "traits": [
@@ -21976,7 +21822,6 @@
     "challenge_rating": 3,
     "size": "Large",
     "type": "Monstrosity",
-    "subtype": "",
     "alignment": "Lawful Evil",
     "armor_class": {
       "value": 14,
@@ -22035,7 +21880,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Darkvision": "60 ft."
@@ -22241,11 +22086,10 @@
     "challenge_rating": 0.125,
     "size": "Medium",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 12,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -22300,7 +22144,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {},
     "traits": [
@@ -22330,7 +22174,6 @@
     "challenge_rating": 6,
     "size": "Medium",
     "type": "Monstrosity",
-    "subtype": "",
     "alignment": "Lawful Evil",
     "armor_class": {
       "value": 15,
@@ -22450,7 +22293,7 @@
     "alignment": "Neutral",
     "armor_class": {
       "value": 11,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -22536,7 +22379,6 @@
     "challenge_rating": 2,
     "size": "Large",
     "type": "Monstrosity",
-    "subtype": "",
     "alignment": "Chaotic Evil",
     "armor_class": {
       "value": 13,
@@ -22712,7 +22554,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Darkvision": "60 ft."
@@ -22775,7 +22617,6 @@
     "challenge_rating": 3,
     "size": "Large",
     "type": "Monstrosity",
-    "subtype": "",
     "alignment": "Chaotic Evil",
     "armor_class": {
       "value": 14,
@@ -22886,7 +22727,6 @@
     "challenge_rating": 2,
     "size": "Large",
     "type": "Undead",
-    "subtype": "",
     "alignment": "Lawful Evil",
     "armor_class": {
       "value": 12,
@@ -22999,11 +22839,10 @@
     "challenge_rating": 0.125,
     "size": "Medium",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 10,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -23058,7 +22897,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {},
     "traits": [
@@ -23093,7 +22932,6 @@
     "challenge_rating": 3,
     "size": "Medium",
     "type": "Undead",
-    "subtype": "",
     "alignment": "Lawful Evil",
     "armor_class": {
       "value": 11,
@@ -23202,7 +23040,6 @@
     "challenge_rating": 15,
     "size": "Medium",
     "type": "Undead",
-    "subtype": "",
     "alignment": "Lawful Evil",
     "armor_class": {
       "value": 17,
@@ -23500,7 +23337,6 @@
     "challenge_rating": 5,
     "size": "Medium",
     "type": "Fiend",
-    "subtype": "",
     "alignment": "Neutral Evil",
     "armor_class": {
       "value": 17,
@@ -23646,7 +23482,6 @@
     "challenge_rating": 3,
     "size": "Large",
     "type": "Fiend",
-    "subtype": "",
     "alignment": "Neutral Evil",
     "armor_class": {
       "value": 13,
@@ -23754,7 +23589,7 @@
     "alignment": "Any Alignment",
     "armor_class": {
       "value": 15,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -23839,11 +23674,10 @@
     "challenge_rating": 2,
     "size": "Large",
     "type": "Ooze",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 8,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -23898,7 +23732,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Blindsight": "60 ft. (blind beyond this radius)"
@@ -23958,11 +23792,10 @@
     "challenge_rating": 0,
     "size": "Small",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 12,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -24017,7 +23850,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Darkvision": "30 ft."
@@ -24064,7 +23897,6 @@
     "challenge_rating": 2,
     "size": "Large",
     "type": "Giant",
-    "subtype": "",
     "alignment": "Chaotic Evil",
     "armor_class": {
       "value": 11,
@@ -24160,11 +23992,10 @@
     "challenge_rating": 2,
     "size": "Large",
     "type": "Undead",
-    "subtype": "",
     "alignment": "Neutral Evil",
     "armor_class": {
       "value": 8,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -24259,7 +24090,6 @@
     "challenge_rating": 7,
     "size": "Large",
     "type": "Giant",
-    "subtype": "",
     "alignment": "Lawful Evil",
     "armor_class": {
       "value": 16,
@@ -24483,7 +24313,6 @@
     "challenge_rating": 5,
     "size": "Large",
     "type": "Aberration",
-    "subtype": "",
     "alignment": "Neutral",
     "armor_class": {
       "value": 14,
@@ -24594,11 +24423,10 @@
     "challenge_rating": 0,
     "size": "Tiny",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 11,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -24653,7 +24481,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Darkvision": "120 ft."
@@ -24690,7 +24518,6 @@
     "challenge_rating": 3,
     "size": "Large",
     "type": "Monstrosity",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 13,
@@ -24749,7 +24576,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Darkvision": "60 ft."
@@ -24796,11 +24623,10 @@
     "challenge_rating": 0.25,
     "size": "Medium",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 12,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -24855,7 +24681,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {},
     "traits": [
@@ -24900,11 +24726,10 @@
     "challenge_rating": 2,
     "size": "Large",
     "type": "Celestial",
-    "subtype": "",
     "alignment": "Chaotic Good",
     "armor_class": {
       "value": 12,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -24986,11 +24811,10 @@
     "challenge_rating": 3,
     "size": "Large",
     "type": "Monstrosity",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 13,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -25045,7 +24869,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Darkvision": "60 ft."
@@ -25244,7 +25068,6 @@
     "challenge_rating": 16,
     "size": "Large",
     "type": "Celestial",
-    "subtype": "",
     "alignment": "Lawful Good",
     "armor_class": {
       "value": 19,
@@ -25374,7 +25197,6 @@
     "challenge_rating": 2,
     "size": "Large",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 13,
@@ -25433,7 +25255,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {},
     "traits": [
@@ -25465,11 +25287,10 @@
     "challenge_rating": 0.125,
     "size": "Tiny",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 13,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -25524,7 +25345,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Blindsight": "10 ft."
@@ -25550,11 +25371,10 @@
     "challenge_rating": 2,
     "size": "Large",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 12,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -25609,7 +25429,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {},
     "traits": [
@@ -25654,11 +25474,10 @@
     "challenge_rating": 0.125,
     "size": "Medium",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 10,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -25713,7 +25532,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {},
     "traits": [],
@@ -25741,7 +25560,7 @@
     "alignment": "Any Alignment",
     "armor_class": {
       "value": 13,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -25831,7 +25650,6 @@
     "challenge_rating": 0.25,
     "size": "Tiny",
     "type": "Dragon",
-    "subtype": "",
     "alignment": "Neutral Good",
     "armor_class": {
       "value": 13,
@@ -25948,7 +25766,6 @@
     "challenge_rating": 15,
     "size": "Gargantuan",
     "type": "Monstrosity",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 18,
@@ -26007,7 +25824,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Blindsight": "30 ft.",
@@ -26059,7 +25876,7 @@
     "alignment": "Chaotic Evil",
     "armor_class": {
       "value": 13,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -26183,11 +26000,10 @@
     "challenge_rating": 0,
     "size": "Tiny",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 13,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -26242,7 +26058,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Darkvision": "60 ft."
@@ -26279,7 +26095,6 @@
     "challenge_rating": 13,
     "size": "Medium",
     "type": "Fiend",
-    "subtype": "",
     "alignment": "Lawful Evil",
     "armor_class": {
       "value": 16,
@@ -26389,11 +26204,10 @@
     "challenge_rating": 0,
     "size": "Tiny",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 10,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -26448,7 +26262,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Darkvision": "30 ft."
@@ -26480,11 +26294,10 @@
     "challenge_rating": 0,
     "size": "Tiny",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 12,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -26539,7 +26352,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {},
     "traits": [
@@ -26564,7 +26377,6 @@
     "challenge_rating": 4,
     "size": "Medium",
     "type": "Dragon",
-    "subtype": "",
     "alignment": "Chaotic Evil",
     "armor_class": {
       "value": 17,
@@ -26665,11 +26477,10 @@
     "challenge_rating": 0.5,
     "size": "Medium",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 12,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -26724,7 +26535,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Blindsight": "30 ft."
@@ -26761,7 +26572,6 @@
     "challenge_rating": 11,
     "size": "Huge",
     "type": "Monstrosity",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 17,
@@ -26820,7 +26630,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Darkvision": "60 ft.",
@@ -26862,11 +26672,10 @@
     "challenge_rating": 2,
     "size": "Large",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 11,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -26921,7 +26730,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {},
     "traits": [
@@ -26951,11 +26760,10 @@
     "challenge_rating": 0.25,
     "size": "Large",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 10,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -27010,7 +26818,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {},
     "traits": [],
@@ -27034,7 +26842,6 @@
     "challenge_rating": 11,
     "size": "Gargantuan",
     "type": "Monstrosity",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 15,
@@ -27093,7 +26900,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {},
     "traits": [
@@ -27138,7 +26945,6 @@
     "challenge_rating": 5,
     "size": "Large",
     "type": "Monstrosity",
-    "subtype": "",
     "alignment": "Neutral Evil",
     "armor_class": {
       "value": 20,
@@ -27197,7 +27003,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Darkvision": "60 ft."
@@ -27254,11 +27060,10 @@
     "challenge_rating": 2,
     "size": "Large",
     "type": "Construct",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 12,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -27313,7 +27118,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Blindsight": "60 ft. (blind beyond this radius)"
@@ -27370,7 +27175,6 @@
     "challenge_rating": 0.5,
     "size": "Medium",
     "type": "Monstrosity",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 14,
@@ -27429,7 +27233,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Darkvision": "60 ft."
@@ -27471,11 +27275,10 @@
     "challenge_rating": 2,
     "size": "Large",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 12,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -27530,7 +27333,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {},
     "traits": [
@@ -27701,7 +27504,6 @@
     "challenge_rating": 5,
     "size": "Large",
     "type": "Elemental",
-    "subtype": "",
     "alignment": "Neutral Evil",
     "armor_class": {
       "value": 15,
@@ -27823,7 +27625,6 @@
     "challenge_rating": 0.5,
     "size": "Medium",
     "type": "Fey",
-    "subtype": "",
     "alignment": "Chaotic Neutral",
     "armor_class": {
       "value": 14,
@@ -27939,11 +27740,10 @@
     "challenge_rating": 0,
     "size": "Tiny",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 11,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -27998,7 +27798,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Blindsight": "10 ft."
@@ -28028,7 +27828,7 @@
     "alignment": "Any Alignment",
     "armor_class": {
       "value": 13,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -28128,7 +27928,6 @@
     "challenge_rating": 2,
     "size": "Medium",
     "type": "Fey",
-    "subtype": "",
     "alignment": "Chaotic Evil",
     "armor_class": {
       "value": 14,
@@ -28253,11 +28052,10 @@
     "challenge_rating": 0,
     "size": "Tiny",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 11,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -28312,7 +28110,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {},
     "traits": [
@@ -28331,11 +28129,10 @@
     "challenge_rating": 0.5,
     "size": "Medium",
     "type": "Undead",
-    "subtype": "",
     "alignment": "Chaotic Evil",
     "armor_class": {
       "value": 12,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -28390,7 +28187,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Darkvision": "60 ft."
@@ -28459,7 +28256,6 @@
     "challenge_rating": 5,
     "size": "Large",
     "type": "Plant",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 15,
@@ -28518,7 +28314,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Blindsight": "60 ft. (blind beyond this radius)"
@@ -28572,7 +28368,6 @@
     "challenge_rating": 7,
     "size": "Large",
     "type": "Construct",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 17,
@@ -28695,11 +28490,10 @@
     "challenge_rating": 0,
     "size": "Medium",
     "type": "Plant",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 5,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -28754,7 +28548,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Blindsight": "30 ft. (blind beyond this radius)"
@@ -28788,7 +28582,6 @@
     "challenge_rating": 2,
     "size": "Medium",
     "type": "Dragon",
-    "subtype": "",
     "alignment": "Lawful Good",
     "armor_class": {
       "value": 17,
@@ -28889,7 +28682,6 @@
     "challenge_rating": 0.25,
     "size": "Medium",
     "type": "Undead",
-    "subtype": "",
     "alignment": "Lawful Evil",
     "armor_class": {
       "value": 13,
@@ -28992,7 +28784,6 @@
     "challenge_rating": 21,
     "size": "Large",
     "type": "Celestial",
-    "subtype": "",
     "alignment": "Lawful Good",
     "armor_class": {
       "value": 21,
@@ -29160,11 +28951,10 @@
     "challenge_rating": 1,
     "size": "Medium",
     "type": "Undead",
-    "subtype": "",
     "alignment": "Chaotic Evil",
     "armor_class": {
       "value": 12,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -29281,11 +29071,10 @@
     "challenge_rating": 0,
     "size": "Tiny",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 12,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -29340,7 +29129,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Darkvision": "30 ft."
@@ -29382,7 +29171,6 @@
     "challenge_rating": 8,
     "size": "Large",
     "type": "Monstrosity",
-    "subtype": "",
     "alignment": "Chaotic Evil",
     "armor_class": {
       "value": 15,
@@ -29488,7 +29276,6 @@
     "challenge_rating": 0.25,
     "size": "Tiny",
     "type": "Fey",
-    "subtype": "",
     "alignment": "Neutral Good",
     "armor_class": {
       "value": 15,
@@ -29597,7 +29384,7 @@
     "alignment": "Any Alignment",
     "armor_class": {
       "value": 12,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -29702,11 +29489,10 @@
     "challenge_rating": 0.25,
     "size": "Small",
     "type": "Elemental",
-    "subtype": "",
     "alignment": "Neutral Evil",
     "armor_class": {
       "value": 10,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -29818,7 +29604,6 @@
     "challenge_rating": 0.125,
     "size": "Tiny",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 14,
@@ -29877,7 +29662,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Darkvision": "60 ft."
@@ -29903,7 +29688,6 @@
     "challenge_rating": 7,
     "size": "Huge",
     "type": "Giant",
-    "subtype": "",
     "alignment": "Neutral",
     "armor_class": {
       "value": 17,
@@ -30017,7 +29801,6 @@
     "challenge_rating": 10,
     "size": "Large",
     "type": "Construct",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 17,
@@ -30145,7 +29928,6 @@
     "challenge_rating": 13,
     "size": "Huge",
     "type": "Giant",
-    "subtype": "",
     "alignment": "Chaotic Good",
     "armor_class": {
       "value": 16,
@@ -30402,11 +30184,10 @@
     "challenge_rating": 0.25,
     "size": "Medium",
     "type": "Swarm of Tiny beasts",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 12,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -30461,7 +30242,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Blindsight": "60 ft."
@@ -30518,11 +30299,10 @@
     "challenge_rating": 0.5,
     "size": "Medium",
     "type": "Swarm of Tiny beasts",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 12,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -30577,7 +30357,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Blindsight": "10 ft."
@@ -30624,11 +30404,10 @@
     "challenge_rating": 0.5,
     "size": "Medium",
     "type": "Swarm of Tiny beasts",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 12,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -30683,7 +30462,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Blindsight": "10 ft."
@@ -30730,11 +30509,10 @@
     "challenge_rating": 0.5,
     "size": "Medium",
     "type": "Swarm of Tiny beasts",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 12,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -30789,7 +30567,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Blindsight": "10 ft."
@@ -30836,11 +30614,10 @@
     "challenge_rating": 2,
     "size": "Medium",
     "type": "Swarm of Tiny beasts",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 14,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -30895,7 +30672,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Blindsight": "10 ft."
@@ -30942,11 +30719,10 @@
     "challenge_rating": 1,
     "size": "Medium",
     "type": "Swarm of Tiny beasts",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 13,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -31001,7 +30777,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Darkvision": "60 ft."
@@ -31058,11 +30834,10 @@
     "challenge_rating": 0.25,
     "size": "Medium",
     "type": "Swarm of Tiny beasts",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 10,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -31117,7 +30892,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Darkvision": "30 ft."
@@ -31169,11 +30944,10 @@
     "challenge_rating": 0.25,
     "size": "Medium",
     "type": "Swarm of Tiny beasts",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 12,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -31228,7 +31002,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {},
     "traits": [
@@ -31273,11 +31047,10 @@
     "challenge_rating": 0.5,
     "size": "Medium",
     "type": "Swarm of Tiny beasts",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 12,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -31332,7 +31105,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Blindsight": "10 ft."
@@ -31393,11 +31166,10 @@
     "challenge_rating": 0.5,
     "size": "Medium",
     "type": "Swarm of Tiny beasts",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 12,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -31452,7 +31224,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Blindsight": "10 ft."
@@ -31558,7 +31330,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Blindsight": "120 ft."
@@ -31685,7 +31457,7 @@
     "alignment": "Any Non-good Alignment",
     "armor_class": {
       "value": 11,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -31785,11 +31557,10 @@
     "challenge_rating": 1,
     "size": "Large",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 12,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -31844,7 +31615,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Darkvision": "60 ft."
@@ -31886,7 +31657,6 @@
     "challenge_rating": 9,
     "size": "Huge",
     "type": "Plant",
-    "subtype": "",
     "alignment": "Chaotic Good",
     "armor_class": {
       "value": 16,
@@ -32014,7 +31784,7 @@
     "alignment": "Any Alignment",
     "armor_class": {
       "value": 12,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -32099,7 +31869,6 @@
     "challenge_rating": 5,
     "size": "Huge",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 13,
@@ -32158,7 +31927,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {},
     "traits": [
@@ -32200,7 +31969,6 @@
     "challenge_rating": 5,
     "size": "Large",
     "type": "Giant",
-    "subtype": "",
     "alignment": "Chaotic Evil",
     "armor_class": {
       "value": 15,
@@ -32316,7 +32084,6 @@
     "challenge_rating": 8,
     "size": "Huge",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 13,
@@ -32375,7 +32142,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {},
     "traits": [],
@@ -32416,11 +32183,10 @@
     "challenge_rating": 5,
     "size": "Large",
     "type": "Celestial",
-    "subtype": "",
     "alignment": "Lawful Good",
     "armor_class": {
       "value": 12,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -32743,7 +32509,6 @@
     "challenge_rating": 5,
     "size": "Medium",
     "type": "Undead",
-    "subtype": "",
     "alignment": "Neutral Evil",
     "armor_class": {
       "value": 15,
@@ -32866,7 +32631,7 @@
     "alignment": "Any Alignment",
     "armor_class": {
       "value": 17,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -32970,11 +32735,10 @@
     "challenge_rating": 0.25,
     "size": "Medium",
     "type": "Plant",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 5,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -33029,7 +32793,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Blindsight": "30 ft. (blind beyond this radius)"
@@ -33211,11 +32975,10 @@
     "challenge_rating": 0,
     "size": "Medium",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 10,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -33270,7 +33033,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {},
     "traits": [
@@ -33305,11 +33068,10 @@
     "challenge_rating": 0.5,
     "size": "Large",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 11,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -33364,7 +33126,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {},
     "traits": [
@@ -33394,7 +33156,6 @@
     "challenge_rating": 0.5,
     "size": "Large",
     "type": "Undead",
-    "subtype": "",
     "alignment": "Lawful Evil",
     "armor_class": {
       "value": 13,
@@ -33453,7 +33214,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Darkvision": "60 ft."
@@ -33491,11 +33252,10 @@
     "challenge_rating": 5,
     "size": "Large",
     "type": "Elemental",
-    "subtype": "",
     "alignment": "Neutral",
     "armor_class": {
       "value": 14,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -33618,11 +33378,10 @@
     "challenge_rating": 0,
     "size": "Tiny",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 13,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -33677,7 +33436,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {},
     "traits": [
@@ -33958,7 +33717,7 @@
     "alignment": "Lawful Evil",
     "armor_class": {
       "value": 12,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -34086,7 +33845,7 @@
     "alignment": "Neutral",
     "armor_class": {
       "value": 12,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -34351,7 +34110,6 @@
     "challenge_rating": 2,
     "size": "Medium",
     "type": "Dragon",
-    "subtype": "",
     "alignment": "Chaotic Evil",
     "armor_class": {
       "value": 16,
@@ -34452,7 +34210,6 @@
     "challenge_rating": 3,
     "size": "Medium",
     "type": "Undead",
-    "subtype": "",
     "alignment": "Neutral Evil",
     "armor_class": {
       "value": 14,
@@ -34577,11 +34334,10 @@
     "challenge_rating": 2,
     "size": "Tiny",
     "type": "Undead",
-    "subtype": "",
     "alignment": "Chaotic Evil",
     "armor_class": {
       "value": 19,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -34711,11 +34467,10 @@
     "challenge_rating": 3,
     "size": "Large",
     "type": "Monstrosity",
-    "subtype": "",
     "alignment": "Neutral Evil",
     "armor_class": {
       "value": 13,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -34825,11 +34580,10 @@
     "challenge_rating": 0.25,
     "size": "Medium",
     "type": "Beast",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 13,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -34884,7 +34638,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {},
     "traits": [
@@ -34919,11 +34673,10 @@
     "challenge_rating": 0.5,
     "size": "Large",
     "type": "Monstrosity",
-    "subtype": "",
     "alignment": "Neutral Evil",
     "armor_class": {
       "value": 13,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -35011,11 +34764,10 @@
     "challenge_rating": 5,
     "size": "Medium",
     "type": "Undead",
-    "subtype": "",
     "alignment": "Neutral Evil",
     "armor_class": {
       "value": 13,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {
@@ -35136,7 +34888,6 @@
     "challenge_rating": 6,
     "size": "Large",
     "type": "Dragon",
-    "subtype": "",
     "alignment": "Unaligned",
     "armor_class": {
       "value": 13,
@@ -35195,7 +34946,7 @@
       "Persuasion": false
     },
     "languages": [
-      ""
+
     ],
     "senses": {
       "Darkvision": "60 ft."
@@ -35246,7 +34997,6 @@
     "challenge_rating": 5,
     "size": "Medium",
     "type": "Elemental",
-    "subtype": "",
     "alignment": "Neutral",
     "armor_class": {
       "value": 19,
@@ -35366,7 +35116,6 @@
     "challenge_rating": 7,
     "size": "Large",
     "type": "Dragon",
-    "subtype": "",
     "alignment": "Chaotic Evil",
     "armor_class": {
       "value": 18,
@@ -35489,7 +35238,6 @@
     "challenge_rating": 9,
     "size": "Large",
     "type": "Dragon",
-    "subtype": "",
     "alignment": "Lawful Evil",
     "armor_class": {
       "value": 18,
@@ -35606,7 +35354,6 @@
     "challenge_rating": 6,
     "size": "Large",
     "type": "Dragon",
-    "subtype": "",
     "alignment": "Chaotic Good",
     "armor_class": {
       "value": 17,
@@ -35723,7 +35470,6 @@
     "challenge_rating": 8,
     "size": "Large",
     "type": "Dragon",
-    "subtype": "",
     "alignment": "Lawful Good",
     "armor_class": {
       "value": 18,
@@ -35846,7 +35592,6 @@
     "challenge_rating": 7,
     "size": "Large",
     "type": "Dragon",
-    "subtype": "",
     "alignment": "Chaotic Good",
     "armor_class": {
       "value": 17,
@@ -35963,7 +35708,6 @@
     "challenge_rating": 10,
     "size": "Large",
     "type": "Dragon",
-    "subtype": "",
     "alignment": "Lawful Good",
     "armor_class": {
       "value": 18,
@@ -36086,7 +35830,6 @@
     "challenge_rating": 8,
     "size": "Large",
     "type": "Dragon",
-    "subtype": "",
     "alignment": "Lawful Evil",
     "armor_class": {
       "value": 18,
@@ -36212,7 +35955,6 @@
     "challenge_rating": 10,
     "size": "Large",
     "type": "Dragon",
-    "subtype": "",
     "alignment": "Chaotic Evil",
     "armor_class": {
       "value": 18,
@@ -36329,7 +36071,6 @@
     "challenge_rating": 9,
     "size": "Large",
     "type": "Dragon",
-    "subtype": "",
     "alignment": "Lawful Good",
     "armor_class": {
       "value": 18,
@@ -36446,7 +36187,6 @@
     "challenge_rating": 6,
     "size": "Large",
     "type": "Dragon",
-    "subtype": "",
     "alignment": "Chaotic Evil",
     "armor_class": {
       "value": 17,
@@ -36569,11 +36309,10 @@
     "challenge_rating": 0.25,
     "size": "Medium",
     "type": "Undead",
-    "subtype": "",
     "alignment": "Neutral Evil",
     "armor_class": {
       "value": 8,
-      "description": "",
+      
       "shield": false
     },
     "hit_points": {

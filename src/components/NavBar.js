@@ -52,9 +52,24 @@ const Test = styled.div`
 `
 
 
+const Image = styled.img`
+    width: 50px;
+    filter: invert(100%);
+    animation: blink 4.8s infinite;
+    -webkit-animation-delay: 15s;
+    -moz-animation-delay: 15s;
+    -ms-animation-delay: 15s;
+    -o-animation-delay: 15s;
+    animation-delay: 15s;
+`
+
+
 function NavBar() {
     return (
         <NavContainer>
+            <NavItem to={"/creatures"}>
+                <Image src="eye.png"></Image>
+            </NavItem>
             <NavItem to={"/creatures"} primary="true">
                 Summon List
             </NavItem>

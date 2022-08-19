@@ -264,7 +264,7 @@ const CreatureInfo = ({ currentCreature }) => {
                 </Row>
             : null }
 
-            {currentCreature.saving_throws ? 
+            {currentCreature.saving_throws && saving_throws() !== "" ? 
                 <TextStat>
                     <Label>Saving Throws:</Label>{" "}
                     {saving_throws()}
@@ -278,14 +278,14 @@ const CreatureInfo = ({ currentCreature }) => {
             </TextStat>
             : null }
 
-            {currentCreature.senses ? 
+            {currentCreature.senses && Object.keys(currentCreature.senses).length > 0 ? 
             <TextStat>
                 <Label>Senses:</Label>{" "}
                 {senses()}
             </TextStat>
             : null }
 
-            {currentCreature.languages ? 
+            {currentCreature.languages && currentCreature.languages.length > 0? 
             <TextStat>
                 <Label>Languages:</Label>{" "}
                 {displayArray("languages")}
@@ -320,14 +320,14 @@ const CreatureInfo = ({ currentCreature }) => {
             </TextStat>
             : null }
 
-            {currentCreature.traits ? 
+            {currentCreature.traits && Object.keys(currentCreature.traits).length > 0 ? 
             <TextStat>
                 <hr></hr>
                 <div dangerouslySetInnerHTML={{__html: traits()}}></div>
             </TextStat>
             : null }
 
-            {currentCreature.actions ? 
+            {currentCreature.actions && Object.keys(currentCreature.actions).length > 0  ? 
             <TextStat>
                 <hr></hr>
                 <h5>Actions:</h5>{" "}
@@ -343,7 +343,7 @@ const CreatureInfo = ({ currentCreature }) => {
             </TextStat>
             : null }
 
-            {currentCreature.tags ? 
+            {currentCreature.tags && Object.keys(currentCreature.tags).length > 0 ? 
             <TextStat>
                 <hr></hr>
                 <div dangerouslySetInnerHTML={{__html: tags()}}></div>
