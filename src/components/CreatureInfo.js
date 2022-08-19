@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { ItemInfo } from "../styles/listStyles"
-import { Link } from "react-router-dom"
+import Button from 'react-bootstrap/Button';
+import CreatureDataService from "../services/CreatureService";
 
 const Row = styled.div`
     display:grid;
@@ -24,6 +24,8 @@ const AbilityLabel = styled(Label)`
     margin:0;
 `
 
+
+
 const CreatureInfo = ({ currentCreature }) => {
     const abilityMod = (ability) => {
         const modifier = Math.floor((ability-10)/2);
@@ -31,6 +33,28 @@ const CreatureInfo = ({ currentCreature }) => {
             return modifier;
         }
         return "+" + modifier;
+    }
+
+    const armor_class = () => {
+        var string = "";
+        var obj = currentCreature.armor_class;
+        if(obj){
+           string += obj.value;
+            if(obj.description || obj.shield){
+                string += " ("
+                if(obj.description){
+                    string += obj.description
+                }
+                if(obj.description && obj.shield){
+                    string += ", "
+                }
+                if(obj.shield){
+                    string += "Shield"
+                }
+                string += ")"
+            }
+        }
+        return string
     }
 
     const speed = () => {
@@ -51,10 +75,27 @@ const CreatureInfo = ({ currentCreature }) => {
         return string;
     }
 
+    const saving_throws = () => {
+        var string = "";
+        var obj = currentCreature.saving_throws
+        for(const saving_throw in obj) {
+            if(obj[saving_throw]){
+                if(string !== ""){
+                    string += ", "
+                }
+                if(obj[saving_throw]<0){
+                    string += (saving_throw + " " + obj[saving_throw])
+                } else {
+                    string += (saving_throw + " +" + obj[saving_throw])
+                }
+            } 
+        };
+        return string;
+    }
+
     const skills = () => {
         var string = "";
         var obj = currentCreature.skills
-        console.log(obj)
         for(const skill in obj) {
             if(obj[skill]){
                 if(string !== ""){
@@ -79,14 +120,17 @@ const CreatureInfo = ({ currentCreature }) => {
                     string += ", "
                 }
                 string += (sense + " " + obj[sense])
+                if(sense !== "Passive Perception"){
+                    string += "ft."
+                }
             } 
         };
         return string;
     }
 
-    const languages = () => {
+    const displayArray = (category) => {
         var string = "";
-        var obj = currentCreature.languages
+        var obj = currentCreature[category]
         for(const i in obj) {
             if(string !== ""){
                 string += ", "
@@ -116,7 +160,11 @@ const CreatureInfo = ({ currentCreature }) => {
                 if(string !== ""){
                 string += "<br />"
                 }
-                string += "<strong>" + obj[i].name + ". </strong>" + obj[i].description 
+                if(obj[i].reaction){
+                    string += "<strong>" + obj[i].name + ". </strong><i> (Reaction)</i> " + obj[i].description
+                } else {
+                    string += "<strong>" + obj[i].name + ". </strong>" + obj[i].description   
+                } 
             }
         };
         return string;
@@ -130,8 +178,11 @@ const CreatureInfo = ({ currentCreature }) => {
                 if(string !== ""){
                 string += "<br />"
                 }
-                string += "<strong>" + obj[i].name + ". </strong>" + obj[i].description 
-            }
+                if(obj[i].reaction){
+                    string += "<strong>" + obj[i].name + ". </strong><i> (Reaction)</i> " + obj[i].description
+                } else {
+                    string += "<strong>" + obj[i].name + ". </strong>" + obj[i].description   
+                }             }
         };
         return string;
     }
@@ -149,7 +200,7 @@ const CreatureInfo = ({ currentCreature }) => {
     }
 
     return (
-        <ItemInfo>
+        <div>
             {currentCreature.source ? 
             <TextStat>
                 <Label>Source:</Label>{" "}
@@ -160,7 +211,7 @@ const CreatureInfo = ({ currentCreature }) => {
             {currentCreature.armor_class ? 
                 <TextStat>
                     <Label>Armor Class:</Label>{" "}
-                    {currentCreature.armor_class.value + (currentCreature.armor_class.description ? " (" + currentCreature.armor_class.description + ")" : "") }
+                    {armor_class()}
                 </TextStat>    
             : null}
             
@@ -213,6 +264,13 @@ const CreatureInfo = ({ currentCreature }) => {
                 </Row>
             : null }
 
+            {currentCreature.saving_throws ? 
+                <TextStat>
+                    <Label>Saving Throws:</Label>{" "}
+                    {saving_throws()}
+                </TextStat>
+            : null }
+
             {currentCreature.skills ? 
             <TextStat>
                 <Label>Skills:</Label>{" "}
@@ -230,7 +288,35 @@ const CreatureInfo = ({ currentCreature }) => {
             {currentCreature.languages ? 
             <TextStat>
                 <Label>Languages:</Label>{" "}
-                {languages()}
+                {displayArray("languages")}
+            </TextStat>
+            : null }
+
+            {currentCreature.vulnerabilities ? 
+            <TextStat>
+                <Label>Damage Vulnerabilities:</Label>{" "}
+                {displayArray("vulnerabilities")}
+            </TextStat>
+            : null }
+
+            {currentCreature.resistances ? 
+            <TextStat>
+                <Label>Damage Resistances:</Label>{" "}
+                {displayArray("resistances")}
+            </TextStat>
+            : null }
+
+            {currentCreature.immunities ? 
+            <TextStat>
+                <Label>Damage Immunities:</Label>{" "}
+                {displayArray("immunities")}
+            </TextStat>
+            : null }
+
+            {currentCreature.condition_immunities ? 
+            <TextStat>
+                <Label>Condition Immunities:</Label>{" "}
+                {displayArray("condition_immunities")}
             </TextStat>
             : null }
 
@@ -249,7 +335,7 @@ const CreatureInfo = ({ currentCreature }) => {
             </TextStat>
             : null }
 
-            {currentCreature.actions ? 
+            {legActions() !== "" ? 
             <TextStat>
                 <hr></hr>
                 <h5>Legendary Actions:</h5>{" "}
@@ -264,12 +350,14 @@ const CreatureInfo = ({ currentCreature }) => {
             </TextStat>
             : null }
 
+
+
             {/* <Link
               to={"/Creatures/" + currentCreature.id}
             >
               Edit
             </Link>  */}
-        </ItemInfo>
+        </div>
     );
 };
 

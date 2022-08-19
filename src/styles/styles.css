@@ -10,6 +10,11 @@
     flex-direction: row;
     column-gap:0.5rem;
 }
+.auto-row-right {
+    display: flex;
+    flex-direction: row-reverse;
+    column-gap:0.5rem;
+}
 .auto-column{
     display:grid;
     grid-auto-rows: auto;
@@ -22,6 +27,14 @@
 }
 .sense-row {
     grid-auto-columns: 5fr 8fr 1fr 1fr;
+}
+.temp {
+    padding: 1rem 1.25rem;
+}
+
+.list-row {
+    grid-auto-columns: 3fr 1fr 6fr 20px;
+    width:100%;
 }
 .long-row {
     display:grid;
@@ -45,4 +58,7 @@
     background-color: blue;
     color: white;
     cursor:pointer;
+}
+.pointer {
+    cursor: pointer;
 }

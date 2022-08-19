@@ -1,7 +1,7 @@
 import React, { useState, useReducer } from "react";
 import CreatureDataService from "../services/CreatureService";
 import styled from 'styled-components'
-import { Add, Remove } from '../styles/theme'
+import { Remove } from '../styles/theme'
 import * as monsterSchema from "../data/monsterSchema.json"
 import Dropdown from 'react-bootstrap/Dropdown';
 import Button from 'react-bootstrap/Button';
@@ -11,7 +11,7 @@ import $ from 'jquery';
 
 const sizeOptions = monsterSchema.default.properties.size.enum;
 const typeOptions = monsterSchema.default.properties.type.enum;
-const abilityOptions = ["str","dex","con","int","wis","cha"];
+//const abilityOptions = ["str","dex","con","int","wis","cha"];
 const savingThrowOptions = ["Str","Dex","Con","Int","Wis","Cha"];
 const speedOptions = monsterSchema.default.properties.speed.enum;
 const skillOptions = monsterSchema.default.properties.skills.enum
@@ -30,12 +30,20 @@ const Toggle = styled(Dropdown.Toggle)`
     }
 `;
 
+const initialState = () => {
+  return {
+    immunities: [],
+    resistances: [],
+    vulnerabilities: [],
+  }
+}
+
 
 const AddCreature = () => {
   const formReducer = (state, action) => {
     console.log("State " + JSON.stringify(state))
     console.log("Action " + JSON.stringify(action))
-    if(action.payload === "Other"){
+    if(action.payload === "Other" || action.payload === "Telepathy"){
       return {...state};
     }
     if(action.type === "array"){
@@ -73,7 +81,7 @@ const AddCreature = () => {
                 ...state,
                 [action.type]: {
                   ...state.hit_points,
-                  ["dice"]: {
+                  "dice": {
                     ...state.hit_points.dice,
                     [action.subtype]: action.payload
                   }
@@ -107,7 +115,7 @@ const AddCreature = () => {
   }
 
   const [submitted, setSubmitted] = useState(false);
-  const [formData, dispatch] = useReducer(formReducer, {});
+  const [formData, dispatch] = useReducer(formReducer, initialState);
   const [visibleSpeedOptions, setVisibleSpeedOptions] = useState(["Walk"]);
   const [visibleSavingThrowOptions, setVisibleSavingThrowOptions] = useState([]);
   const [visibleSkillOptions, setVisibleSkillOptions] = useState([]);
@@ -162,11 +170,19 @@ const AddCreature = () => {
   const addOther = (type, other) => {
     const value = other.val()
     if(value){
-      dispatch({
-        type: "array",
-        subtype: type,
-        payload: value,
-      });
+      if(type === "languages" && other.attr("id") === "telepathy_field"){
+        dispatch({
+          type: "array",
+          subtype: type,
+          payload: "Telepathy " + value + "ft.",
+        });
+      } else {
+        dispatch({
+          type: "array",
+          subtype: type,
+          payload: value,
+        });
+      }   
       other.val('');
     }
   }
@@ -276,8 +292,23 @@ const AddCreature = () => {
     }
   }
 
+  const checkRequired = () => {
+    const required = ["name", "size", "type", "alignment", "challenge_rating"];
+    var pass = true;
+    for(let i = 0; i < required.length; i++) {
+      if(!formData[required[i]]){
+        pass = false;
+        $(`#${required[i]}`).addClass("border-danger")
+      } else {
+        $(`#${required[i]}`).removeClass("border-danger")
+      }
+    }
+    return pass
+  }
+
   const saveCreature = () => {
-    CreatureDataService.create(formData)
+    if(checkRequired()){
+      CreatureDataService.create(formData)
       .then(response => {
         console.log(response)
         if(response.status === 200){
@@ -292,6 +323,7 @@ const AddCreature = () => {
         console.log(e);
         
       });
+    }
   };
 
 
@@ -308,7 +340,7 @@ const AddCreature = () => {
         <Form>
           <div className="auto-row">
             <Form.Group>
-              <Form.Label className="font-weight-bold">Name:</Form.Label>
+              <Form.Label className="font-weight-bold">Name: <span className="text-danger">*</span></Form.Label>
               <Form.Control 
                 type="text" 
                 placeholder="" 
@@ -319,9 +351,9 @@ const AddCreature = () => {
           </div>
 
           <div className="auto-row">
-            <div>
-              <label className="font-weight-bold">Size</label>
-              <select className="form-control" 
+            <Form.Group>
+              <Form.Label className="font-weight-bold">Size <span className="text-danger">*</span></Form.Label>
+              <Form.Select className="form-control" 
                 name="size"
                 onChange={handleChange}
                 id="size"
@@ -331,19 +363,20 @@ const AddCreature = () => {
                   <option key={option}>{option}</option>
                   ))}
                 <option id="other_size_option" key="Other">Other</option>
-              </select>
+              </Form.Select>
               {document.getElementById('other_size_option') && document.getElementById('other_size_option').selected ?
-              <input className="form-control" 
+              <Form.Control className="form-control" 
                 name="size"
                 id="size"
                 onChange={handleChange}
                 placeholder="Please Enter Size">
-              </input>
+              </Form.Control>
               : null }
-            </div>
-            <div>
-              <label className="font-weight-bold">Type</label>
-              <select className="form-control" 
+            </Form.Group>
+
+            <Form.Group>
+              <Form.Label className="font-weight-bold">Type <span className="text-danger">*</span></Form.Label>
+              <Form.Select className="form-control" 
                 name="type"
                 onChange={handleChange}
                 id="type"
@@ -353,15 +386,16 @@ const AddCreature = () => {
                   <option key={option}>{option}</option>
                   ))}
                 <option id="other_type_option" key="Other">Other</option>
-              </select>
+              </Form.Select>
               {document.getElementById('other_type_option') && document.getElementById('other_type_option').selected ?
-              <input className="form-control" 
+              <Form.Control className="form-control" 
                 name="size"
                 onChange={handleChange}
                 placeholder="Please Enter Type">
-              </input>
+              </Form.Control>
               : null }
-            </div>
+            </Form.Group>
+
             <Form.Group>
               <Form.Label className="font-weight-bold">Subtype:</Form.Label>
               <Form.Control 
@@ -371,9 +405,10 @@ const AddCreature = () => {
                 onChange={handleChange}
                 name="subtype"/>
             </Form.Group>
-            <div>
-              <label className="font-weight-bold">Alignment</label>
-              <select className="form-control" 
+
+            <Form.Group>
+              <Form.Label className="font-weight-bold">Alignment <span className="text-danger">*</span></Form.Label>
+              <Form.Select className="form-control" 
                 name="alignment"
                 id="alignment"
                 onChange={handleChange}
@@ -382,20 +417,21 @@ const AddCreature = () => {
                 {alignmentOptions.map((option, _) => (
                   <option key={option}>{option}</option>
                   ))}
-              </select>
-            </div>
-            </div>
+              </Form.Select>
+            </Form.Group>
+          </div>
 
           <div className="auto-row">
             <Form.Group>
-              <Form.Label className="font-weight-bold" >Challenge Rating:</Form.Label>
+              <Form.Label className="font-weight-bold" >Challenge Rating: <span className="text-danger">*</span></Form.Label>
               <Form.Control 
                 type="number" 
                 placeholder="" 
-                id="cr"
+                id="challenge_rating"
                 onChange={handleChange}
                 name="challenge_rating"/>
             </Form.Group>
+
             <Form.Group>
               <Form.Label className="font-weight-bold" >Hit Points:</Form.Label>
               <Form.Control 
@@ -438,6 +474,7 @@ const AddCreature = () => {
                   
                 : null}
             </Form.Group>
+
             <div>
               <Form.Label className="font-weight-bold" >Armor Class:</Form.Label>
               <div className="auto-row">
@@ -451,7 +488,7 @@ const AddCreature = () => {
                     subtype="value"/>
                 </Form.Group>
 
-                <select className="form-control" 
+                <Form.Select className="form-control" 
                   name="armor_class"
                   id="armor_class_description"
                   onChange={handleChange}
@@ -461,7 +498,7 @@ const AddCreature = () => {
                   {armorOptions.map((option, _) => (
                     <option key={option}>{option}</option>
                     ))}
-                </select>
+                </Form.Select>
               </div>
               <Form.Check 
                     type="checkbox"
@@ -539,7 +576,7 @@ const AddCreature = () => {
 
           <div className="auto-row">
             <div className="auto-column">
-              <label className="font-weight-bold">Speed: </label>
+              <Form.Label className="font-weight-bold">Speed: </Form.Label>
               {visibleSpeedOptions.map((option, _) => (
                   <Form.Group className="auto-row speed-row" key={option} >
                     <Form.Label>{option}:</Form.Label>
@@ -553,9 +590,7 @@ const AddCreature = () => {
                     <Form.Label>ft.</Form.Label>
                     {option !== "Walk" ? <Remove onClick={() => removeSpeedRow(option)}></Remove> : <div></div>}
                   </Form.Group>
-                  
                 ))}
-
               {speedOptions.length !== visibleSpeedOptions.length ?
               <Dropdown id="speedDropdown">
                 <Toggle variant="success" id="dropdown-basic">
@@ -570,10 +605,10 @@ const AddCreature = () => {
                 </Dropdown.Menu>
               </Dropdown>
               : null }
-                
             </div>
+
             <div className="auto-column">
-              <label className="font-weight-bold">Saving Throws: </label>
+              <Form.Label className="font-weight-bold">Saving Throws: </Form.Label>
               {visibleSavingThrowOptions.map((option, _) => (
                   <Form.Group className="auto-row speed-row" key={option}>
                     <Form.Label>{option}:</Form.Label>
@@ -586,14 +621,10 @@ const AddCreature = () => {
                       subtype={option}  />
                     <Remove onClick={() => removeSavingRow(option)}></Remove>
                   </Form.Group>
-                  
                 ))}
-
               {savingThrowOptions.length !== visibleSavingThrowOptions.length ?
               <Dropdown id="savingThrowDropdown">
-                <Toggle variant="success" id="dropdown-basic">
-                  +
-                </Toggle>
+                <Toggle variant="success" id="dropdown-basic">+</Toggle>
                 <Dropdown.Menu>
                 {savingThrowOptions.map((option, _) => (
                   (!visibleSavingThrowOptions.includes(option)) ? 
@@ -603,11 +634,10 @@ const AddCreature = () => {
                 </Dropdown.Menu>
               </Dropdown>
               : null }
-                
             </div>
 
             <div className="auto-column">
-              <label className="font-weight-bold">Languages: </label>
+              <Form.Label className="font-weight-bold">Languages: </Form.Label>
               {formData.languages ? 
                 <div >
                   {formData.languages.map((option, index) => (
@@ -622,7 +652,7 @@ const AddCreature = () => {
                   ))}
                 </div>
               : null }
-              <select className="form-control" 
+              <Form.Select className="form-control" 
                 subtype="languages"
                 name="array"
                 onChange={handleChange}
@@ -636,32 +666,34 @@ const AddCreature = () => {
                     <option key={option}>{option}</option>
                   ))}
                 <option id="other_language_option" key="Other">Other</option>
-              </select>
+                <option id="telepathy" key="telepathy">Telepathy</option>
+              </Form.Select>
               {document.getElementById('other_language_option') && document.getElementById('other_language_option').selected ?
-                <div className="three-one-row">
-                  <input className="form-control" 
+                <Form.Group className="three-one-row">
+                  <Form.Control className="form-control" 
                     subtype="languages"
                     id="other_language_field"
                     placeholder="Please Enter a Language">
-                  </input>
-                  <Button onClick={()=>addOther("languagues",$("#other_language_field"))}> Add </Button>
-                </div>
+                  </Form.Control>
+                  <Button onClick={()=>addOther("languages",$("#other_language_field"))}> Add </Button>
+                </Form.Group>
               : null }
-              <Form.Check 
-                type="checkbox"
-                id="telepathy"
-                label={`Telepathy`}
-                name="languages"
-                subtype="telepathy"
-              />
-              
-              
+              {document.getElementById('telepathy') && document.getElementById('telepathy').selected ?
+                <Form.Group className="three-one-row">
+                  <Form.Control className="form-control" 
+                    subtype="languages"
+                    id="telepathy_field"
+                    placeholder="Please Enter a Distance">
+                  </Form.Control>
+                  <Button onClick={()=>addOther("languages",$("#telepathy_field"))}> Add </Button>
+                </Form.Group>
+              : null }
             </div>
           </div>
 
           <div className="auto-row">
             <div className="auto-column">
-              <label className="font-weight-bold">Skills: </label>
+              <Form.Label className="font-weight-bold">Skills: </Form.Label>
               {visibleSkillOptions.map((option, _) => (
                   <Form.Group className="auto-row speed-row" key={option}>
                     <Form.Label>{option}:</Form.Label>
@@ -673,15 +705,11 @@ const AddCreature = () => {
                       name="skills"
                       subtype={option}/>
                     <Remove onClick={() => removeSkillRow(option)}></Remove>
-                  </Form.Group>
-                  
+                  </Form.Group> 
                 ))}
-
               {skillOptions.length !== visibleSkillOptions.length ?
               <Dropdown id="skillDropdown">
-                <Toggle variant="success" id="dropdown-basic">
-                  +
-                </Toggle>
+                <Toggle variant="success" id="dropdown-basic">+</Toggle>
                 <Dropdown.Menu>
                 {skillOptions.map((option, _) => (
                   (!visibleSkillOptions.includes(option)) ? 
@@ -690,13 +718,11 @@ const AddCreature = () => {
                 ))}
                 </Dropdown.Menu>
               </Dropdown>
-              : null }
-                
+              : null } 
             </div>
 
             <div className="auto-column">
-              <label className="font-weight-bold">Senses: </label>
-
+              <Form.Label className="font-weight-bold">Senses: </Form.Label>
               {visibleSenseOptions.map((option, _) => (
                   <Form.Group className="auto-row sense-row" key={option}>
                     <Form.Label>{option}:</Form.Label>
@@ -714,14 +740,10 @@ const AddCreature = () => {
                       <Remove onClick={() => removeSenseRow(option)}></Remove>
                     : <div></div>}
                   </Form.Group>
-                  
               ))}
-
               {senseOptions.length !== (formData.senses ? formData.senses.length : -1) ?
               <Dropdown id="senseDropdown">
-                <Toggle variant="success" id="dropdown-basic">
-                  +
-                </Toggle>
+                <Toggle variant="success" id="dropdown-basic">+</Toggle>
                 <Dropdown.Menu>
                 {senseOptions.map((option, _) => (
                   (!visibleSenseOptions.includes(option)) ? 
@@ -736,9 +758,9 @@ const AddCreature = () => {
 
           <div className="auto-row">
             <div className="auto-column">
-                <label className="font-weight-bold">Damage Vulnerabilities: </label>
+                <Form.Label className="font-weight-bold">Damage Vulnerabilities: </Form.Label>
                 {formData.vulnerabilities ? 
-                  <div >
+                  <div>
                     {formData.vulnerabilities.map((option, index) => (
                       <span 
                       className="red-hover" 
@@ -750,7 +772,7 @@ const AddCreature = () => {
                     ))}
                   </div>
                 : null }
-                <select className="form-control" 
+                <Form.Select className="form-control" 
                   subtype="vulnerabilities"
                   name="array"
                   onChange={handleChange}
@@ -758,71 +780,28 @@ const AddCreature = () => {
                   defaultValue={'default'}>
                   <option value='default' disabled>Please select</option>
                   {damageTypes.map((option, _) => (
-                    (formData.vulnerabilities && formData.vulnerabilities.includes(option)) ?
+                     ((formData.immunities && formData.immunities.includes(option)) || (formData.resistances && formData.resistances.includes(option)) || (formData.vulnerabilities && formData.vulnerabilities.includes(option)) ) ?
                       <option disabled key={option}>{option}</option>
-                    :
-                      <option key={option}>{option}</option>
+                    : <option key={option}>{option}</option>
                     ))}
                   <option id="other_vulnerabilities_option" key="Other">Other</option>
-                </select>
+                </Form.Select>
                 {document.getElementById('other_vulnerabilities_option') && document.getElementById('other_vulnerabilities_option').selected ?
                   <div className="three-one-row">
-                    <input className="form-control" 
+                    <Form.Control className="form-control" 
                       subtype="vulnerabilities"
                       id="other_vulnerabilities_field"
                       placeholder="Please Enter a Vulnerability">
-                    </input>
+                    </Form.Control>
                     <Button onClick={()=>addOther("vulnerabilities",$("#other_vulnerabilities_field"))}> Add </Button>
                   </div>
                 : null }
               </div>
 
               <div className="auto-column">
-                <label className="font-weight-bold">Damage Immunities: </label>
-                {formData.immunities ? 
-                  <div >
-                    {formData.immunities.map((option, index) => (
-                      <span 
-                      className="red-hover" 
-                      key={option} 
-                      onClick={() => handleRemove("immunities",option)}
-                      id="immunities-display">
-                        {(formData.immunities.length !== 0 && index !== formData.immunities.length-1) ? option + ", " : option}
-                      </span>
-                    ))}
-                  </div>
-                : null }
-                <select className="form-control" 
-                  subtype="immunities"
-                  name="array"
-                  onChange={handleChange}
-                  id="immunities"
-                  defaultValue={'default'}>
-                  <option value='default' disabled>Please select</option>
-                  {damageTypes.map((option, _) => (
-                    (formData.immunities && formData.immunities.includes(option)) ?
-                      <option disabled key={option}>{option}</option>
-                    :
-                      <option key={option}>{option}</option>
-                    ))}
-                  <option id="other_immunities_option" key="Other">Other</option>
-                </select>
-                {document.getElementById('other_immunities_option') && document.getElementById('other_immunities_option').selected ?
-                  <div className="three-one-row">
-                    <input className="form-control" 
-                      subtype="immunities"
-                      id="other_immunities_field"
-                      placeholder="Please Enter an Immunity">
-                    </input>
-                    <Button onClick={()=>addOther("immunities",$("#other_immunities_field"))}> Add </Button>
-                  </div>
-                : null }
-              </div>
-
-              <div className="auto-column">
-                <label className="font-weight-bold">Damage Resistances: </label>
+                <Form.Label className="font-weight-bold">Damage Resistances: </Form.Label>
                 {formData.resistances ? 
-                  <div >
+                  <div>
                     {formData.resistances.map((option, index) => (
                       <span 
                       className="red-hover" 
@@ -834,7 +813,7 @@ const AddCreature = () => {
                     ))}
                   </div>
                 : null }
-                <select className="form-control" 
+                <Form.Select className="form-control" 
                   subtype="resistances"
                   name="array"
                   onChange={handleChange}
@@ -842,29 +821,69 @@ const AddCreature = () => {
                   defaultValue={'default'}>
                   <option value='default' disabled>Please select</option>
                   {damageTypes.map((option, _) => (
-                    (formData.resistances && formData.resistances.includes(option)) ?
+                    ((formData.immunities && formData.immunities.includes(option)) || (formData.resistances && formData.resistances.includes(option)) || (formData.vulnerabilities && formData.vulnerabilities.includes(option)) ) ?
                       <option disabled key={option}>{option}</option>
-                    :
-                      <option key={option}>{option}</option>
+                    : <option key={option}>{option}</option>
                     ))}
                   <option id="other_resistances_option" key="Other">Other</option>
-                </select>
+                </Form.Select>
                 {document.getElementById('other_resistances_option') && document.getElementById('other_resistances_option').selected ?
                   <div className="three-one-row">
-                    <input className="form-control" 
+                    <Form.Control className="form-control" 
                       subtype="resistances"
                       id="other_resistances_field"
                       placeholder="Please Enter a Vulnerability">
-                    </input>
+                    </Form.Control>
                     <Button onClick={()=>addOther("resistances",$("#other_resistances_field"))}> Add </Button>
                   </div>
                 : null }
               </div>
 
               <div className="auto-column">
-                <label className="font-weight-bold">Condition Immunities: </label>
+                <Form.Label className="font-weight-bold">Damage Immunities: </Form.Label>
+                {formData.immunities ? 
+                  <div>
+                    {formData.immunities.map((option, index) => (
+                      <span 
+                      className="red-hover" 
+                      key={option} 
+                      onClick={() => handleRemove("immunities",option)}
+                      id="immunities-display">
+                        {(formData.immunities.length !== 0 && index !== formData.immunities.length-1) ? option + ", " : option}
+                      </span>
+                    ))}
+                  </div>
+                : null }
+                <Form.Select className="form-control" 
+                  subtype="immunities"
+                  name="array"
+                  onChange={handleChange}
+                  id="immunities"
+                  defaultValue={'default'}>
+                  <option value='default' disabled>Please select</option>
+                  {damageTypes.map((option, _) => (
+                    ((formData.immunities && formData.immunities.includes(option)) || (formData.resistances && formData.resistances.includes(option)) || (formData.vulnerabilities && formData.vulnerabilities.includes(option)) ) ?
+                      <option disabled key={option}>{option}</option>
+                    : <option key={option}>{option}</option>
+                    ))}
+                  <option id="other_immunities_option" key="Other">Other</option>
+                </Form.Select>
+                {document.getElementById('other_immunities_option') && document.getElementById('other_immunities_option').selected ?
+                  <div className="three-one-row">
+                    <Form.Control className="form-control" 
+                      subtype="immunities"
+                      id="other_immunities_field"
+                      placeholder="Please Enter an Immunity">
+                    </Form.Control>
+                    <Button onClick={()=>addOther("immunities",$("#other_immunities_field"))}> Add </Button>
+                  </div>
+                : null }
+              </div>
+
+              <div className="auto-column">
+                <Form.Label className="font-weight-bold">Condition Immunities: </Form.Label>
                 {formData.condition_immunities ? 
-                  <div >
+                  <div>
                     {formData.condition_immunities.map((option, index) => (
                       <span 
                       className="red-hover" 
@@ -876,7 +895,7 @@ const AddCreature = () => {
                     ))}
                   </div>
                 : null }
-                <select className="form-control" 
+                <Form.Select className="form-control" 
                   subtype="condition_immunities"
                   name="array"
                   onChange={handleChange}
@@ -886,24 +905,21 @@ const AddCreature = () => {
                   {conditionTypes.map((option, _) => (
                     (formData.condition_immunities && formData.condition_immunities.includes(option)) ?
                       <option disabled key={option}>{option}</option>
-                    :
-                      <option key={option}>{option}</option>
+                    : <option key={option}>{option}</option>
                     ))}
                   <option id="other_condition_immunities_option" key="Other">Other</option>
-                </select>
+                </Form.Select>
                 {document.getElementById('other_condition_immunities_option') && document.getElementById('other_condition_immunities_option').selected ?
                   <div className="three-one-row">
-                    <input className="form-control" 
+                    <Form.Control className="form-control" 
                       subtype="condition_immunities"
                       id="other_condition_immunities_field"
                       placeholder="Please Enter a Condition Immunities">
-                    </input>
+                    </Form.Control>
                     <Button onClick={()=>addOther("condition_immunities",$("#other_condition_immunities_field"))}> Add </Button>
                   </div>
                 : null }
               </div>
-
-
           </div>
 
           <div className="auto-row">
@@ -913,7 +929,7 @@ const AddCreature = () => {
                 {formData.traits ? formData.traits.map((option, _) => (
                   <div key = {option.name} className="red-hover" onClick={()=>removeTrait(option)}>
                     <span className="font-weight-bold">{option.name}: {' '}</span>
-                    <span >{option.description}</span>
+                    <span>{option.description}</span>
                   </div>
                 )): ""}
                 <div className="long-row">

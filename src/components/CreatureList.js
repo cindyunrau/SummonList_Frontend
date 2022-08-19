@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import CreatureDataService from "../services/CreatureService";
 import { SearchBar, CreatureInfo } from "./";
-import { Container, List, ListItem, ListItemTitle, ListItemDes } from "../styles/listStyles.js";
-import { Button, ButtonNeg, Title, Loading } from "../styles/theme";
+import { Title } from "../styles/theme";
+import Button from 'react-bootstrap/Button';
+import Accordian from 'react-bootstrap/Accordion';
 import * as srdData from "../data/srd.json";
-
 
 const CreatureList = () => {
   const [Creatures, setCreatures] = useState([]);
@@ -20,7 +20,7 @@ const CreatureList = () => {
   const retrieveCreatures = () => {
     CreatureDataService.getAll()
       .then(response => {
-        setCreatures(response.data);
+        setCreatures(defaultSort(response.data));
         console.log(response.data);
       })
       .catch(e => {
@@ -86,6 +86,10 @@ const CreatureList = () => {
       refreshList();
     })
 
+  }
+
+  function defaultSort(list){
+    return sortAlphaNameInc(list);
   }
 
   function sortAlphaName(list){
@@ -166,82 +170,59 @@ const CreatureList = () => {
   }
 
   return (
-    <Container>
-      <div>
-        <Button
-          onClick={() => addAllFromFile()}
-          style={{float:"left"}}
-        >
-          add all srd (takes a min, will not create duplicates)
-        </Button>
-        {loading ? <Loading style={{float:"left"}}></Loading>
-        : null
-        }
-        <br clear="all" />
-        <div onClick={removeAllCreatures}>
-          <ButtonNeg    
-              
-              style={{display:"block", float:"left"}}
-            >
-          </ButtonNeg>
-          <strong style={{margin:"0.5rem"}}>Remove All</strong>
-        </div>
-      </div>
+    <div>
+      
+      <Button
+        onClick={() => addAllFromFile()}
+      >
+        TEMP BUTTON: Add all srd (takes a min, will not create duplicates)
+      </Button>
+      <br></br><br></br>
+      <Button onClick={removeAllCreatures}> TEMP BUTTON: Remove All</Button>
+      <br></br><br></br>
       <SearchBar setCreatures={setCreatures} />
+
       <div >
         <Title>Creatures List ({Creatures.length})</Title>
-        <List >
-          {Creatures.length !== 0 ? (
-            <ListItem>
-              <ListItemTitle onClick={() => sortAlphaName(Creatures)}>
-              <strong>Name</strong>
-                {sort !== "alphaNormal" ? " ˄" : " ˅"}
-              </ListItemTitle>
-              <div style={{gridArea:"cr"}} onClick={() => sortCR(Creatures)}>
-              <strong>CR</strong>
-                {sort !== "crNormal" ? " ˄" : " ˅"} 
-              </div>
-              <ListItemDes style={{gridArea:"description"}}>
-                <strong>Description</strong>
-              </ListItemDes>
-            </ListItem>)
+        
+          {Creatures.length !== 0 ? 
+            <div className="auto-row list-row temp">
+              <div className="pointer" onClick={() => sortAlphaName(Creatures)}><strong >Name{sort !== "alphaNormal" ? " ˄" : " ˅"}</strong></div>
+              <div className="pointer" onClick={() => sortCR(Creatures)}><strong >CR{sort !== "crNormal" ? " ˄" : " ˅"}</strong></div>
+              <div><strong>Description</strong></div>
+              <div></div>
+            </div>            
           : <p> No Creatures </p>
           }
-          
+
           {Creatures &&
-            Creatures.map((Creature, index) => (
-              <>
-                <ListItem
-                  
-                >
-                  <ListItemTitle
-                    onClick={() => setActiveCreature(Creature, index)}
-                  >
-                    {Creature.name}
-                  </ListItemTitle>
-                  <div style={{gridArea:"cr"}}>
-                  {toFraction(Creature.challenge_rating)}
-                  </div>
-                  <ListItemDes style={{gridArea:"description"}}>
-                  {Creature.size} {Creature.type} {Creature.subtype} : {Creature.alignment}
-                    </ListItemDes>
-                  <ButtonNeg
-                    onClick={() => removeCreature(Creature._id)}>
-                  </ButtonNeg>
-                </ListItem>
-                {
-                  Creature == currentCreature ? 
-                    <CreatureInfo currentCreature={currentCreature}>
-                    </CreatureInfo> 
-                    : null
-                }
-                
-              </>
+            Creatures.map((Creature) => (
+              <Accordian defaultActiveKey="0" key={Creature.name}>
+                <Accordian.Item eventKey={Creature._id}>
+                  <Accordian.Header >
+                    <div className="auto-row list-row">
+                      <div>{Creature.name}</div>
+                      <div>{toFraction(Creature.challenge_rating)}</div>
+                      <div>{Creature.size} {Creature.type} {Creature.subtype} : {Creature.alignment}</div>
+
+                    </div>
+                  </Accordian.Header>
+                  <Accordian.Body>
+                    {(Object.keys(Creature).length > 6) ? 
+                        <CreatureInfo currentCreature={Creature}></CreatureInfo> 
+                        : <div> This Creature has no additional Content </div>
+                    }
+                    <div className="auto-row-right">
+                      <Button onClick={() => removeCreature(Creature._id)}> x </Button>
+                    </div>
+                    
+                  </Accordian.Body>
+                </Accordian.Item>
+              </Accordian>
             ))}
-        </List >
 
       </div>
-    </ Container>
+    </ div>
   );
 };
 

@@ -1,35 +1,33 @@
 import React, { useState } from "react";
 import CreatureDataService from "../services/CreatureService";
-import styled from 'styled-components';
-import { Button } from './';
-
-const Container = styled.div`
-    display:grid;
-    grid-template-columns: 8fr 1fr;
-    grid-template-areas:
-        "search button";
-    column-gap: 1em;  
-    margin-top: 1em;
-`
-const Search = styled.input`
-    grid-area: search;
-`
-const Submit = styled.button`
-    grid-area: button;
-`
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 
 const SearchBar = ({setCreatures}) => {
     const [searchName, setSearchName] = useState("");
 
     const findByName = () => {
-        CreatureDataService.findByName(searchName)
-          .then(response => {
-            setCreatures(response.data);
-            console.log(response.data);
-          })
-          .catch(e => {
-            console.log(e);
-          });
+        if(searchName === ""){
+            CreatureDataService.getAll()
+            .then(response => {
+              console.log(response.data);
+              setCreatures(response.data);
+            })
+            .catch(e => {
+              console.log(e);
+            });
+        } else {
+            CreatureDataService.findByName(searchName)
+            .then(response => {
+                console.log(response.data);
+                setCreatures(response.data);
+                
+            })
+            .catch(e => {
+                console.log(e);
+            });
+        }
+        
       };
 
       const onChangeSearchName = e => {
@@ -37,20 +35,25 @@ const SearchBar = ({setCreatures}) => {
         setSearchName(searchName);
       };
     return (
-        <Container>
-            <Search
+        <Form.Group className="three-one-row">
+            <Form.Control
                 type="text"
                 placeholder="Search by Name"
                 value={searchName}
                 onChange={onChangeSearchName}
+                onKeyPress={event => {
+                    if (event.key === "Enter") {
+                        findByName();
+                    }
+                  }}
             />
-            <Submit
+            <Button
                 type="button"
                 onClick={findByName}
             >
                 Search
-            </Submit>
-        </Container>
+            </Button>
+        </Form.Group>
     );
 };
 

@@ -29,7 +29,7 @@ const removeAll = () => {
 };
 
 const findByName = name => {
-  return http.get(`/creatures?name=${name}`);
+  return http.get(`/creature/search/name/${name}`);
 };
 
 // eslint-disable-next-line import/no-anonymous-default-export
